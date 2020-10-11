@@ -1,0 +1,59 @@
+Exercise 2.1 Read the output of your previous command. How many nodes were expanded? Which is the total cost of the found solution?
+
+	2-1.png
+	Search nodes expanded: 0
+	Path found with total cost of 8 in 0.0 seconds
+	
+Exercise 2.2 Why the agent finds the dot? Change the maze (with another one from layouts folder). Does it work? Does the Pacman find the food?
+
+	The agent finds the dot because in search.py the tinyMazeSearch method returns a sequence of moves that solves tinyMaze. For any other maze, the sequence moves would be incorrect.
+	When I changed the tinyMaze layout with bigMaze layout, the program stopped suddenly and "Exception : Illegal action South" popped in the terminal. Therefore, for any other maze than tinyMaze, it wouldn't work and Pacman wouldn't find the food.
+	
+Exercise 2.3 Read from AIMA what are and how to formalize Search problems in sections 3.1.1 and 3.1.2.
+
+	A search problem can be formally defined as a set of possible states that the environment can be in. We call this the state space.
+	The state space can be represented as a graph in which the vertices are states and the directed edges between them are actions.
+	A sequence of actions forms a path, and a solution is a path from the initial state to a goal state. An optimal solution has the lowest path cost among all solutions.
+	
+	GOAL FORMULATION
+	PROBLEM FORMULATION
+	SEARCH: before taking any action, the agent simulates sequences of actions in its model, searching until it finds a sequence of actions that reaches the goal
+	EXECUTION
+	
+	
+Exercise 2.4 Open searchAgents.py and go to the class PositionSearchProblem. Read the comments. Identify the main elements of a search problem: initial state, goal test, successor and cost of actions. Identify the order in which the legal actions are returned in getSuccessors method.
+
+	The initial state is given by self.startState.
+	The goal state is given by self.goal and it is tested inside the isGoalState method.
+	The succesor states are returned by the getSuccessors method (which also returns the actions they require and a cost of 1).
+	The cost of a particular sequence of actions is returned by the getCostOfActions method (which also returns 999999 if those actions include an illegal move).
+	
+	In the getSuccesors method is created an empty array called successors[] where the successors that require a legal action will be stored. The order in which these successors will be appended in the array are: North, South, East, West, meaning Up, Down, Right, Left.
+	
+Exercise 2.5 Go to depthFirstSearch function from search.py and uncomment the existing lines [...] Run again [...]
+
+	2-5.png
+	
+Exercise 2.6 Go to depthFirstSearch function from search.py. Get the succesors of the initial state and print the state, the action and the cost for each successor. Run again with smallMaze.
+
+	2-6-code.png
+	2-6-terminal.png
+	
+Exercise 2.7 Go to depthFirstSearch function from search.py. Comment the code from the previous exercises. Comment util.raiseNotDefined() and similar to TinyMazeSearch, add to depthFirstSearch function [...] Run again [...] Important: each search function must return a list of legal actions. Otherwise, you will get an error.
+
+	2-7.png
+	Pacman moves twice to the left (WEST).
+	
+Exercise 2.8 Go to depthFirstSearch function from search.py. Return a sequence of two legal actions from the initial state.
+
+	2.8-code.png
+	2.8-terminal.png
+	Pacman moves twice to the right (EAST).
+	
+Exercise 2.9 Go to depthFirstSearch function from search.py. Create a new data-structure with two components: name and cost. Create two instances of the new data structure and add them to a Stack described in util.py. Pop an element from the stack and print it.
+
+	2-9.png
+	
+Exercise 2-10 Random search agent. As a baseline, we will create an agent which searches a solution randomly: it just picks one legal action at each step of search. Write a new search function in search.py similar to tinyMazeSearch function. The function returns a list of actions from the initial state to goal state, each action being randomly selected from the set of legal actions.
+
+	2-10.png
