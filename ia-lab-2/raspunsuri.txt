@@ -20,7 +20,6 @@ Exercise 2.3 Read from AIMA what are and how to formalize Search problems in sec
 	SEARCH: before taking any action, the agent simulates sequences of actions in its model, searching until it finds a sequence of actions that reaches the goal
 	EXECUTION
 	
-	
 Exercise 2.4 Open searchAgents.py and go to the class PositionSearchProblem. Read the comments. Identify the main elements of a search problem: initial state, goal test, successor and cost of actions. Identify the order in which the legal actions are returned in getSuccessors method.
 
 	The initial state is given by self.startState.
