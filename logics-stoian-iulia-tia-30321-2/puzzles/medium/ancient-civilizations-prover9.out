@@ -1,0 +1,302 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 13096 was started by iulia on DESKTOP-6AB8R6E,
+Fri Nov 27 15:24:33 2020
+The command was "/cygdrive/c/Program Files (x86)/Prover9-Mace4/bin-win32/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.69 (+ 0.12) seconds.
+% Length of proof is 282.
+% Level of proof is 62.
+% Maximum clause weight is 20.
+% Given clauses 2324.
+
+7 Black(x) & Black(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+8 Blue(x) & Blue(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+9 Green(x) & Green(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+11 White(x) & White(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+17 Architecture(x) & Architecture(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+18 Art(x) & Art(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+19 Economy(x) & Economy(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+20 Religion(x) & Religion(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+32 Girl4(x) -> Strawberry(x) # label(non_clause).  [assumption].
+33 Art(x) & Apple(x) -> inbetween(x,y) # label(non_clause).  [assumption].
+35 Strawberry(x) & Apple(y) -> right(x,y) # label(non_clause).  [assumption].
+37 Green(x) -> Apple(x) # label(non_clause).  [assumption].
+38 Girl4(x) -> Religion(x) # label(non_clause).  [assumption].
+41 Science(x) & Red(y) -> inbetween(x,y) # label(non_clause).  [assumption].
+42 Black(x) & Science(y) -> right(y,x) # label(non_clause).  [assumption].
+44 Red(x) & White(y) -> right(x,y) # label(non_clause).  [assumption].
+52 Science(x) -> extremity(x) # label(non_clause).  [assumption].
+53 Architecture(x) -> extremity(x) # label(non_clause).  [assumption].
+60 Girl2(x) -> Art(x) # label(non_clause).  [assumption].
+61 Girl1(g1) -> Blue(g1) # label(non_clause) # label(goal).  [goal].
+62 -Girl2(x) | Art(x).  [clausify(60)].
+63 Girl2(1).  [assumption].
+66 -Girl4(x) | Strawberry(x).  [clausify(32)].
+67 Girl4(3).  [assumption].
+68 -Girl4(x) | Religion(x).  [clausify(38)].
+69 differentFrom(g1,g2).  [assumption].
+70 differentFrom(g1,g3).  [assumption].
+71 differentFrom(g1,g4).  [assumption].
+72 differentFrom(g1,g5).  [assumption].
+73 differentFrom(g2,g3).  [assumption].
+74 differentFrom(g2,g4).  [assumption].
+75 differentFrom(g2,g5).  [assumption].
+76 differentFrom(g3,g4).  [assumption].
+77 differentFrom(g3,g5).  [assumption].
+78 differentFrom(g4,g5).  [assumption].
+82 g2 = 1.  [assumption].
+83 1 = g2.  [copy(82),flip(a)].
+86 g4 = 3.  [assumption].
+87 3 = g4.  [copy(86),flip(a)].
+143 -extremity(g3).  [assumption].
+151 -inbetween(g1,g2).  [assumption].
+158 -inbetween(g5,g4).  [assumption].
+159 -inbetween(g1,g1).  [assumption].
+160 -inbetween(g2,g2).  [assumption].
+163 -inbetween(g5,g5).  [assumption].
+166 -inbetween(g5,g3).  [assumption].
+168 -inbetween(g5,g2).  [assumption].
+169 -inbetween(g5,g1).  [assumption].
+184 -right(g1,g1).  [assumption].
+189 -right(g3,g1).  [assumption].
+192 -right(g4,g1).  [assumption].
+194 -right(g5,g1).  [assumption].
+196 Black(x) | Blue(x) | Green(x) | Red(x) | White(x).  [assumption].
+198 Architecture(x) | Art(x) | Economy(x) | Religion(x) | Science(x).  [assumption].
+206 -Black(x) | -Black(y) | -differentFrom(x,y).  [clausify(7)].
+207 -Blue(x) | -Blue(y) | -differentFrom(x,y).  [clausify(8)].
+208 -Green(x) | -Green(y) | -differentFrom(x,y).  [clausify(9)].
+210 -White(x) | -White(y) | -differentFrom(x,y).  [clausify(11)].
+216 -Architecture(x) | -Architecture(y) | -differentFrom(x,y).  [clausify(17)].
+217 -Art(x) | -Art(y) | -differentFrom(x,y).  [clausify(18)].
+218 -Economy(x) | -Economy(y) | -differentFrom(x,y).  [clausify(19)].
+219 -Religion(x) | -Religion(y) | -differentFrom(x,y).  [clausify(20)].
+231 -Art(x) | -Apple(x) | inbetween(x,y).  [clausify(33)].
+233 -Strawberry(x) | -Apple(y) | right(x,y).  [clausify(35)].
+235 -Green(x) | Apple(x).  [clausify(37)].
+238 -Science(x) | -Red(y) | inbetween(x,y).  [clausify(41)].
+239 -Black(x) | -Science(y) | right(y,x).  [clausify(42)].
+241 -Red(x) | -White(y) | right(x,y).  [clausify(44)].
+248 -Science(x) | extremity(x).  [clausify(52)].
+249 -Architecture(x) | extremity(x).  [clausify(53)].
+256 -Blue(g1).  [deny(61)].
+257 Art(1).  [resolve(62,a,63,a)].
+258 Art(g2).  [copy(257),rewrite([83(1)])].
+261 Strawberry(3).  [resolve(66,a,67,a)].
+262 Strawberry(g4).  [copy(261),rewrite([87(1)])].
+263 Religion(3).  [resolve(68,a,67,a)].
+264 Religion(g4).  [copy(263),rewrite([87(1)])].
+350 -Black(g4) | -Black(g5).  [resolve(206,c,78,a)].
+351 -Black(g3) | -Black(g5).  [resolve(206,c,77,a)].
+352 -Black(g3) | -Black(g4).  [resolve(206,c,76,a)].
+353 -Black(g2) | -Black(g5).  [resolve(206,c,75,a)].
+354 -Black(g2) | -Black(g4).  [resolve(206,c,74,a)].
+355 -Black(g2) | -Black(g3).  [resolve(206,c,73,a)].
+356 -Black(g1) | -Black(g5).  [resolve(206,c,72,a)].
+357 -Black(g1) | -Black(g4).  [resolve(206,c,71,a)].
+358 -Black(g1) | -Black(g3).  [resolve(206,c,70,a)].
+359 -Black(g1) | -Black(g2).  [resolve(206,c,69,a)].
+360 -Blue(g4) | -Blue(g5).  [resolve(207,c,78,a)].
+361 -Blue(g3) | -Blue(g5).  [resolve(207,c,77,a)].
+362 -Blue(g3) | -Blue(g4).  [resolve(207,c,76,a)].
+363 -Blue(g2) | -Blue(g5).  [resolve(207,c,75,a)].
+364 -Blue(g2) | -Blue(g4).  [resolve(207,c,74,a)].
+365 -Blue(g2) | -Blue(g3).  [resolve(207,c,73,a)].
+366 -Green(g4) | -Green(g5).  [resolve(208,c,78,a)].
+367 -Green(g3) | -Green(g5).  [resolve(208,c,77,a)].
+368 -Green(g3) | -Green(g4).  [resolve(208,c,76,a)].
+372 -Green(g1) | -Green(g5).  [resolve(208,c,72,a)].
+373 -Green(g1) | -Green(g4).  [resolve(208,c,71,a)].
+374 -Green(g1) | -Green(g3).  [resolve(208,c,70,a)].
+386 -White(g4) | -White(g5).  [resolve(210,c,78,a)].
+387 -White(g3) | -White(g5).  [resolve(210,c,77,a)].
+388 -White(g3) | -White(g4).  [resolve(210,c,76,a)].
+389 -White(g2) | -White(g5).  [resolve(210,c,75,a)].
+390 -White(g2) | -White(g4).  [resolve(210,c,74,a)].
+391 -White(g2) | -White(g3).  [resolve(210,c,73,a)].
+392 -White(g1) | -White(g5).  [resolve(210,c,72,a)].
+393 -White(g1) | -White(g4).  [resolve(210,c,71,a)].
+394 -White(g1) | -White(g3).  [resolve(210,c,70,a)].
+395 -White(g1) | -White(g2).  [resolve(210,c,69,a)].
+452 -Architecture(g1) | -Architecture(g5).  [resolve(216,c,72,a)].
+459 -Art(g5).  [resolve(217,c,75,a),unit_del(a,258)].
+461 -Art(g3).  [resolve(217,c,73,a),unit_del(a,258)].
+462 -Art(g1).  [resolve(217,c,69,a),unit_del(b,258)].
+464 -Economy(g3) | -Economy(g5).  [resolve(218,c,77,a)].
+471 -Economy(g1) | -Economy(g3).  [resolve(218,c,70,a)].
+473 -Religion(g5).  [resolve(219,c,78,a),unit_del(a,264)].
+474 -Religion(g3).  [resolve(219,c,76,a),unit_del(b,264)].
+476 -Religion(g1).  [resolve(219,c,71,a),unit_del(b,264)].
+581 Black(g1) | Green(g1) | Red(g1) | White(g1).  [resolve(256,a,196,b)].
+582 -Apple(g2) | inbetween(g2,x).  [resolve(258,a,231,a)].
+583 -Apple(x) | right(g4,x).  [resolve(262,a,233,a)].
+586 Architecture(g5) | Economy(g5) | Science(g5).  [resolve(473,a,198,d),unit_del(b,459)].
+587 Architecture(g3) | Economy(g3) | Science(g3).  [resolve(474,a,198,d),unit_del(b,461)].
+588 Architecture(g1) | Economy(g1) | Science(g1).  [resolve(476,a,198,d),unit_del(b,462)].
+590 Black(g1) | Green(g1) | Red(g1) | -Red(x) | right(x,g1).  [resolve(581,d,241,b)].
+655 -Blue(g4) | Black(g5) | Green(g5) | Red(g5) | White(g5).  [resolve(360,b,196,b)].
+656 -Blue(g3) | Black(g5) | Green(g5) | Red(g5) | White(g5).  [resolve(361,b,196,b)].
+657 Black(g5) | Green(g5) | Red(g5) | White(g5) | Black(g4) | Green(g4) | Red(g4) | White(g4).  [resolve(655,a,196,b)].
+658 Black(g5) | Green(g5) | Red(g5) | White(g5) | Black(g3) | Green(g3) | Red(g3) | White(g3).  [resolve(656,a,196,b)].
+660 -Blue(g3) | Black(g4) | Green(g4) | Red(g4) | White(g4).  [resolve(362,b,196,b)].
+661 -Blue(g2) | Black(g5) | Green(g5) | Red(g5) | White(g5).  [resolve(363,b,196,b)].
+662 -Blue(g2) | Black(g4) | Green(g4) | Red(g4) | White(g4).  [resolve(364,b,196,b)].
+663 -Blue(g2) | Black(g3) | Green(g3) | Red(g3) | White(g3).  [resolve(365,b,196,b)].
+664 Black(g4) | Green(g4) | Red(g4) | White(g4) | Black(g3) | Green(g3) | Red(g3) | White(g3).  [resolve(660,a,196,b)].
+665 Black(g5) | Green(g5) | Red(g5) | White(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2).  [resolve(661,a,196,b)].
+666 Black(g4) | Green(g4) | Red(g4) | White(g4) | Black(g2) | Green(g2) | Red(g2) | White(g2).  [resolve(662,a,196,b)].
+667 Black(g3) | Green(g3) | Red(g3) | White(g3) | Black(g2) | Green(g2) | Red(g2) | White(g2).  [resolve(663,a,196,b)].
+685 -White(g4) | Black(g1) | Green(g1) | Red(g1).  [resolve(393,a,581,d)].
+686 -White(g3) | Black(g1) | Green(g1) | Red(g1).  [resolve(394,a,581,d)].
+687 -White(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(395,a,581,d)].
+778 -Economy(g3) | Architecture(g5) | Science(g5).  [resolve(464,b,586,b)].
+781 Architecture(g5) | Science(g5) | Architecture(g3) | Science(g3).  [resolve(778,a,587,b)].
+782 Science(g5) | Architecture(g3) | Science(g3) | -Architecture(g1).  [resolve(781,a,452,b)].
+787 -Economy(g3) | Architecture(g1) | Science(g1).  [resolve(471,a,588,b)].
+790 Architecture(g1) | Science(g1) | Architecture(g3) | Science(g3).  [resolve(787,a,587,b)].
+794 Science(g1) | Architecture(g3) | Science(g3) | Science(g5).  [resolve(790,a,782,d),merge(e),merge(f)].
+799 Science(g1) | Science(g3) | Science(g5).  [resolve(794,b,249,a),unit_del(d,143)].
+802 Science(g1) | Science(g3) | -Red(x) | inbetween(g5,x).  [resolve(799,c,238,a)].
+914 Black(g5) | Green(g5) | Red(g5) | Black(g4) | Green(g4) | Red(g4) | White(g4) | -White(g1).  [resolve(657,d,392,b)].
+915 Black(g5) | Green(g5) | Red(g5) | Black(g4) | Green(g4) | Red(g4) | White(g4) | -White(g2).  [resolve(657,d,389,b)].
+916 Black(g5) | Green(g5) | Red(g5) | Black(g4) | Green(g4) | Red(g4) | White(g4) | -White(g3).  [resolve(657,d,387,b)].
+918 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | White(g3) | -White(g1).  [resolve(658,d,392,b)].
+919 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | White(g3) | -White(g2).  [resolve(658,d,389,b)].
+920 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | White(g3) | -White(g4).  [resolve(658,d,386,b)].
+923 Black(g4) | Green(g4) | Red(g4) | Black(g3) | Green(g3) | Red(g3) | White(g3) | Black(g1) | Green(g1) | Red(g1).  [resolve(664,d,685,a)].
+924 Black(g4) | Green(g4) | Red(g4) | Black(g3) | Green(g3) | Red(g3) | White(g3) | -White(g2).  [resolve(664,d,390,b)].
+929 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2) | -White(g1).  [resolve(665,d,392,b)].
+930 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2) | -White(g3).  [resolve(665,d,387,b)].
+931 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2) | -White(g4).  [resolve(665,d,386,b)].
+936 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | White(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(666,d,685,a)].
+937 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | White(g2) | -White(g3).  [resolve(666,d,388,b)].
+939 Black(g3) | Green(g3) | Red(g3) | Black(g2) | Green(g2) | Red(g2) | White(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(667,d,686,a)].
+1241 Black(g5) | Green(g5) | Red(g5) | Black(g4) | Green(g4) | Red(g4) | White(g4) | Black(g1) | Green(g1) | Red(g1).  [resolve(914,h,581,d)].
+1264 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | White(g3) | Black(g1) | Green(g1) | Red(g1).  [resolve(918,h,581,d)].
+1268 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | White(g3) | Black(g4) | Green(g4) | Red(g4).  [resolve(920,h,664,d),merge(k),merge(l),merge(m),merge(n)].
+1269 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(929,h,581,d)].
+1270 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2) | Black(g3) | Green(g3) | Red(g3).  [resolve(930,h,667,d),merge(k),merge(l),merge(m),merge(n)].
+1271 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | White(g2) | Black(g4) | Green(g4) | Red(g4).  [resolve(931,h,666,d),merge(k),merge(l),merge(m),merge(n)].
+1272 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | White(g2) | Black(g3) | Green(g3) | Red(g3).  [resolve(937,h,667,d),merge(k),merge(l),merge(m),merge(n)].
+1273 Black(g4) | Green(g4) | Red(g4) | Black(g3) | Green(g3) | Red(g3) | Black(g1) | Green(g1) | Red(g1).  [resolve(923,g,686,a),merge(j),merge(k),merge(l)].
+1274 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(936,g,687,a),merge(j),merge(k),merge(l)].
+1276 Black(g3) | Green(g3) | Red(g3) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(939,g,687,a),merge(j),merge(k),merge(l)].
+1549 Black(g5) | Green(g5) | Red(g5) | Black(g4) | Green(g4) | Red(g4) | Black(g1) | Green(g1) | Red(g1).  [resolve(1241,g,685,a),merge(j),merge(k),merge(l)].
+1552 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Red(g1) | -Green(g3).  [resolve(1274,h,374,a)].
+1554 Black(g3) | Green(g3) | Red(g3) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Red(g1) | -Green(g4).  [resolve(1276,h,373,a)].
+1556 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g1) | Green(g1) | Red(g1).  [resolve(1264,g,686,a),merge(j),merge(k),merge(l)].
+1557 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Green(g4) | Red(g4) | White(g4).  [resolve(1268,g,916,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1561 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Green(g1) | Red(g1).  [resolve(1269,g,687,a),merge(j),merge(k),merge(l)].
+1573 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | White(g3).  [resolve(1270,g,919,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1579 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Green(g4) | Red(g4) | White(g4).  [resolve(1271,g,915,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1585 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | White(g3).  [resolve(1272,g,924,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1610 Black(g5) | Red(g5) | Black(g4) | Green(g4) | Red(g4) | Black(g1) | Green(g1) | Red(g1) | -Green(g3).  [resolve(1549,b,367,b)].
+1624 Black(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g1) | Green(g1) | Red(g1) | -Green(g4).  [resolve(1556,b,366,b)].
+1626 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Green(g1) | Red(g1) | -Green(g3).  [resolve(1561,b,367,b)].
+1627 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g1) | Green(g1) | Red(g1) | -Green(g4).  [resolve(1561,b,366,b)].
+1766 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Green(g4) | Red(g4) | -White(g3).  [resolve(1557,j,388,b)].
+1769 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | -White(g2).  [resolve(1573,j,391,b)].
+1771 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Green(g4) | Red(g4) | -White(g2).  [resolve(1579,j,390,b)].
+1774 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | -White(g2).  [resolve(1585,j,391,b)].
+1849 Black(g5) | Green(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Green(g4) | Red(g4).  [resolve(1766,j,1268,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1850 Black(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Green(g4) | Red(g4) | -Green(g1).  [resolve(1849,b,372,b)].
+1854 Black(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Green(g4) | Red(g4) | Black(g1) | Red(g1).  [resolve(1850,i,1273,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+1871 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3).  [resolve(1769,j,1270,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1872 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | -Green(g1).  [resolve(1871,b,372,b)].
+1873 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | -Green(g4).  [resolve(1871,b,366,b)].
+1875 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | Black(g1) | Red(g1).  [resolve(1872,i,1276,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+1886 Black(g5) | Green(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Green(g4) | Red(g4).  [resolve(1771,j,1271,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1890 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Green(g4) | Red(g4) | -Green(g1).  [resolve(1886,b,372,b)].
+1891 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Green(g4) | Red(g4) | -Green(g3).  [resolve(1886,b,367,b)].
+1893 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Green(g4) | Red(g4) | Black(g1) | Red(g1).  [resolve(1890,i,1274,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+1909 Black(g4) | Green(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3).  [resolve(1774,j,1272,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1910 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | Black(g5) | Red(g5).  [resolve(1909,b,1873,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1911 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Green(g3) | Red(g3) | Black(g1) | Red(g1).  [resolve(1909,b,1554,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2028 Black(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Green(g1).  [resolve(1854,g,1624,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+2040 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | Green(g1).  [resolve(1875,g,1626,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+2044 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Green(g1).  [resolve(1893,g,1627,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+2062 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g5) | Red(g5) | Green(g4).  [resolve(1910,g,1891,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+2064 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | Green(g4).  [resolve(1911,g,1552,i),merge(j),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2116 Black(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | -Green(g4).  [resolve(2028,j,373,a)].
+2133 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | -Green(g3).  [resolve(2040,j,374,a)].
+2145 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | -Green(g4).  [resolve(2044,j,373,a)].
+2205 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g5) | Red(g5) | -Green(g3).  [resolve(2062,j,368,b)].
+2209 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | -Green(g3).  [resolve(2064,j,368,b)].
+2376 Black(g5) | Red(g5) | Black(g3) | Green(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1).  [resolve(2116,j,1854,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2377 Black(g5) | Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Green(g4) | Green(g1).  [resolve(2376,d,1610,i),merge(i),merge(j),merge(k),merge(m),merge(n),merge(p)].
+2405 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1).  [resolve(2133,j,1875,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2408 Black(g5) | Red(g5) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | Apple(g2).  [resolve(2405,d,235,a)].
+2412 Red(g5) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | Apple(g2) | -Black(g4).  [resolve(2408,a,350,b)].
+2425 Black(g5) | Red(g5) | Black(g2) | Green(g2) | Red(g2) | Black(g4) | Red(g4) | Black(g1) | Red(g1).  [resolve(2145,j,1893,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2427 Black(g5) | Red(g5) | Black(g2) | Red(g2) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Apple(g2).  [resolve(2425,d,235,a)].
+2428 Red(g5) | Black(g2) | Red(g2) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Apple(g2) | -Black(g3).  [resolve(2427,a,351,b)].
+2455 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g5) | Red(g5).  [resolve(2205,j,1910,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2457 Black(g4) | Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g5) | Red(g5) | Apple(g2).  [resolve(2455,d,235,a)].
+2458 Black(g4) | Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Red(g5) | Apple(g2) | -Black(g1).  [resolve(2457,g,356,b)].
+2462 Black(g4) | Red(g4) | Black(g2) | Green(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1).  [resolve(2209,j,1911,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2464 Black(g4) | Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Black(g1) | Red(g1) | Apple(g2).  [resolve(2462,d,235,a)].
+2465 Black(g4) | Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Red(g1) | Apple(g2) | Red(g5).  [resolve(2464,g,2458,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(p)].
+2469 Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Red(g1) | Apple(g2) | Red(g5) | Black(g1).  [resolve(2465,a,2412,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+2476 Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Red(g1) | Apple(g2) | Red(g5) | -Black(g4).  [resolve(2469,i,357,a)].
+2479 Red(g4) | Black(g2) | Red(g2) | Black(g3) | Red(g3) | Red(g1) | Apple(g2) | Red(g5).  [resolve(2476,i,2465,a),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2481 Red(g4) | Black(g2) | Red(g2) | Red(g3) | Red(g1) | Apple(g2) | Red(g5) | Black(g4) | Black(g1).  [resolve(2479,d,2428,i),merge(h),merge(i),merge(j),merge(l),merge(n),merge(o)].
+2488 Red(g4) | Black(g2) | Red(g2) | Red(g3) | Red(g1) | Apple(g2) | Red(g5) | Black(g4) | -Black(g3).  [resolve(2481,i,358,a)].
+2491 Red(g4) | Black(g2) | Red(g2) | Red(g3) | Red(g1) | Apple(g2) | Red(g5) | Black(g4).  [resolve(2488,i,2479,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+2492 Red(g4) | Black(g2) | Red(g2) | Red(g3) | Red(g1) | Apple(g2) | Red(g5) | -Black(g3).  [resolve(2491,h,352,b)].
+2495 Red(g4) | Black(g2) | Red(g2) | Red(g3) | Red(g1) | Apple(g2) | Red(g5).  [resolve(2492,h,2479,d),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2552 Black(g5) | Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Green(g4) | -Green(g3).  [resolve(2377,j,374,a)].
+2622 Black(g5) | Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Green(g4).  [resolve(2552,j,2376,d),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2623 Black(g5) | Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | -Green(g3).  [resolve(2622,i,368,b)].
+2625 Black(g5) | Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1).  [resolve(2623,i,2376,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2626 Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | -Black(g2).  [resolve(2625,a,353,b)].
+2629 Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Black(g1) | Red(g1) | Red(g2) | Apple(g2).  [resolve(2626,h,2495,b),merge(h),merge(j),merge(k),merge(m)].
+2630 Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | -Black(g2).  [resolve(2629,f,359,a)].
+2633 Red(g5) | Black(g3) | Red(g3) | Black(g4) | Red(g4) | Red(g1) | Red(g2) | Apple(g2).  [resolve(2630,i,2495,b),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2636 Red(g5) | Black(g3) | Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | -Black(g2).  [resolve(2633,d,354,b)].
+2641 Red(g5) | Black(g3) | Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2).  [resolve(2636,h,2495,b),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m)].
+2642 Red(g5) | Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | -Black(g2).  [resolve(2641,b,355,b)].
+2647 Red(g5) | Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2).  [resolve(2642,g,2495,b),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+2652 Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | Science(g1) | Science(g3).  [resolve(2647,a,802,c),unit_del(h,163)].
+2653 Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | Black(g1) | Green(g1).  [resolve(2647,a,590,d),merge(h),unit_del(h,194)].
+2662 Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | Black(g1) | Apple(g1).  [resolve(2653,g,235,a)].
+2667 Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | Apple(g1) | -Science(x) | right(x,g1).  [resolve(2662,f,239,a)].
+2677 Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | Apple(g1) | Science(g3).  [resolve(2667,g,2652,f),merge(h),merge(i),merge(j),merge(k),merge(l),unit_del(g,184)].
+2678 Red(g3) | Red(g4) | Red(g1) | Red(g2) | Apple(g2) | Apple(g1).  [resolve(2677,g,2667,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l),unit_del(g,189)].
+2681 Red(g3) | Red(g4) | Red(g2) | Apple(g2) | Apple(g1) | Science(g1) | Science(g3).  [resolve(2678,c,802,c),unit_del(h,169)].
+2684 Red(g3) | Red(g4) | Red(g2) | Apple(g2) | Apple(g1) | Science(g3) | -Red(x) | inbetween(g1,x).  [resolve(2681,f,238,a)].
+2685 Red(g3) | Red(g4) | Red(g2) | Apple(g2) | Apple(g1) | Science(g3).  [resolve(2684,g,2678,c),merge(h),merge(i),merge(j),merge(k),merge(l),unit_del(g,159)].
+2687 Red(g3) | Red(g4) | Red(g2) | Apple(g2) | Apple(g1).  [resolve(2685,f,248,a),unit_del(f,143)].
+2692 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Science(g1) | Science(g3).  [resolve(2687,b,802,c),unit_del(g,158)].
+2693 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Black(g1) | Green(g1) | Red(g1).  [resolve(2687,b,590,d),unit_del(h,192)].
+2697 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Science(g3) | -Red(x) | inbetween(g1,x).  [resolve(2692,e,238,a)].
+2700 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Black(g1) | Red(g1).  [resolve(2693,f,235,a),merge(g)].
+2705 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Red(g1) | -Science(x) | right(x,g1).  [resolve(2700,e,239,a)].
+2709 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Red(g1) | Science(g3).  [resolve(2705,f,2692,e),merge(g),merge(h),merge(i),merge(j),unit_del(f,184)].
+2710 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Red(g1).  [resolve(2709,f,2705,f),merge(f),merge(g),merge(h),merge(i),merge(j),unit_del(f,189)].
+2711 Red(g3) | Red(g2) | Apple(g2) | Apple(g1) | Science(g3).  [resolve(2710,e,2697,f),merge(e),merge(f),merge(g),merge(h),unit_del(f,159)].
+2714 Red(g3) | Red(g2) | Apple(g2) | Apple(g1).  [resolve(2711,e,248,a),unit_del(e,143)].
+2719 Red(g2) | Apple(g2) | Apple(g1) | Science(g1) | Science(g3).  [resolve(2714,a,802,c),unit_del(f,166)].
+2720 Red(g2) | Apple(g2) | Apple(g1) | Black(g1) | Green(g1) | Red(g1).  [resolve(2714,a,590,d),unit_del(g,189)].
+2725 Red(g2) | Apple(g2) | Apple(g1) | Science(g3) | -Red(x) | inbetween(g1,x).  [resolve(2719,d,238,a)].
+2728 Red(g2) | Apple(g2) | Apple(g1) | Black(g1) | Red(g1).  [resolve(2720,e,235,a),merge(f)].
+2733 Red(g2) | Apple(g2) | Apple(g1) | Red(g1) | -Science(x) | right(x,g1).  [resolve(2728,d,239,a)].
+2738 Red(g2) | Apple(g2) | Apple(g1) | Red(g1) | Science(g3).  [resolve(2733,e,2719,d),merge(f),merge(g),merge(h),unit_del(e,184)].
+2739 Red(g2) | Apple(g2) | Apple(g1) | Red(g1).  [resolve(2738,e,2733,e),merge(e),merge(f),merge(g),merge(h),unit_del(e,189)].
+2740 Red(g2) | Apple(g2) | Apple(g1) | Science(g3).  [resolve(2739,d,2725,e),merge(d),merge(e),merge(f),unit_del(e,159)].
+2747 Red(g2) | Apple(g2) | Apple(g1).  [resolve(2740,d,248,a),unit_del(d,143)].
+2751 Apple(g2) | Apple(g1) | Science(g1) | Science(g3).  [resolve(2747,a,802,c),unit_del(e,168)].
+2757 Apple(g2) | Apple(g1) | Science(g3) | -Red(x) | inbetween(g1,x).  [resolve(2751,c,238,a)].
+2769 Apple(g2) | Apple(g1) | Science(g3).  [resolve(2757,d,2747,a),merge(e),merge(f),unit_del(d,151)].
+2773 Apple(g2) | Apple(g1).  [resolve(2769,c,248,a),unit_del(c,143)].
+2774 Apple(g2).  [resolve(2773,b,583,a),unit_del(b,192)].
+2775 inbetween(g2,x).  [back_unit_del(582),unit_del(a,2774)].
+2776 $F.  [resolve(2775,a,160,a)].
+
+============================== end of proof ==========================

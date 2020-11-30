@@ -1,0 +1,385 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 2812 was started by iulia on DESKTOP-6AB8R6E,
+Fri Nov 27 13:45:53 2020
+The command was "/cygdrive/c/Program Files (x86)/Prover9-Mace4/bin-win32/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.45 (+ 0.25) seconds.
+% Length of proof is 365.
+% Level of proof is 84.
+% Maximum clause weight is 18.
+% Given clauses 1670.
+
+2 Georgina(x) & Georgina(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+5 Jo(x) & Jo(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+6 Lucy(x) & Lucy(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+7 Blue(x) & Blue(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+8 Green(x) & Green(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+9 Lilac(x) & Lilac(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+10 Pink(x) & Pink(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+12 Boost(x) & Boost(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+13 Crunchies(x) & Crunchies(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+14 DairyMilk(x) & DairyMilk(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+15 MilkyBars(x) & MilkyBars(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+16 WispaBites(x) & WispaBites(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+19 Horse(x) & Horse(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+20 Puppy(x) & Puppy(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+21 Rabbit(x) & Rabbit(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+24 Swimming(x) & Swimming(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+27 Australia(x) & Australia(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+28 Canada(x) & Canada(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+29 Florida(x) & Florida(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+31 Tobago(x) & Tobago(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+32 Jo(x) -> WispaBites(x) # label(non_clause).  [assumption].
+33 Hamster(x) -> Swimming(x) # label(non_clause).  [assumption].
+34 Hannah(x) -> DairyMilk(x) # label(non_clause).  [assumption].
+35 Jessica(x) & Georgina(y) -> directlyright(x,y) # label(non_clause).  [assumption].
+36 Girl1(x) -> Lucy(x) # label(non_clause).  [assumption].
+37 Girl5(x) -> Swimming(x) # label(non_clause).  [assumption].
+38 MilkyBars(x) -> Horse(x) # label(non_clause).  [assumption].
+39 Girl3(x) -> DairyMilk(x) # label(non_clause).  [assumption].
+40 Jessica(x) -> Green(x) # label(non_clause).  [assumption].
+41 Girl2(x) -> Tobago(x) # label(non_clause).  [assumption].
+42 Maldives(x) -> Lilac(x) # label(non_clause).  [assumption].
+43 WispaBites(x) & Florida(y) -> nextto(y,x) # label(non_clause).  [assumption].
+44 Pink(x) -> Florida(x) # label(non_clause).  [assumption].
+45 Girl1(x) -> Lilac(x) # label(non_clause).  [assumption].
+46 Blue(x) -> Puppy(x) # label(non_clause).  [assumption].
+49 MilkyBars(x) & Boost(y) -> nextto(x,y) # label(non_clause).  [assumption].
+50 Purple(x) -> Canada(x) # label(non_clause).  [assumption].
+51 Crunchies(x) -> Rabbit(x) # label(non_clause).  [assumption].
+53 Jessica(x) -> Australia(x) # label(non_clause).  [assumption].
+54 Girl3(g3) -> Crocodile(g3) # label(non_clause) # label(goal).  [goal].
+55 -Girl1(x) | Lucy(x).  [clausify(36)].
+56 Girl1(0).  [assumption].
+58 -Girl1(x) | Lilac(x).  [clausify(45)].
+59 -Girl2(x) | Tobago(x).  [clausify(41)].
+60 Girl2(1).  [assumption].
+63 -Girl3(x) | DairyMilk(x).  [clausify(39)].
+64 Girl3(2).  [assumption].
+68 -Girl5(x) | Swimming(x).  [clausify(37)].
+69 Girl5(4).  [assumption].
+70 differentFrom(g1,g2).  [assumption].
+71 differentFrom(g1,g3).  [assumption].
+72 differentFrom(g1,g4).  [assumption].
+73 differentFrom(g1,g5).  [assumption].
+74 differentFrom(g2,g3).  [assumption].
+75 differentFrom(g2,g4).  [assumption].
+76 differentFrom(g2,g5).  [assumption].
+77 differentFrom(g3,g4).  [assumption].
+78 differentFrom(g3,g5).  [assumption].
+79 differentFrom(g4,g5).  [assumption].
+81 g1 = 0.  [assumption].
+82 0 = g1.  [copy(81),flip(a)].
+83 g2 = 1.  [assumption].
+84 1 = g2.  [copy(83),flip(a)].
+85 g3 = 2.  [assumption].
+86 2 = g3.  [copy(85),flip(a)].
+89 g5 = 4.  [assumption].
+90 4 = g5.  [copy(89),flip(a)].
+104 -directlyright(g4,g2).  [assumption].
+109 -directlyright(g5,g4).  [assumption].
+113 -directlyright(g5,g2).  [assumption].
+125 -nextto(g2,g2).  [assumption].
+138 -nextto(g5,g2).  [assumption].
+140 -nextto(g5,g1).  [assumption].
+141 Georgina(x) | Hannah(x) | Jessica(x) | Jo(x) | Lucy(x).  [assumption].
+142 Blue(x) | Green(x) | Lilac(x) | Pink(x) | Purple(x).  [assumption].
+143 Boost(x) | Crunchies(x) | DairyMilk(x) | MilkyBars(x) | WispaBites(x).  [assumption].
+144 Crocodile(x) | Hamster(x) | Horse(x) | Puppy(x) | Rabbit(x).  [assumption].
+146 Australia(x) | Canada(x) | Florida(x) | Maldives(x) | Tobago(x).  [assumption].
+147 -Georgina(x) | -Georgina(y) | -differentFrom(x,y).  [clausify(2)].
+150 -Jo(x) | -Jo(y) | -differentFrom(x,y).  [clausify(5)].
+151 -Lucy(x) | -Lucy(y) | -differentFrom(x,y).  [clausify(6)].
+152 -Blue(x) | -Blue(y) | -differentFrom(x,y).  [clausify(7)].
+153 -Green(x) | -Green(y) | -differentFrom(x,y).  [clausify(8)].
+154 -Lilac(x) | -Lilac(y) | -differentFrom(x,y).  [clausify(9)].
+155 -Pink(x) | -Pink(y) | -differentFrom(x,y).  [clausify(10)].
+157 -Boost(x) | -Boost(y) | -differentFrom(x,y).  [clausify(12)].
+158 -Crunchies(x) | -Crunchies(y) | -differentFrom(x,y).  [clausify(13)].
+159 -DairyMilk(x) | -DairyMilk(y) | -differentFrom(x,y).  [clausify(14)].
+160 -MilkyBars(x) | -MilkyBars(y) | -differentFrom(x,y).  [clausify(15)].
+161 -WispaBites(x) | -WispaBites(y) | -differentFrom(x,y).  [clausify(16)].
+164 -Horse(x) | -Horse(y) | -differentFrom(x,y).  [clausify(19)].
+165 -Puppy(x) | -Puppy(y) | -differentFrom(x,y).  [clausify(20)].
+166 -Rabbit(x) | -Rabbit(y) | -differentFrom(x,y).  [clausify(21)].
+169 -Swimming(x) | -Swimming(y) | -differentFrom(x,y).  [clausify(24)].
+172 -Australia(x) | -Australia(y) | -differentFrom(x,y).  [clausify(27)].
+173 -Canada(x) | -Canada(y) | -differentFrom(x,y).  [clausify(28)].
+174 -Florida(x) | -Florida(y) | -differentFrom(x,y).  [clausify(29)].
+176 -Tobago(x) | -Tobago(y) | -differentFrom(x,y).  [clausify(31)].
+177 -Jo(x) | WispaBites(x).  [clausify(32)].
+178 -Hamster(x) | Swimming(x).  [clausify(33)].
+179 -Hannah(x) | DairyMilk(x).  [clausify(34)].
+180 -Jessica(x) | -Georgina(y) | directlyright(x,y).  [clausify(35)].
+181 -MilkyBars(x) | Horse(x).  [clausify(38)].
+182 -Jessica(x) | Green(x).  [clausify(40)].
+183 -Maldives(x) | Lilac(x).  [clausify(42)].
+184 -WispaBites(x) | -Florida(y) | nextto(y,x).  [clausify(43)].
+185 -Pink(x) | Florida(x).  [clausify(44)].
+186 -Blue(x) | Puppy(x).  [clausify(46)].
+189 -MilkyBars(x) | -Boost(y) | nextto(x,y).  [clausify(49)].
+190 -Purple(x) | Canada(x).  [clausify(50)].
+191 -Crunchies(x) | Rabbit(x).  [clausify(51)].
+193 -Jessica(x) | Australia(x).  [clausify(53)].
+194 -Crocodile(g3).  [deny(54)].
+195 Lucy(0).  [resolve(55,a,56,a)].
+196 Lucy(g1).  [copy(195),rewrite([82(1)])].
+197 Lilac(0).  [resolve(58,a,56,a)].
+198 Lilac(g1).  [copy(197),rewrite([82(1)])].
+199 Tobago(1).  [resolve(59,a,60,a)].
+200 Tobago(g2).  [copy(199),rewrite([84(1)])].
+201 DairyMilk(2).  [resolve(63,a,64,a)].
+202 DairyMilk(g3).  [copy(201),rewrite([86(1)])].
+203 Swimming(4).  [resolve(68,a,69,a)].
+204 Swimming(g5).  [copy(203),rewrite([90(1)])].
+245 -Georgina(g4) | -Georgina(g5).  [resolve(147,c,79,a)].
+248 -Georgina(g2) | -Georgina(g5).  [resolve(147,c,76,a)].
+249 -Georgina(g2) | -Georgina(g4).  [resolve(147,c,75,a)].
+275 -Jo(g4) | -Jo(g5).  [resolve(150,c,79,a)].
+291 -Lucy(g5).  [resolve(151,c,73,a),unit_del(a,196)].
+292 -Lucy(g4).  [resolve(151,c,72,a),unit_del(a,196)].
+294 -Lucy(g2).  [resolve(151,c,70,a),unit_del(a,196)].
+296 -Blue(g3) | -Blue(g5).  [resolve(152,c,78,a)].
+300 -Blue(g2) | -Blue(g3).  [resolve(152,c,74,a)].
+305 -Green(g4) | -Green(g5).  [resolve(153,c,79,a)].
+307 -Green(g3) | -Green(g4).  [resolve(153,c,77,a)].
+309 -Green(g2) | -Green(g4).  [resolve(153,c,75,a)].
+321 -Lilac(g5).  [resolve(154,c,73,a),unit_del(a,198)].
+322 -Lilac(g4).  [resolve(154,c,72,a),unit_del(a,198)].
+323 -Lilac(g3).  [resolve(154,c,71,a),unit_del(a,198)].
+324 -Lilac(g2).  [resolve(154,c,70,a),unit_del(a,198)].
+326 -Pink(g3) | -Pink(g5).  [resolve(155,c,78,a)].
+328 -Pink(g2) | -Pink(g5).  [resolve(155,c,76,a)].
+330 -Pink(g2) | -Pink(g3).  [resolve(155,c,74,a)].
+345 -Boost(g4) | -Boost(g5).  [resolve(157,c,79,a)].
+351 -Boost(g1) | -Boost(g5).  [resolve(157,c,73,a)].
+352 -Boost(g1) | -Boost(g4).  [resolve(157,c,72,a)].
+355 -Crunchies(g4) | -Crunchies(g5).  [resolve(158,c,79,a)].
+361 -Crunchies(g1) | -Crunchies(g5).  [resolve(158,c,73,a)].
+362 -Crunchies(g1) | -Crunchies(g4).  [resolve(158,c,72,a)].
+366 -DairyMilk(g5).  [resolve(159,c,78,a),unit_del(a,202)].
+367 -DairyMilk(g4).  [resolve(159,c,77,a),unit_del(a,202)].
+368 -DairyMilk(g2).  [resolve(159,c,74,a),unit_del(b,202)].
+369 -DairyMilk(g1).  [resolve(159,c,71,a),unit_del(b,202)].
+370 -MilkyBars(g4) | -MilkyBars(g5).  [resolve(160,c,79,a)].
+376 -MilkyBars(g1) | -MilkyBars(g5).  [resolve(160,c,73,a)].
+377 -MilkyBars(g1) | -MilkyBars(g4).  [resolve(160,c,72,a)].
+383 -WispaBites(g2) | -WispaBites(g5).  [resolve(161,c,76,a)].
+384 -WispaBites(g2) | -WispaBites(g4).  [resolve(161,c,75,a)].
+389 -WispaBites(g1) | -WispaBites(g2).  [resolve(161,c,70,a)].
+407 -Horse(g3) | -Horse(g5).  [resolve(164,c,78,a)].
+408 -Horse(g3) | -Horse(g4).  [resolve(164,c,77,a)].
+414 -Horse(g1) | -Horse(g3).  [resolve(164,c,71,a)].
+417 -Puppy(g3) | -Puppy(g5).  [resolve(165,c,78,a)].
+421 -Puppy(g2) | -Puppy(g3).  [resolve(165,c,74,a)].
+427 -Rabbit(g3) | -Rabbit(g5).  [resolve(166,c,78,a)].
+428 -Rabbit(g3) | -Rabbit(g4).  [resolve(166,c,77,a)].
+434 -Rabbit(g1) | -Rabbit(g3).  [resolve(166,c,71,a)].
+457 -Swimming(g3).  [resolve(169,c,78,a),unit_del(b,204)].
+480 -Australia(g4) | -Australia(g5).  [resolve(172,c,79,a)].
+483 -Australia(g2) | -Australia(g5).  [resolve(172,c,76,a)].
+484 -Australia(g2) | -Australia(g4).  [resolve(172,c,75,a)].
+485 -Australia(g2) | -Australia(g3).  [resolve(172,c,74,a)].
+490 -Canada(g4) | -Canada(g5).  [resolve(173,c,79,a)].
+491 -Canada(g3) | -Canada(g5).  [resolve(173,c,78,a)].
+492 -Canada(g3) | -Canada(g4).  [resolve(173,c,77,a)].
+493 -Canada(g2) | -Canada(g5).  [resolve(173,c,76,a)].
+495 -Canada(g2) | -Canada(g3).  [resolve(173,c,74,a)].
+500 -Florida(g4) | -Florida(g5).  [resolve(174,c,79,a)].
+501 -Florida(g3) | -Florida(g5).  [resolve(174,c,78,a)].
+502 -Florida(g3) | -Florida(g4).  [resolve(174,c,77,a)].
+523 -Tobago(g5).  [resolve(176,c,76,a),unit_del(a,200)].
+524 -Tobago(g4).  [resolve(176,c,75,a),unit_del(a,200)].
+525 -Tobago(g3).  [resolve(176,c,74,a),unit_del(a,200)].
+528 Canada(x) | Blue(x) | Green(x) | Lilac(x) | Pink(x).  [resolve(190,a,142,e)].
+529 Rabbit(x) | Boost(x) | DairyMilk(x) | MilkyBars(x) | WispaBites(x).  [resolve(191,a,143,b)].
+530 Hamster(g3) | Horse(g3) | Puppy(g3) | Rabbit(g3).  [resolve(194,a,144,a)].
+531 Georgina(g5) | Hannah(g5) | Jessica(g5) | Jo(g5).  [resolve(291,a,141,e)].
+532 Georgina(g4) | Hannah(g4) | Jessica(g4) | Jo(g4).  [resolve(292,a,141,e)].
+534 Georgina(g2) | Hannah(g2) | Jessica(g2) | Jo(g2).  [resolve(294,a,141,e)].
+535 Georgina(g5) | Hannah(g5) | Jessica(g5) | WispaBites(g5).  [resolve(531,d,177,a)].
+536 Georgina(g4) | Hannah(g4) | Jessica(g4) | WispaBites(g4).  [resolve(532,d,177,a)].
+538 Georgina(g2) | Hannah(g2) | Jessica(g2) | WispaBites(g2).  [resolve(534,d,177,a)].
+539 Georgina(g5) | Jessica(g5) | WispaBites(g5).  [resolve(535,b,179,a),unit_del(d,366)].
+541 Jessica(g5) | WispaBites(g5) | -Georgina(g4).  [resolve(539,a,245,b)].
+543 Australia(g5) | Canada(g5) | Florida(g5) | Maldives(g5).  [resolve(523,a,146,e)].
+544 Australia(g4) | Canada(g4) | Florida(g4) | Maldives(g4).  [resolve(524,a,146,e)].
+545 Australia(g3) | Canada(g3) | Florida(g3) | Maldives(g3).  [resolve(525,a,146,e)].
+547 Georgina(g4) | Jessica(g4) | WispaBites(g4).  [resolve(536,b,179,a),unit_del(d,367)].
+548 Jessica(g4) | WispaBites(g4) | Jessica(g5) | WispaBites(g5).  [resolve(547,a,541,c)].
+550 Jessica(g4) | WispaBites(g4) | -Jessica(x) | directlyright(x,g4).  [resolve(547,a,180,b)].
+554 Georgina(g2) | Jessica(g2) | WispaBites(g2).  [resolve(538,b,179,a),unit_del(d,368)].
+558 Jessica(g2) | WispaBites(g2) | -Jessica(x) | directlyright(x,g2).  [resolve(554,a,180,b)].
+559 Australia(g5) | Canada(g5) | Florida(g5).  [resolve(543,d,183,a),unit_del(d,321)].
+560 Australia(g4) | Canada(g4) | Florida(g4).  [resolve(544,d,183,a),unit_del(d,322)].
+561 Australia(g3) | Canada(g3) | Florida(g3).  [resolve(545,d,183,a),unit_del(d,323)].
+565 -Jo(g4) | Georgina(g5) | Hannah(g5) | Jessica(g5).  [resolve(275,b,531,d)].
+568 Georgina(g5) | Hannah(g5) | Jessica(g5) | Georgina(g4) | Hannah(g4) | Jessica(g4).  [resolve(565,a,532,d)].
+571 Canada(x) | Blue(x) | Green(x) | Lilac(x) | Florida(x).  [resolve(528,e,185,a)].
+582 Georgina(g5) | Jessica(g5) | Georgina(g4) | Hannah(g4) | Jessica(g4).  [resolve(568,b,179,a),unit_del(f,366)].
+585 Georgina(g5) | Jessica(g5) | Georgina(g4) | Jessica(g4).  [resolve(582,d,179,a),unit_del(e,367)].
+587 Jessica(g5) | Georgina(g4) | Jessica(g4) | -Georgina(g2).  [resolve(585,a,248,b)].
+590 -Green(g4) | Canada(g5) | Blue(g5) | Florida(g5).  [resolve(305,b,571,c),unit_del(d,321)].
+593 Jessica(g5) | Georgina(g4) | Jessica(g4) | Jessica(g2) | WispaBites(g2).  [resolve(587,d,554,a)].
+604 -Pink(g3) | Canada(g5) | Blue(g5) | Green(g5).  [resolve(326,b,528,e),unit_del(e,321)].
+608 Canada(g5) | Blue(g5) | Green(g5) | Canada(g3) | Blue(g3) | Green(g3).  [resolve(604,a,528,e),unit_del(g,323)].
+609 -Pink(g2) | Canada(g5) | Blue(g5) | Green(g5).  [resolve(328,b,528,e),unit_del(e,321)].
+611 -Pink(g3) | Canada(g2) | Blue(g2) | Green(g2).  [resolve(330,a,528,e),unit_del(e,324)].
+614 Canada(g5) | Blue(g5) | Green(g5) | Canada(g2) | Blue(g2) | Green(g2).  [resolve(609,a,528,e),unit_del(g,324)].
+616 Canada(g2) | Blue(g2) | Green(g2) | Canada(g3) | Blue(g3) | Green(g3).  [resolve(611,a,528,e),unit_del(g,323)].
+630 Jessica(g5) | Jessica(g4) | Jessica(g2) | WispaBites(g2) | -Georgina(g2).  [resolve(593,b,249,b)].
+632 Jessica(g5) | Jessica(g4) | Jessica(g2) | WispaBites(g2).  [resolve(630,e,554,a),merge(e),merge(f)].
+640 -Crunchies(g4) | Boost(g5) | MilkyBars(g5) | WispaBites(g5).  [resolve(355,b,143,b),unit_del(c,366)].
+643 Boost(g5) | MilkyBars(g5) | WispaBites(g5) | Boost(g4) | MilkyBars(g4) | WispaBites(g4).  [resolve(640,a,143,b),unit_del(e,367)].
+647 -Crunchies(g1) | Boost(g5) | MilkyBars(g5) | WispaBites(g5).  [resolve(361,b,143,b),unit_del(c,366)].
+648 -Crunchies(g4) | Boost(g1) | MilkyBars(g1) | WispaBites(g1).  [resolve(362,a,143,b),unit_del(c,369)].
+651 Boost(g5) | MilkyBars(g5) | WispaBites(g5) | Boost(g1) | MilkyBars(g1) | WispaBites(g1).  [resolve(647,a,143,b),unit_del(e,369)].
+654 Boost(g1) | MilkyBars(g1) | WispaBites(g1) | Boost(g4) | MilkyBars(g4) | WispaBites(g4).  [resolve(648,a,143,b),unit_del(e,367)].
+671 -WispaBites(g2) | Jessica(g4) | WispaBites(g4) | Jessica(g5).  [resolve(383,b,548,d)].
+675 Jessica(g4) | WispaBites(g4) | Jessica(g5) | Jessica(g2).  [resolve(671,a,632,d),merge(d),merge(e)].
+679 Jessica(g4) | Jessica(g5) | Jessica(g2) | -WispaBites(g2).  [resolve(675,b,384,b)].
+681 Jessica(g4) | Jessica(g5) | Jessica(g2).  [resolve(679,d,632,d),merge(d),merge(e),merge(f)].
+682 Jessica(g4) | Jessica(g2) | WispaBites(g2).  [resolve(681,b,558,c),merge(c),unit_del(d,113)].
+683 Jessica(g4) | Jessica(g2) | WispaBites(g4).  [resolve(681,b,550,c),merge(c),unit_del(d,109)].
+693 Jessica(g4) | Jessica(g2) | -WispaBites(g2).  [resolve(683,c,384,b)].
+699 Jessica(g4) | Jessica(g2).  [resolve(693,c,682,c),merge(c),merge(d)].
+700 Jessica(g2) | WispaBites(g2).  [resolve(699,a,558,c),merge(b),unit_del(c,104)].
+702 Jessica(g2) | Australia(g4).  [resolve(699,a,193,a)].
+703 Jessica(g2) | Green(g4).  [resolve(699,a,182,a)].
+705 Jessica(g2) | -Florida(x) | nextto(x,g2).  [resolve(700,b,184,a)].
+706 Jessica(g2) | Canada(g5) | Blue(g5) | Florida(g5).  [resolve(703,b,590,a)].
+707 Jessica(g2) | -Green(g2).  [resolve(703,b,309,b)].
+708 Jessica(g2) | -Green(g3).  [resolve(703,b,307,b)].
+709 Jessica(g2) | Canada(g2) | Blue(g2) | Florida(g2).  [resolve(707,b,571,c),unit_del(d,324)].
+716 -Rabbit(g3) | Boost(g5) | MilkyBars(g5) | WispaBites(g5).  [resolve(427,b,529,a),unit_del(c,366)].
+717 Boost(g5) | MilkyBars(g5) | WispaBites(g5) | Hamster(g3) | Horse(g3) | Puppy(g3).  [resolve(716,a,530,d)].
+720 -Rabbit(g3) | Boost(g4) | MilkyBars(g4) | WispaBites(g4).  [resolve(428,b,529,a),unit_del(c,367)].
+725 Boost(g4) | MilkyBars(g4) | WispaBites(g4) | Hamster(g3) | Horse(g3) | Puppy(g3).  [resolve(720,a,530,d)].
+728 -Rabbit(g3) | Boost(g1) | MilkyBars(g1) | WispaBites(g1).  [resolve(434,a,529,a),unit_del(c,369)].
+730 Boost(g1) | MilkyBars(g1) | WispaBites(g1) | Hamster(g3) | Horse(g3) | Puppy(g3).  [resolve(728,a,530,d)].
+737 Canada(g5) | Blue(g5) | Canada(g3) | Blue(g3) | Green(g3) | -Green(g4).  [resolve(608,c,305,b)].
+742 Canada(g5) | Blue(g5) | Canada(g2) | Blue(g2) | Green(g2) | -Green(g4).  [resolve(614,c,305,b)].
+745 Canada(g2) | Blue(g2) | Canada(g3) | Blue(g3) | Green(g3) | Jessica(g2).  [resolve(616,c,707,b)].
+769 MilkyBars(g5) | WispaBites(g5) | Boost(g4) | MilkyBars(g4) | WispaBites(g4) | -Boost(g1).  [resolve(643,a,351,b)].
+787 MilkyBars(g5) | WispaBites(g5) | Boost(g1) | MilkyBars(g1) | WispaBites(g1) | -Boost(g4).  [resolve(651,a,345,b)].
+797 MilkyBars(g1) | WispaBites(g1) | Boost(g4) | MilkyBars(g4) | WispaBites(g4) | -MilkyBars(x) | nextto(x,g1).  [resolve(654,a,189,b)].
+806 -Canada(g4) | Australia(g5) | Florida(g5).  [resolve(490,b,559,b)].
+810 -Canada(g3) | Australia(g5) | Florida(g5).  [resolve(491,b,559,b)].
+813 Australia(g5) | Florida(g5) | Australia(g4) | Florida(g4).  [resolve(806,a,560,b)].
+815 Australia(g5) | Florida(g5) | Australia(g3) | Florida(g3).  [resolve(810,a,561,b)].
+819 -Canada(g3) | Australia(g4) | Florida(g4).  [resolve(492,b,560,b)].
+820 -Canada(g2) | Jessica(g2) | Blue(g5) | Florida(g5).  [resolve(493,b,706,b)].
+823 -Canada(g2) | Australia(g5) | Florida(g5).  [resolve(493,b,559,b)].
+832 Australia(g4) | Florida(g4) | Australia(g3) | Florida(g3).  [resolve(819,a,561,b)].
+833 Australia(g5) | Florida(g5) | Jessica(g2) | Blue(g2) | Florida(g2).  [resolve(823,a,709,b)].
+837 Florida(g5) | Australia(g4) | Florida(g4) | -Australia(g2).  [resolve(813,a,483,b)].
+840 Florida(g5) | Australia(g3) | Florida(g3) | -Australia(g2).  [resolve(815,a,483,b)].
+842 Jessica(g2) | Blue(g5) | Florida(g5) | Blue(g2) | Florida(g2).  [resolve(820,a,709,b),merge(d)].
+845 Florida(g4) | Australia(g3) | Florida(g3) | -Australia(g2).  [resolve(832,a,484,b)].
+865 Australia(g5) | Florida(g5) | Jessica(g2) | Florida(g2) | Puppy(g2).  [resolve(833,d,186,a)].
+867 Jessica(g2) | Florida(g5) | Blue(g2) | Florida(g2) | -Blue(g3).  [resolve(842,b,296,b)].
+876 Australia(g5) | Florida(g5) | Jessica(g2) | Florida(g2) | -Puppy(g3).  [resolve(865,e,421,a)].
+887 Australia(g5) | Florida(g5) | Jessica(g2) | Florida(g2) | Boost(g5) | MilkyBars(g5) | WispaBites(g5) | Hamster(g3) | Horse(g3).  [resolve(876,e,717,f)].
+893 Boost(g4) | MilkyBars(g4) | WispaBites(g4) | Hamster(g3) | Horse(g3) | Australia(g5) | Florida(g5) | Jessica(g2) | Florida(g2).  [resolve(725,f,876,e)].
+898 Boost(g1) | MilkyBars(g1) | WispaBites(g1) | Hamster(g3) | Horse(g3) | Australia(g5) | Florida(g5) | Jessica(g2) | Florida(g2).  [resolve(730,f,876,e)].
+902 Canada(g5) | Blue(g5) | Canada(g3) | Blue(g3) | Green(g3) | Jessica(g2).  [resolve(737,f,703,b)].
+906 Canada(g5) | Blue(g5) | Canada(g2) | Blue(g2) | Green(g2) | Jessica(g2).  [resolve(742,f,703,b)].
+910 Canada(g2) | Blue(g2) | Canada(g3) | Blue(g3) | Jessica(g2).  [resolve(745,e,708,b),merge(f)].
+950 MilkyBars(g5) | WispaBites(g5) | Boost(g4) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | WispaBites(g1).  [resolve(769,f,654,a),merge(h),merge(i),merge(j)].
+1012 Canada(g5) | Blue(g5) | Canada(g3) | Blue(g3) | Jessica(g2).  [resolve(902,e,708,b),merge(f)].
+1014 Blue(g5) | Canada(g3) | Blue(g3) | Jessica(g2) | -Canada(g2).  [resolve(1012,a,493,b)].
+1017 Blue(g5) | Canada(g3) | Blue(g3) | Jessica(g2) | Blue(g2).  [resolve(1014,e,910,a),merge(f),merge(g),merge(h)].
+1047 Canada(g5) | Blue(g5) | Canada(g2) | Blue(g2) | Jessica(g2).  [resolve(906,e,707,b),merge(f)].
+1051 Blue(g5) | Canada(g2) | Blue(g2) | Jessica(g2) | -Canada(g3).  [resolve(1047,a,491,b)].
+1053 Blue(g5) | Canada(g2) | Blue(g2) | Jessica(g2) | Blue(g3).  [resolve(1051,e,1017,b),merge(e),merge(g),merge(h)].
+1055 Blue(g5) | Blue(g2) | Jessica(g2) | Blue(g3) | -Canada(g3).  [resolve(1053,b,495,a)].
+1056 Blue(g5) | Blue(g2) | Jessica(g2) | Blue(g3).  [resolve(1055,e,1017,b),merge(e),merge(f),merge(g),merge(h)].
+1059 Blue(g2) | Jessica(g2) | Blue(g3) | Puppy(g5).  [resolve(1056,a,186,a)].
+1064 Blue(g2) | Jessica(g2) | Blue(g3) | -Puppy(g3).  [resolve(1059,d,417,b)].
+1066 Blue(g2) | Jessica(g2) | Blue(g3) | Boost(g1) | MilkyBars(g1) | WispaBites(g1) | Hamster(g3) | Horse(g3).  [resolve(1064,d,730,f)].
+1067 Blue(g2) | Jessica(g2) | Blue(g3) | Boost(g4) | MilkyBars(g4) | WispaBites(g4) | Hamster(g3) | Horse(g3).  [resolve(1064,d,725,f)].
+1197 MilkyBars(g5) | WispaBites(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | WispaBites(g1) | Boost(g1).  [resolve(950,c,787,f),merge(g),merge(h),merge(j),merge(k)].
+1324 MilkyBars(g5) | WispaBites(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | WispaBites(g1) | -Boost(g4).  [resolve(1197,g,352,a)].
+1491 MilkyBars(g5) | WispaBites(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | WispaBites(g1).  [resolve(1324,g,950,c),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+1492 MilkyBars(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | WispaBites(g1) | -WispaBites(g2).  [resolve(1491,b,383,b)].
+1495 MilkyBars(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | WispaBites(g1) | Jessica(g2).  [resolve(1492,f,700,b)].
+1496 MilkyBars(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | Jessica(g2) | -WispaBites(g2).  [resolve(1495,e,389,a)].
+1498 MilkyBars(g5) | MilkyBars(g4) | WispaBites(g4) | MilkyBars(g1) | Jessica(g2).  [resolve(1496,f,700,b),merge(f)].
+1499 MilkyBars(g5) | MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | -WispaBites(g2).  [resolve(1498,c,384,b)].
+1501 MilkyBars(g5) | MilkyBars(g4) | MilkyBars(g1) | Jessica(g2).  [resolve(1499,e,700,b),merge(e)].
+1502 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | WispaBites(g1) | Boost(g4) | WispaBites(g4).  [resolve(1501,a,797,f),merge(d),merge(g),unit_del(g,140)].
+1505 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Horse(g5).  [resolve(1501,a,181,a)].
+1508 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | -Horse(g3).  [resolve(1505,d,407,b)].
+1512 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g2) | Blue(g3) | Boost(g4) | WispaBites(g4) | Hamster(g3).  [resolve(1508,d,1067,h),merge(e),merge(h)].
+1513 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g2) | Blue(g3) | Boost(g1) | WispaBites(g1) | Hamster(g3).  [resolve(1508,d,1066,h),merge(e),merge(h)].
+1786 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | -Boost(g4).  [resolve(1513,f,352,a)].
+1817 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4).  [resolve(1786,h,1512,f),merge(h),merge(i),merge(j),merge(k),merge(l),merge(n)].
+1821 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | Puppy(g2).  [resolve(1817,d,186,a)].
+1822 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | -Puppy(g3).  [resolve(1821,h,421,a)].
+1823 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | Boost(g1) | Horse(g3).  [resolve(1822,h,730,f),merge(i),merge(j),merge(k)].
+2037 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | Boost(g1).  [resolve(1823,i,1508,d),merge(i),merge(j),merge(k)].
+2038 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | -Boost(g4).  [resolve(2037,h,352,a)].
+2043 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Blue(g3) | WispaBites(g1) | Hamster(g3) | WispaBites(g4).  [resolve(2038,h,1502,e),merge(h),merge(i),merge(j),merge(k),merge(l)].
+2048 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | Florida(g5) | Blue(g2) | Florida(g2).  [resolve(2043,d,867,e),merge(g)].
+2148 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | Florida(g5) | Florida(g2) | -Blue(g3).  [resolve(2048,h,300,a)].
+2189 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | WispaBites(g1) | Hamster(g3) | WispaBites(g4) | Florida(g5) | Florida(g2).  [resolve(2148,i,2043,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2191 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Hamster(g3) | WispaBites(g4) | Florida(g5) | Florida(g2) | -WispaBites(g2).  [resolve(2189,d,389,a)].
+2193 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Hamster(g3) | WispaBites(g4) | Florida(g5) | Florida(g2).  [resolve(2191,h,700,b),merge(h)].
+2194 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | -WispaBites(g2).  [resolve(2193,e,384,b)].
+2196 MilkyBars(g4) | MilkyBars(g1) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2).  [resolve(2194,g,700,b),merge(g)].
+2202 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Horse(g1).  [resolve(2196,b,181,a)].
+2204 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | -Horse(g3).  [resolve(2202,f,414,a)].
+2215 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Boost(g4) | WispaBites(g4) | Australia(g5).  [resolve(2204,f,893,e),merge(g),merge(i),merge(k),merge(l),merge(m)].
+2218 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Australia(g5) | Boost(g5) | MilkyBars(g5) | WispaBites(g5).  [resolve(2204,f,887,i),merge(g),merge(h),merge(i),merge(m)].
+2256 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Australia(g5) | MilkyBars(g5) | WispaBites(g5) | -Boost(g4).  [resolve(2218,g,345,b)].
+2277 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Australia(g5) | MilkyBars(g5) | WispaBites(g5) | WispaBites(g4).  [resolve(2256,i,2215,f),merge(i),merge(j),merge(k),merge(l),merge(m),merge(o)].
+2281 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | WispaBites(g5) | WispaBites(g4) | -Australia(g4).  [resolve(2277,f,480,b)].
+2285 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | WispaBites(g5) | WispaBites(g4).  [resolve(2281,i,702,b),merge(i)].
+2289 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | WispaBites(g4) | -WispaBites(g2).  [resolve(2285,g,383,b)].
+2291 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | WispaBites(g4).  [resolve(2289,h,700,b),merge(h)].
+2292 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | -WispaBites(g2).  [resolve(2291,g,384,b)].
+2296 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5).  [resolve(2292,g,700,b),merge(g)].
+2297 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | -MilkyBars(g1).  [resolve(2296,f,376,b)].
+2299 MilkyBars(g4) | Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2).  [resolve(2297,f,2196,b),merge(f),merge(g),merge(h),merge(i),merge(j)].
+2302 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Horse(g4).  [resolve(2299,a,181,a)].
+2305 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | -Horse(g3).  [resolve(2302,e,408,b)].
+2315 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Boost(g1) | MilkyBars(g1) | WispaBites(g1) | Australia(g5).  [resolve(2305,e,898,e),merge(h),merge(j),merge(k),merge(l)].
+2318 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Australia(g5) | Boost(g5) | MilkyBars(g5) | WispaBites(g5).  [resolve(2305,e,887,i),merge(f),merge(g),merge(h),merge(l)].
+2334 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Australia(g5) | MilkyBars(g5) | WispaBites(g5) | -Boost(g1).  [resolve(2318,f,351,b)].
+2343 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | Australia(g5) | MilkyBars(g5) | WispaBites(g5) | MilkyBars(g1) | WispaBites(g1).  [resolve(2334,h,2315,e),merge(h),merge(i),merge(j),merge(k),merge(n)].
+2349 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | WispaBites(g5) | MilkyBars(g1) | WispaBites(g1) | -Australia(g4).  [resolve(2343,e,480,b)].
+2355 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | WispaBites(g5) | MilkyBars(g1) | WispaBites(g1).  [resolve(2349,i,702,b),merge(i)].
+2356 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | MilkyBars(g1) | WispaBites(g1) | -WispaBites(g2).  [resolve(2355,f,383,b)].
+2359 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | MilkyBars(g1) | WispaBites(g1).  [resolve(2356,h,700,b),merge(h)].
+2361 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | MilkyBars(g1) | -WispaBites(g2).  [resolve(2359,g,389,a)].
+2364 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g5) | MilkyBars(g1).  [resolve(2361,g,700,b),merge(g)].
+2365 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g1) | -MilkyBars(g4).  [resolve(2364,e,370,b)].
+2367 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | MilkyBars(g1).  [resolve(2365,f,2299,a),merge(f),merge(g),merge(h),merge(i)].
+2369 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2) | -MilkyBars(g4).  [resolve(2367,e,377,a)].
+2371 Jessica(g2) | Hamster(g3) | Florida(g5) | Florida(g2).  [resolve(2369,e,2299,a),merge(e),merge(f),merge(g),merge(h)].
+2373 Jessica(g2) | Florida(g5) | Florida(g2).  [resolve(2371,b,178,a),unit_del(d,457)].
+2374 Jessica(g2) | Florida(g2).  [resolve(2373,b,705,b),merge(c),unit_del(c,138)].
+2376 Jessica(g2).  [resolve(2374,b,705,b),merge(b),unit_del(b,125)].
+2459 Australia(g2).  [resolve(2376,a,193,a)].
+2461 Florida(g4) | Australia(g3) | Florida(g3).  [back_unit_del(845),unit_del(d,2459)].
+2462 Florida(g5) | Australia(g3) | Florida(g3).  [back_unit_del(840),unit_del(d,2459)].
+2463 Florida(g5) | Australia(g4) | Florida(g4).  [back_unit_del(837),unit_del(d,2459)].
+2465 -Australia(g3).  [back_unit_del(485),unit_del(a,2459)].
+2466 -Australia(g4).  [back_unit_del(484),unit_del(a,2459)].
+2485 Florida(g5) | Florida(g3).  [back_unit_del(2462),unit_del(b,2465)].
+2486 Florida(g4) | Florida(g3).  [back_unit_del(2461),unit_del(b,2465)].
+2512 Florida(g5) | Florida(g4).  [back_unit_del(2463),unit_del(b,2466)].
+2605 Florida(g3) | -Florida(g4).  [resolve(2485,a,500,b)].
+2609 Florida(g4) | -Florida(g3).  [resolve(2512,a,501,b)].
+2615 Florida(g3).  [resolve(2605,b,2486,a),merge(b)].
+2616 Florida(g4).  [back_unit_del(2609),unit_del(b,2615)].
+2619 $F.  [back_unit_del(502),unit_del(a,2615),unit_del(b,2616)].
+
+============================== end of proof ==========================

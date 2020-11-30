@@ -1,0 +1,239 @@
+if(Mace4).
+assign(domain_size, 5).
+end_if.
+
+if(Prover9).
+formulas(goals).
+
+Girl3(g3) -> Crocodile(g3).
+
+end_of_list.
+end_if.
+
+% Avoid using sentence names starting with u, v, w, x, y, z.
+
+% Girls' order in row
+	% Girl1: first girl
+	% Girl2: second girl
+	% Girl3: third girl
+	% Girl4: fourth girl
+	% Girl5: fifth girl
+
+% Girls' names
+	% Georgina, Hannah, Jessica, Jo, Lucy
+
+% Favourite Colour
+	% Blue, Green, Lilac, Pink, Purple
+
+% Favourite Chocolate
+	% Boost, Crunchies, DairyMilk: Dairy Millk, MilkyBars: Milky Bars, WispaBites: Wispa Bites
+
+% Favourite Pet
+	% Crocodile, Hamster, Horse, Puppy, Rabbit
+
+% Favourite Hobby
+	% Riding: Horse riding, Skiing, Bowling: Ten-Pin bowling, Tennis
+
+% Favourite Holiday
+	% Australia, Canada, Florida, Maldives, Tobago
+
+formulas(assumptions).
+
+% The 5 girls differ
+	differentFrom(g1, g2).
+	differentFrom(g1, g3).
+	differentFrom(g1, g4).
+	differentFrom(g1, g5).
+	differentFrom(g2, g3).
+	differentFrom(g2, g4).
+	differentFrom(g2, g5).
+	differentFrom(g3, g4).
+	differentFrom(g3, g5).
+	differentFrom(g4, g5).
+
+% The "differentFrom" relation is symmetrical
+	differentFrom(x, y) -> differentFrom(y, x).
+
+	g1 = 0.
+	g2 = 1.
+	g3 = 2.
+	g4 = 3.
+	g5 = 4.
+
+	Girl1(0).
+	Girl2(1).
+	Girl3(2).
+	Girl4(3).
+	Girl5(4).
+
+% Relation directlyright(x, y) that affirms that "girl y" is directly to the right of "girl x"
+	directlyright(g1, g2).
+	directlyright(g2, g3).
+	directlyright(g3, g4).
+	directlyright(g4, g5).
+
+	-directlyright(g1, g1).
+	-directlyright(g2, g2).
+	-directlyright(g3, g3).
+	-directlyright(g4, g4).
+	-directlyright(g5, g5).
+	-directlyright(g1, g3).
+	-directlyright(g2, g4).
+	-directlyright(g3, g5).
+	-directlyright(g3, g1).
+	-directlyright(g4, g2).
+	-directlyright(g5, g3).
+	-directlyright(g2, g1).
+	-directlyright(g3, g2).
+	-directlyright(g4, g3).
+	-directlyright(g5, g4).
+	-directlyright(g1, g4).
+	-directlyright(g2, g5).
+	-directlyright(g4, g1).
+	-directlyright(g5, g2).
+	-directlyright(g1, g5).
+	-directlyright(g5, g1).
+
+% Relation nextto(x, y) that affirms that "girl y" is next to "girl x"
+	nextto(g1, g2).
+	nextto(g2, g1).
+	nextto(g2, g3).
+	nextto(g3, g2).
+	nextto(g3, g4).
+	nextto(g4, g3).
+	nextto(g4, g5).
+	nextto(g5, g4).
+
+	-nextto(g1, g1).
+	-nextto(g2, g2).
+	-nextto(g3, g3).
+	-nextto(g4, g4).
+	-nextto(g5, g5).
+	-nextto(g1, g3).
+	-nextto(g2, g4).
+	-nextto(g3, g5).
+	-nextto(g3, g1).
+	-nextto(g4, g2).
+	-nextto(g5, g3).
+	-nextto(g1, g4).
+	-nextto(g2, g5).
+	-nextto(g4, g1).
+	-nextto(g5, g2).
+	-nextto(g1, g5).
+	-nextto(g5, g1).
+
+% Each girl is different and has a name, favourite colour, chocolate, pet, hobby and holiday
+	Girl1(x) | Girl2(x) | Girl3(x) | Girl4(x) | Girl5(x).
+	Georgina(x) | Hannah(x) | Jessica(x) | Jo(x) | Lucy(x).
+	Blue(x) | Green(x) | Lilac(x) | Pink(x) | Purple(x).
+	Boost(x) | Crunchies(x) | DairyMilk(x) | MilkyBars(x) | WispaBites(x).
+	Crocodile(x) | Hamster(x) | Horse(x) | Puppy(x) | Rabbit(x).
+	Riding(x) | Skiing(x) | Swimming(x) | Bowling(x) | Tennis(x).
+	Australia(x) | Canada(x) | Florida(x) | Maldives(x) | Tobago(x).
+
+% Each property applies at most to one girl.
+	Georgina(x) & Georgina(y) -> -differentFrom(x, y).
+	Hannah(x) & Hannah(y) -> -differentFrom(x, y).
+	Jessica(x) & Jessica(y) -> -differentFrom(x, y).
+	Jo(x) & Jo(y) -> -differentFrom(x, y).
+	Lucy(x) & Lucy(y) -> -differentFrom(x, y).
+
+	Blue(x) & Blue(y) -> -differentFrom(x, y).
+	Green(x) & Green(y) -> -differentFrom(x, y).
+	Lilac(x) & Lilac(y) -> -differentFrom(x, y).
+	Pink(x) & Pink(y) -> -differentFrom(x, y).
+	Purple(x) & Purple(y) -> -differentFrom(x, y).
+
+	Boost(x) & Boost(y) -> -differentFrom(x, y).
+	Crunchies(x) & Crunchies(y) -> -differentFrom(x, y).
+	DairyMilk(x) & DairyMilk(y) -> -differentFrom(x, y).
+	MilkyBars(x) & MilkyBars(y) -> -differentFrom(x, y).
+	WispaBites(x) & WispaBites(y) -> -differentFrom(x, y).
+
+	Crocodile(x) & Crocodile(y) -> -differentFrom(x, y).
+	Hamster(x) & Hamster(y) -> -differentFrom(x, y).
+	Horse(x) & Horse(y) -> -differentFrom(x, y).
+	Puppy(x) & Puppy(y) -> -differentFrom(x, y).
+	Rabbit(x) & Rabbit(y) -> -differentFrom(x, y).
+
+	Riding(x) & Riding(y) -> -differentFrom(x, y).
+	Skiing(x) & Skiing(y) -> -differentFrom(x, y).
+	Swimming(x) & Swimming(y) -> -differentFrom(x, y).
+	Bowling(x) & Bowling(y) -> -differentFrom(x, y).
+	Tennis(x) & Tennis(y) -> -differentFrom(x, y).
+
+	Australia(x) & Australia(y) -> -differentFrom(x, y).
+	Canada(x) & Canada(y) -> -differentFrom(x, y).
+	Florida(x) & Florida(y) -> -differentFrom(x, y).
+	Maldives(x) & Maldives(y) -> -differentFrom(x, y).
+	Tobago(x) & Tobago(y) -> -differentFrom(x, y).
+
+%Clues
+
+	% 1. Jo likes the Wispa Bites.
+	Jo(x) -> WispaBites(x).
+
+	% 2. The person with the Hamster likes Swimming.
+	Hamster(x) -> Swimming(x).
+
+	% 3. Hannah eats Dairy Milk.
+	Hannah(x) -> DairyMilk(x).
+
+	% 4. Jessica is on the left of Georgina.
+	Jessica(x) & Georgina(y) -> directlyright(x, y).
+
+	% 5. Lucy is the first on the left.
+	Girl1(x) -> Lucy(x).
+
+	% 6. The first person on the right likes Swimming.
+	Girl5(x) -> Swimming(x).
+
+	% 7. The person who eats Milky Bars owns a Horse.
+	MilkyBars(x) -> Horse(x).
+
+	% 8. The person in the middle eats Dairy Milk.
+	Girl3(x) -> DairyMilk(x).
+
+	% 9. Jessica likes Green.
+	Jessica(x) -> Green(x).
+
+	% 10. The person on the left of the middle wants to go to Tobago.
+	Girl2(x) -> Tobago(x).
+
+	% 11. The person who wants to go to Maldives likes Lilac.
+	Maldives(x) -> Lilac(x).
+
+	% 12. The person who likes Wispa Bites sits next to the person who wants to go to Florida.
+	WispaBites(x) & Florida(y) -> nextto(y, x).
+
+	% 13. The person who likes Pink wants to go to Florida.
+	Pink(x) -> Florida(x).
+
+	% 14. The person who sits first on the left likes lilac.
+	Girl1(x) -> Lilac(x).
+
+	% 15. The girl that likes Blue owns a Puppy.
+	Blue(x) -> Puppy(x).
+
+	% 16. The person who likes Skiing sits next to the person who has a Hamster.
+	Skiing(x) & Hamster(y) -> nextto(y, x).
+
+	% 17. The girl on the right of the girl who likes Tennis likes Horse riding.
+	Tennis(x) & Riding(y) -> directlyright(x, y).
+
+	% 18. The girl next to the girl who likes Milky bars likes Boost.
+	MilkyBars(x) & Boost(y) -> nextto(x, y).
+
+	% 19. The girl who likes Purple wants to go to Canada.
+	Purple(x) -> Canada(x).
+
+	% 20. The girl who likes Crunchies owns a rabbit.
+	Crunchies(x) -> Rabbit(x).
+
+	% 21. The girl who likes Skiing sits next to the girl who play Ten-Pin bowlings.
+	Skiing(x) & Bowling(y) -> nextto(y, x).
+
+	% 22. Jessica wants to go to Australia.
+	Jessica(x) -> Australia(x).
+
+end_of_list.

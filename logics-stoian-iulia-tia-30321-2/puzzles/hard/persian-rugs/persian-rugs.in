@@ -1,0 +1,244 @@
+if(Mace4).
+assign(domain_size, 5).
+end_if.
+
+if(Prover9).
+formulas(goals).
+
+Man4(d4) -> Round(d4).
+
+end_of_list.
+end_if.
+
+% Avoid using sentence names starting with u, v, w, x, y, z.
+
+% Men's order in row
+	% Man1: first man
+	% Man2: second man
+	% Man3: third man
+	% Man4: fourth man
+	% Man5: fifth man
+
+% Men's names
+	% Bryan, Casey, Garrett, Shane, Timothy
+
+% Colour
+	% Blue, Green, Orange, Red, Yellow
+
+% Type
+	% Oval, Rectangular, Round, Runner, Square
+
+% Symbols
+	% Birds, Diamonds, Lotuses, Roses, Stars
+
+% Price
+	% FourHundred, SixHundred, EightHundred, OneThousand, TwelveHundred
+
+% Place
+	% Bedroom, Hall, Library, LivingRoom, Office
+
+formulas(assumptions).
+
+% The 5 men differ
+	differentFrom(d1, d2).
+	differentFrom(d1, d3).
+	differentFrom(d1, d4).
+	differentFrom(d1, d5).
+	differentFrom(d2, d3).
+	differentFrom(d2, d4).
+	differentFrom(d2, d5).
+	differentFrom(d3, d4).
+	differentFrom(d3, d5).
+	differentFrom(d4, d5).
+
+% The "differentFrom" relation is symmetrical
+	differentFrom(x, y) -> differentFrom(y, x).
+
+	d1 = 0.
+	d2 = 1.
+	d3 = 2.
+	d4 = 3.
+	d5 = 4.
+
+	Man1(0).
+	Man2(1).
+	Man3(2).
+	Man4(3).
+	Man5(4).
+
+% Relation directlyright(x, y) that affirms that "man y" is directly to the right of "man x"
+	directlyright(d1, d2).
+	directlyright(d2, d3).
+	directlyright(d3, d4).
+	directlyright(d4, d5).
+
+	-directlyright(d1, d1).
+	-directlyright(d2, d2).
+	-directlyright(d3, d3).
+	-directlyright(d4, d4).
+	-directlyright(d5, d5).
+	-directlyright(d1, d3).
+	-directlyright(d2, d4).
+	-directlyright(d3, d5).
+	-directlyright(d3, d1).
+	-directlyright(d4, d2).
+	-directlyright(d5, d3).
+	-directlyright(d2, d1).
+	-directlyright(d3, d2).
+	-directlyright(d4, d3).
+	-directlyright(d5, d4).
+	-directlyright(d1, d4).
+	-directlyright(d2, d5).
+	-directlyright(d4, d1).
+	-directlyright(d5, d2).
+	-directlyright(d1, d5).
+	-directlyright(d5, d1).
+
+% Relation nextto(x, y) that affirms that "man y" is next to "man x"
+	directlyright(x, y) | directlyright(y, x) <-> nextto(x, y).
+	
+% Relation extremity(x) that affirms that "man x" is at One of the ends.
+	extremity(d1).
+	extremity(d5).
+	
+	-extremity(d2).
+	-extremity(d3).
+	-extremity(d4).
+	
+% Relation right(x, y) that affirms that "man y" is somewhere to the right of "man x"
+	right(d1, d3).
+	right(d2, d4).
+	right(d3, d5).
+	right(d1, d4).
+	right(d2, d5).
+	right(d1, d5).
+	right(d1, d2).
+	right(d4, d5).
+	right(d2, d3).
+	right(d3, d4).
+	
+	-right(d2, d1).
+	-right(d3, d2).
+	-right(d4, d3).
+	-right(d5, d4).
+	-right(d1, d1).
+	-right(d2, d2).
+	-right(d3, d3).
+	-right(d4, d4).
+	-right(d5, d5).
+	-right(d3, d1).
+	-right(d4, d2).
+	-right(d5, d3).
+	-right(d4, d1).
+	-right(d5, d2).
+	-right(d5, d1).
+
+% % Each man has different characteristics
+	Man1(x) | Man2(x) | Man3(x) | Man4(x) | Man5(x).
+	Bryan(x) | Casey(x) | Garrett(x) | Shane(x) | Timothy(x).
+	Blue(x) | Green(x) | Orange(x) | Red(x) | Yellow(x).
+	Oval(x) | Rectangular(x) | Round(x) | Runner(x) | Square(x).
+	Birds(x) | Diamonds(x) | Lotuses(x) | Roses(x) | Stars(x).
+	FourHundred(x) | SixHundred(x) | EightHundred(x) | OneThousand(x) | TwelveHundred(x).
+	Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x) | Office(x).
+
+% Each property applies at most to one man
+	Bryan(x) & Bryan(y) -> -differentFrom(x, y).
+	Casey(x) & Casey(y) -> -differentFrom(x, y).
+	Garrett(x) & Garrett(y) -> -differentFrom(x, y).
+	Shane(x) & Shane(y) -> -differentFrom(x, y).
+	Timothy(x) & Timothy(y) -> -differentFrom(x, y).
+
+	Blue(x) & Blue(y) -> -differentFrom(x, y).
+	Green(x) & Green(y) -> -differentFrom(x, y).
+	Orange(x) & Orange(y) -> -differentFrom(x, y).
+	Red(x) & Red(y) -> -differentFrom(x, y).
+	Yellow(x) & Yellow(y) -> -differentFrom(x, y).
+
+	Oval(x) & Oval(y) -> -differentFrom(x, y).
+	Rectangular(x) & Rectangular(y) -> -differentFrom(x, y).
+	Round(x) & Round(y) -> -differentFrom(x, y).
+	Runner(x) & Runner(y) -> -differentFrom(x, y).
+	Square(x) & Square(y) -> -differentFrom(x, y).
+
+	Birds(x) & Birds(y) -> -differentFrom(x, y).
+	Diamonds(x) & Diamonds(y) -> -differentFrom(x, y).
+	Lotuses(x) & Lotuses(y) -> -differentFrom(x, y).
+	Roses(x) & Roses(y) -> -differentFrom(x, y).
+	Stars(x) & Stars(y) -> -differentFrom(x, y).
+
+	FourHundred(x) & FourHundred(y) -> -differentFrom(x, y).
+	SixHundred(x) & SixHundred(y) -> -differentFrom(x, y).
+	EightHundred(x) & EightHundred(y) -> -differentFrom(x, y).
+	OneThousand(x) & OneThousand(y) -> -differentFrom(x, y).
+	TwelveHundred(x) & TwelveHundred(y) -> -differentFrom(x, y).
+
+	Bedroom(x) & Bedroom(y) -> -differentFrom(x, y).
+	Hall(x) & Hall(y) -> -differentFrom(x, y).
+	Library(x) & Library(y) -> -differentFrom(x, y).
+	LivingRoom(x) & LivingRoom(y) -> -differentFrom(x, y).
+	Office(x) & Office(y) -> -differentFrom(x, y).
+
+%Clues
+
+	% 1. The man who bought the $400 rug is exactly to the left of the man who bought the rug with Birds.
+	FourHundred(x) & Birds(y) -> directlyright(x, y).
+	
+	% 2. Bryan is next to the client that got the Runner rug.
+	Bryan(x) & Runner(y) -> nextto(y, x).
+	
+	% 3. The Red rug's owner is somewhere to the left of the man who bought a rug for his Hall.
+	Red(x) & Hall(y) -> right(x, y).
+	
+	% 4. The buyer who got the most expensive rug is next to the buyer who got the Round rug.
+	TwelveHundred(x) & Round(y) -> nextto(y, x).
+	
+	% 5. The Yellow rug's owner is somewhere between the Oval rug's owner and the man that spent $800, in that order.
+	Oval(x) & Yellow(y) & EightHundred(z) -> right(x, y) & right(y, z).
+	
+	% 6. The man that bought the Red rug is exactly to the left of the man that bought a rug for his Office.
+	Red(x) & Office(y) -> directlyright(x, y).
+	
+	% 7. Garrett is next to the customer who spent $600.
+	Garrett(x) & SixHundred(y) -> nextto(y, x).
+	
+	% 8. Shane is somewhere to the right of the Orange rug's owner.
+	Shane(x) & Orange(y) -> right(y, x).
+	
+	% 9. The cheapest rug has Stars on it.
+	FourHundred(x) -> Stars(x).
+	
+	% 10. At the fifth position is the client who bought the Rectangular rug.
+	Man5(x) -> Rectangular(x).
+	
+	% 11. The man who bought the $600 rug is exactly to the left of the man who bought the rug with Roses.
+	SixHundred(x) & Roses(y) -> directlyright(x, y).
+	
+	% 12. Casey is somewhere to the right of the customer that got the Yellow rug.
+	Casey(x) & Yellow(y) -> right(y, x).
+	
+	% 13. The buyer who purchased the Round rug is exactly to the left of the man who spent $800.
+	Round(x) & EightHundred(y) -> directlyright(x, y).
+	
+	% 14. The man that bought the cheapest rug is exactly to the left of the man that acquired the Square rug.
+	FourHundred(x) & Square(y) -> directlyright(x, y).
+	
+	% 15. At the third position is the man that got a rug for his Bedroom.
+	Man3(x) -> Bedroom(x).
+	
+	% 16. The customer that bought the rug with Stars is exactly to the right of the customer that bought the Green rug.
+	Stars(x) & Green(y) -> directlyright(y, x).
+	
+	% 17. Shane is next to the man who acquired the Round rug.
+	Shane(x) & Round(y) -> nextto(y, x).
+	
+	% 18. The man who got the rug with Birds is somewhere between the man who got the Yellow rug and the man who got the rug with Lotuses, in that order.
+	Yellow(x) & Birds(y) & Lotuses(z) -> right(x, y) & right(y, z).
+	
+	% 19. The customer that spent $800 is somewhere to the right of the Red rug's owner.
+	EightHundred(x) & Red(y) -> right(y, x).
+	
+	% 20. The client that bought a rug for his Living room is exactly to the right of the client that bought a rug for his Library.
+	LivingRoom(x) & Library(y) -> directlyright(y, x).
+
+end_of_list.
