@@ -1,0 +1,308 @@
+if(Mace4).
+assign(domain_size, 5).
+end_if.
+
+if(Prover9).
+formulas(goals).
+
+Girl1(g1) -> Blue(g1).
+
+end_of_list.
+end_if.
+
+% Avoid using sentence names starting with u, v, w, x, y, z.
+
+% Girls' order in row
+	% Girl1: first girl
+	% Girl2: second girl
+	% Girl3: third girl
+	% Girl4: fourth girl
+	% Girl5: fifth girl
+
+% Girls' names
+	% Ella, Julia, Lily, Makayla, Riley
+
+% Shirt
+	% Black, Blue, Green, Red, White
+
+% Civilization
+	% Aztec, Chinese, Egyptian, Greek, Roman
+
+% Subject
+	% Architecture, Art, Economy, Religion, Science
+
+% Age
+	% Ten, Eleven, Twelve, Thirteen, Fourteen
+
+% Juice
+	% Apple, Cranberry, Grapefruit, Orange, Strawberry
+
+formulas(assumptions).
+
+% The 5 girls differ
+	differentFrom(g1, g2).
+	differentFrom(g1, g3).
+	differentFrom(g1, g4).
+	differentFrom(g1, g5).
+	differentFrom(g2, g3).
+	differentFrom(g2, g4).
+	differentFrom(g2, g5).
+	differentFrom(g3, g4).
+	differentFrom(g3, g5).
+	differentFrom(g4, g5).
+
+% The "differentFrom" relation is symmetrical
+	differentFrom(x, y) -> differentFrom(y, x).
+
+	g1 = 0.
+	g2 = 1.
+	g3 = 2.
+	g4 = 3.
+	g5 = 4.
+
+	Girl1(0).
+	Girl2(1).
+	Girl3(2).
+	Girl4(3).
+	Girl5(4).
+
+% Relation directlyright(x, y) that affirms that "girl y" is directly to the right of "girl x"
+	directlyright(g1, g2).
+	directlyright(g2, g3).
+	directlyright(g3, g4).
+	directlyright(g4, g5).
+
+	-directlyright(g1, g1).
+	-directlyright(g2, g2).
+	-directlyright(g3, g3).
+	-directlyright(g4, g4).
+	-directlyright(g5, g5).
+	-directlyright(g1, g3).
+	-directlyright(g2, g4).
+	-directlyright(g3, g5).
+	-directlyright(g3, g1).
+	-directlyright(g4, g2).
+	-directlyright(g5, g3).
+	-directlyright(g2, g1).
+	-directlyright(g3, g2).
+	-directlyright(g4, g3).
+	-directlyright(g5, g4).
+	-directlyright(g1, g4).
+	-directlyright(g2, g5).
+	-directlyright(g4, g1).
+	-directlyright(g5, g2).
+	-directlyright(g1, g5).
+	-directlyright(g5, g1).
+
+% Relation nextto(x, y) that affirms that "girl y" is next to "girl x"
+	nextto(g1, g2).
+	nextto(g2, g1).
+	nextto(g2, g3).
+	nextto(g3, g2).
+	nextto(g3, g4).
+	nextto(g4, g3).
+	nextto(g4, g5).
+	nextto(g5, g4).
+
+	-nextto(g1, g1).
+	-nextto(g2, g2).
+	-nextto(g3, g3).
+	-nextto(g4, g4).
+	-nextto(g5, g5).
+	-nextto(g1, g3).
+	-nextto(g2, g4).
+	-nextto(g3, g5).
+	-nextto(g3, g1).
+	-nextto(g4, g2).
+	-nextto(g5, g3).
+	-nextto(g1, g4).
+	-nextto(g2, g5).
+	-nextto(g4, g1).
+	-nextto(g5, g2).
+	-nextto(g1, g5).
+	-nextto(g5, g1).
+	
+% Relation extremity(x) that affirms that "girl x" is at one of the ends
+	extremity(g1).
+	extremity(g5).
+	
+	-extremity(g2).
+	-extremity(g3).
+	-extremity(g4).
+	
+% Relation inbetween(x, y) that affirms that there is a girl somewhere in between "girl x" and "girl y", exactly in that order
+	inbetween(g1, g3).
+	inbetween(g2, g4).
+	inbetween(g3, g5).
+	inbetween(g1, g4).
+	inbetween(g2, g5).
+	inbetween(g1, g5).
+	
+	-inbetween(g1, g2).
+	-inbetween(g2, g1).
+	-inbetween(g2, g3).
+	-inbetween(g3, g2).
+	-inbetween(g3, g4).
+	-inbetween(g4, g3).
+	-inbetween(g4, g5).
+	-inbetween(g5, g4).
+	-inbetween(g1, g1).
+	-inbetween(g2, g2).
+	-inbetween(g3, g3).
+	-inbetween(g4, g4).
+	-inbetween(g5, g5).
+	-inbetween(g3, g1).
+	-inbetween(g4, g2).
+	-inbetween(g5, g3).
+	-inbetween(g4, g1).
+	-inbetween(g5, g2).
+	-inbetween(g5, g1).
+	
+% Relation right(x, y) that affirms that "girl y" is somewhere to the right of "girl x"
+	right(g1, g3).
+	right(g2, g4).
+	right(g3, g5).
+	right(g1, g4).
+	right(g2, g5).
+	right(g1, g5).
+	right(g1, g2).
+	right(g4, g5).
+	right(g2, g3).
+	right(g3, g4).
+	
+	-right(g2, g1).
+	-right(g3, g2).
+	-right(g4, g3).
+	-right(g5, g4).
+	-right(g1, g1).
+	-right(g2, g2).
+	-right(g3, g3).
+	-right(g4, g4).
+	-right(g5, g5).
+	-right(g3, g1).
+	-right(g4, g2).
+	-right(g5, g3).
+	-right(g4, g1).
+	-right(g5, g2).
+	-right(g5, g1).
+
+% Each girl has different characteristics
+	Girl1(x) | Girl2(x) | Girl3(x) | Girl4(x) | Girl5(x).
+	Ella(x) | Julia(x) | Lily(x) | Makayla(x) | Riley(x).
+	Black(x) | Blue(x) | Green(x) | Red(x) | White(x).
+	Aztec(x) | Chinese(x) | Egyptian(x) | Greek(x) | Roman(x).
+	Architecture(x) | Art(x) | Economy(x) | Religion(x) | Science(x).
+	Ten(x) | Eleven(x) | Twelve(x) | Thirteen(x) | Fourteen(x).
+	Apple(x) | Cranberry(x) | Grapefruit(x) | Orange(x) | Strawberry(x).
+
+% Each property applies at most to one girl
+	Ella(x) & Ella(y) -> -differentFrom(x, y).
+	Julia(x) & Julia(y) -> -differentFrom(x, y).
+	Lily(x) & Lily(y) -> -differentFrom(x, y).
+	Makayla(x) & Makayla(y) -> -differentFrom(x, y).
+	Riley(x) & Riley(y) -> -differentFrom(x, y).
+
+	Black(x) & Black(y) -> -differentFrom(x, y).
+	Blue(x) & Blue(y) -> -differentFrom(x, y).
+	Green(x) & Green(y) -> -differentFrom(x, y).
+	Red(x) & Red(y) -> -differentFrom(x, y).
+	White(x) & White(y) -> -differentFrom(x, y).
+
+	Aztec(x) & Aztec(y) -> -differentFrom(x, y).
+	Chinese(x) & Chinese(y) -> -differentFrom(x, y).
+	Egyptian(x) & Egyptian(y) -> -differentFrom(x, y).
+	Greek(x) & Greek(y) -> -differentFrom(x, y).
+	Roman(x) & Roman(y) -> -differentFrom(x, y).
+
+	Architecture(x) & Architecture(y) -> -differentFrom(x, y).
+	Art(x) & Art(y) -> -differentFrom(x, y).
+	Economy(x) & Economy(y) -> -differentFrom(x, y).
+	Religion(x) & Religion(y) -> -differentFrom(x, y).
+	Science(x) & Science(y) -> -differentFrom(x, y).
+
+	Ten(x) & Ten(y) -> -differentFrom(x, y).
+	Eleven(x) & Eleven(y) -> -differentFrom(x, y).
+	Twelve(x) & Twelve(y) -> -differentFrom(x, y).
+	Thirteen(x) & Thirteen(y) -> -differentFrom(x, y).
+	Fourteen(x) & Fourteen(y) -> -differentFrom(x, y).
+
+	Apple(x) & Apple(y) -> -differentFrom(x, y).
+	Cranberry(x) & Cranberry(y) -> -differentFrom(x, y).
+	Grapefruit(x) & Grapefruit(y) -> -differentFrom(x, y).
+	Orange(x) & Orange(y) -> -differentFrom(x, y).
+	Strawberry(x) & Strawberry(y) -> -differentFrom(x, y).
+
+%Clues
+
+	% 1. At the fourth position is the girl drinking Strawberry juice.
+	Girl4(x) -> Strawberry(x).
+
+	% 2. The girl drinking Strawberry juice is somewhere between the girl who likes Art and the girl that is drinking Apple juice, in that order.
+	Art(x) & Apple(x) -> inbetween(x, y).
+	Strawberry(x) & Art(y) -> right(y, x).
+	Strawberry(x) & Apple(y) -> right(x, y).
+
+	% 3. Riley is next to the girl who likes the Roman civilization.
+	Riley(x) & Roman(y) -> nextto(y, x).
+
+	% 4. The girl wearing the Green shirt is drinking Apple juice.
+	Green(x) -> Apple(x).
+
+	% 5. At the fourth position is the girl that is interested in Religion.
+	Girl4(x) -> Religion(x).
+
+	% 6. The 12 years old girl is exactly to the right of the 11 years old girl.
+	Twelve(x) & Eleven(y) -> directlyright(y, x).
+
+	% 7. At one of the ends is the girl who likes the Egyptian civilization.
+	Egyptian(x) -> extremity(x).
+
+	% 8. The girl wearing the Black shirt is somewhere between the girl that likes Science and the girl wearing the Red shirt, in that order.
+	Science(x) & Red(y) -> inbetween(x, y).
+	Black(x) & Science(y) -> right(y, x).
+	Black(x) & Red(y) -> right(x, y).
+
+	% 9. The girl wearing the Red shirt is somewhere to the left of the girl wearing the White shirt.
+	Red(x) & White(y) -> right(x, y).
+
+	% 10. The girl drinking Cranberry juice likes the Greek civilization.
+	Cranberry(x) -> Greek(x).
+
+	% 11. Ella is at the third position.
+	Girl3(x) -> Ella(x).
+
+	% 12. The 12 years old girl is next to the girl that is interested in Architecture.
+	Twelve(x) & Architecture(y) -> nextto(y, x).
+
+	% 13. Riley is exactly to the right of the girl that admires the Roman civilization.
+	Riley(x) & Roman(y) -> directlyright(y, x).
+
+	% 14. The girl drinking Cranberry juice is somewhere between the 13 years old girl and the girl drinking Grapefruit juice, in that order.
+	Thirteen(x) & Grapefruit(y) -> inbetween(x, y).
+	Cranberry(x) & Thirteen(y) -> right(y, x).
+	Cranberry(x) & Grapefruit(y) -> right(x, y).
+
+	% 15. At one of the ends is the girl that likes Science.
+	Science(x) -> extremity(x).
+
+	% 16. At one of the ends is the girl who loves Architecture.
+	Architecture(x) -> extremity(x).
+
+	% 17. Lily is exactly to the right of the girl who likes Economy.
+	Lily(x) & Economy(y) -> directlyright(y, x).
+
+	% 18. Makayla is 10.
+	Makayla(x) -> Ten(x).
+
+	% 19. The girl interested in the Aztec civilization is somewhere between the girl interested in the Roman civilization and the girl interested in the Chinese civilization, in that order
+	Roman(x) & Chinese(y) -> inbetween(x, y).
+	Aztec(x) & Roman(y) -> right(y, x).
+	Aztec(x) & Chinese(y) -> right(x, y).
+
+	% 20. The youngest girl is at one of the ends.
+	Ten(x) -> extremity(x).
+
+	% 21. At the second position is the girl that likes Art.
+	Girl2(x) -> Art(x).
+
+end_of_list.
