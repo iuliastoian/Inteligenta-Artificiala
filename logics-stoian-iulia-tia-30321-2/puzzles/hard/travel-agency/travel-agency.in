@@ -1,0 +1,241 @@
+if(Mace4).
+assign(domain_size, 5).
+end_if.
+
+if(Prover9).
+formulas(goals).
+
+Woman4(d4) -> Italy(d4).
+
+end_of_list.
+end_if.
+
+% Avoid using sentence names starting with u, v, w, x, y, z.
+
+% Womans' order in row
+	% Woman1: first woman
+	% Woman2: second woman
+	% Woman3: third woman
+	% Woman4: fourth woman
+	% Woman5: fifth woman
+
+% Womans' names
+	% Ana, Glenda, Jessie, Lara, Rose
+
+% Shirt
+	% Blue, Green, Red, White, Yellow
+
+% Age
+	% TwentyFour, TwentySix, TwentyEight, Thirty, ThirtyTwo
+
+% Profession
+	% Biologist, Hostess, Judge, Nurse, Singer
+
+% Country
+	% China, Egypt, Italy, Mexico, Peru
+
+% Duration
+	% FiveDays, TenDays, FifteenDays, TwentyDays, TwentyFiveDays
+
+formulas(assumptions).
+
+% The 5 womans differ
+	differentFrom(d1, d2).
+	differentFrom(d1, d3).
+	differentFrom(d1, d4).
+	differentFrom(d1, d5).
+	differentFrom(d2, d3).
+	differentFrom(d2, d4).
+	differentFrom(d2, d5).
+	differentFrom(d3, d4).
+	differentFrom(d3, d5).
+	differentFrom(d4, d5).
+
+% The "differentFrom" relation is symmetrical
+	differentFrom(x, y) -> differentFrom(y, x).
+
+	d1 = 0.
+	d2 = 1.
+	d3 = 2.
+	d4 = 3.
+	d5 = 4.
+
+	Woman1(0).
+	Woman2(1).
+	Woman3(2).
+	Woman4(3).
+	Woman5(4).
+
+% Relation directlyright(x, y) that affirms that "woman y" is directly to the right of "woman x"
+	directlyright(d1, d2).
+	directlyright(d2, d3).
+	directlyright(d3, d4).
+	directlyright(d4, d5).
+
+	-directlyright(d1, d1).
+	-directlyright(d2, d2).
+	-directlyright(d3, d3).
+	-directlyright(d4, d4).
+	-directlyright(d5, d5).
+	-directlyright(d1, d3).
+	-directlyright(d2, d4).
+	-directlyright(d3, d5).
+	-directlyright(d3, d1).
+	-directlyright(d4, d2).
+	-directlyright(d5, d3).
+	-directlyright(d2, d1).
+	-directlyright(d3, d2).
+	-directlyright(d4, d3).
+	-directlyright(d5, d4).
+	-directlyright(d1, d4).
+	-directlyright(d2, d5).
+	-directlyright(d4, d1).
+	-directlyright(d5, d2).
+	-directlyright(d1, d5).
+	-directlyright(d5, d1).
+
+% Relation nextto(x, y) that affirms that "woman y" is next to "woman x"
+	directlyright(x, y) | directlyright(y, x) <-> nextto(x, y).
+	
+% Relation extremity(x) that affirms that "woman x" is at One of the ends.
+	extremity(d1).
+	extremity(d5).
+	
+	-extremity(d2).
+	-extremity(d3).
+	-extremity(d4).
+	
+% Relation right(x, y) that affirms that "woman y" is somewhere to the right of "woman x"
+	right(d1, d3).
+	right(d2, d4).
+	right(d3, d5).
+	right(d1, d4).
+	right(d2, d5).
+	right(d1, d5).
+	right(d1, d2).
+	right(d4, d5).
+	right(d2, d3).
+	right(d3, d4).
+	
+	-right(d2, d1).
+	-right(d3, d2).
+	-right(d4, d3).
+	-right(d5, d4).
+	-right(d1, d1).
+	-right(d2, d2).
+	-right(d3, d3).
+	-right(d4, d4).
+	-right(d5, d5).
+	-right(d3, d1).
+	-right(d4, d2).
+	-right(d5, d3).
+	-right(d4, d1).
+	-right(d5, d2).
+	-right(d5, d1).
+
+% Each woman has different characteristics
+	Woman1(x) | Woman2(x) | Woman3(x) | Woman4(x) | Woman5(x).
+	Ana(x) | Glenda(x) | Jessie(x) | Lara(x) | Rose(x).
+	Blue(x) | Green(x) | Red(x) | White(x) | Yellow(x).
+	TwentyFour(x) | TwentySix(x) | TwentyEight(x) | Thirty(x) | ThirtyTwo(x).
+	Biologist(x) | Hostess(x) | Judge(x) | Nurse(x) | Singer(x).
+	China(x) | Egypt(x) | Italy(x) | Mexico(x) | Peru(x).
+	FiveDays(x) | TenDays(x) | FifteenDays(x) | TwentyDays(x) | TwentyFiveDays(x).
+
+% Each property applies at most to one woman
+	Ana(x) & Ana(y) -> -differentFrom(x, y).
+	Glenda(x) & Glenda(y) -> -differentFrom(x, y).
+	Jessie(x) & Jessie(y) -> -differentFrom(x, y).
+	Lara(x) & Lara(y) -> -differentFrom(x, y).
+	Rose(x) & Rose(y) -> -differentFrom(x, y).
+
+	Blue(x) & Blue(y) -> -differentFrom(x, y).
+	Green(x) & Green(y) -> -differentFrom(x, y).
+	Red(x) & Red(y) -> -differentFrom(x, y).
+	White(x) & White(y) -> -differentFrom(x, y).
+	Yellow(x) & Yellow(y) -> -differentFrom(x, y).
+
+	TwentyFour(x) & TwentyFour(y) -> -differentFrom(x, y).
+	TwentySix(x) & TwentySix(y) -> -differentFrom(x, y).
+	TwentyEight(x) & TwentyEight(y) -> -differentFrom(x, y).
+	Thirty(x) & Thirty(y) -> -differentFrom(x, y).
+	ThirtyTwo(x) & ThirtyTwo(y) -> -differentFrom(x, y).
+
+	Biologist(x) & Biologist(y) -> -differentFrom(x, y).
+	Hostess(x) & Hostess(y) -> -differentFrom(x, y).
+	Judge(x) & Judge(y) -> -differentFrom(x, y).
+	Nurse(x) & Nurse(y) -> -differentFrom(x, y).
+	Singer(x) & Singer(y) -> -differentFrom(x, y).
+
+	China(x) & China(y) -> -differentFrom(x, y).
+	Egypt(x) & Egypt(y) -> -differentFrom(x, y).
+	Italy(x) & Italy(y) -> -differentFrom(x, y).
+	Mexico(x) & Mexico(y) -> -differentFrom(x, y).
+	Peru(x) & Peru(y) -> -differentFrom(x, y).
+
+	FiveDays(x) & FiveDays(y) -> -differentFrom(x, y).
+	TenDays(x) & TenDays(y) -> -differentFrom(x, y).
+	FifteenDays(x) & FifteenDays(y) -> -differentFrom(x, y).
+	TwentyDays(x) & TwentyDays(y) -> -differentFrom(x, y).
+	TwentyFiveDays(x) & TwentyFiveDays(y) -> -differentFrom(x, y).
+
+%Clues
+
+	% 1. The Singer is at the third position.
+	Woman3(x) -> Singer(x).
+	
+	% 2. The woman traveling for 20 days is somewhere between the woman who is going to Peru and the owner of the Blue purse, in that order.
+	Peru(x) & TwentyDays(y) & Blue(z) -> right(x, y) & right(y, z).
+	
+	% 3. Ana is exactly to the left of the Biologist.
+	Ana(x) & Biologist(y) -> directlyright(x, y).
+	
+	% 4. The 32 years old is going to see the Sahara.
+	ThirtyTwo(x) -> Egypt(x).
+	
+	% 5. The owner of the White purse is exactly to the right of the woman traveling to visit Machu Picchu.
+	Peru(x) & White(y) -> directlyright(x, y).
+	
+	% 6. Glenda is somewhere to the right of the woman who has the Green purse.
+	Green(x) & Glenda(y) -> right(x, y).
+	
+	% 7. The person wearing the White purse is somewhere between the 30 years old woman and the owner of the Blue purse, in that order.
+	Thirty(x) & White(y) & Blue(z) -> right(x, y) & right(y, z).
+	
+	% 8. The 24 years old woman is going to visit an Aztec pyramid.
+	TwentyFour(x) -> Mexico(x).
+	
+	% 9. The woman wearing the White purse is somewhere to the left of the youngest woman.
+	White(x) & TwentyFour(y) -> right(x, y).
+	
+	% 10. The traveler going to Italy is exactly to the right of the woman traveling for 20 days.
+	TwentyDays(x) & Italy(y) -> directlyright(x, y).
+	
+	% 11. The person who is going to travel for 25 days has the Red purse.
+	TwentyFiveDays(x) -> Red(x).
+	
+	% 12. The Judge is in the first position.
+	Woman1(x) -> Judge(x).
+	
+	% 13. The Nurse is exactly to the right of the woman who is going to travel for 20 days.
+	TwentyDays(x) & Nurse(y) -> directlyright(x, y).
+	
+	% 14. The Hostess is somewhere between Lara and the woman who has the Blue purse, in that order.
+	Lara(x) & Hostess(y) & Blue(z) -> right(x, y) & right(y, z).
+	
+	% 15. In the second position is the woman that is going to travel for 15 days.
+	Woman2(x) -> FifteenDays(x).
+	
+	% 16. Rose has the Green purse.
+	Rose(x) -> Green(x).
+	
+	% 17. The woman who is traveling for less than a week is exactly to the left of the 32 years old woman.
+	FiveDays(x) & ThirtyTwo(y) -> directlyright(x, y).
+	
+	% 18. The person traveling for 5 days is 28.
+	FiveDays(x) -> TwentyEight(x).
+	
+	% 19. The Blue purse owner is somewhere between the 30 years old woman and the owner of the Yellow purse, in that order.
+	Thirty(x) & Blue(y) & Yellow(z) -> right(x, y) & right(y, z).
+
+end_of_list.
