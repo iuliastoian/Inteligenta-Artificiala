@@ -1,0 +1,1220 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 5460 was started by iulia on DESKTOP-6AB8R6E,
+Sun Nov 29 02:23:52 2020
+The command was "/cygdrive/c/Program Files (x86)/Prover9-Mace4/bin-win32/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 14.83 (+ 0.61) seconds.
+% Length of proof is 1200.
+% Level of proof is 190.
+% Maximum clause weight is 29.
+% Given clauses 7397.
+
+2 directlyright(x,y) | directlyright(y,x) <-> nextto(x,y) # label(non_clause).  [assumption].
+8 Blue(x) & Blue(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+9 Green(x) & Green(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+10 Orange(x) & Orange(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+12 Yellow(x) & Yellow(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+13 Oval(x) & Oval(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+14 Rectangular(x) & Rectangular(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+15 Round(x) & Round(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+16 Runner(x) & Runner(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+17 Square(x) & Square(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+23 FourHundred(x) & FourHundred(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+24 SixHundred(x) & SixHundred(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+25 EightHundred(x) & EightHundred(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+26 OneThousand(x) & OneThousand(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+27 TwelveHundred(x) & TwelveHundred(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+28 Bedroom(x) & Bedroom(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+29 Hall(x) & Hall(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+30 Library(x) & Library(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+31 LivingRoom(x) & LivingRoom(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+32 Office(x) & Office(y) -> -differentFrom(x,y) # label(non_clause).  [assumption].
+35 Red(x) & Hall(y) -> right(x,y) # label(non_clause).  [assumption].
+36 TwelveHundred(x) & Round(y) -> nextto(y,x) # label(non_clause).  [assumption].
+37 Oval(x) & Yellow(y) & EightHundred(z) -> right(x,y) & right(y,z) # label(non_clause).  [assumption].
+38 Red(x) & Office(y) -> directlyright(x,y) # label(non_clause).  [assumption].
+41 FourHundred(x) -> Stars(x) # label(non_clause).  [assumption].
+42 Man5(x) -> Rectangular(x) # label(non_clause).  [assumption].
+45 Round(x) & EightHundred(y) -> directlyright(x,y) # label(non_clause).  [assumption].
+46 FourHundred(x) & Square(y) -> directlyright(x,y) # label(non_clause).  [assumption].
+47 Man3(x) -> Bedroom(x) # label(non_clause).  [assumption].
+48 Stars(x) & Green(y) -> directlyright(y,x) # label(non_clause).  [assumption].
+51 EightHundred(x) & Red(y) -> right(y,x) # label(non_clause).  [assumption].
+52 LivingRoom(x) & Library(y) -> directlyright(y,x) # label(non_clause).  [assumption].
+53 Man4(d4) -> Round(d4) # label(non_clause) # label(goal).  [goal].
+54 -Man3(x) | Bedroom(x).  [clausify(47)].
+55 Man3(2).  [assumption].
+56 -Man5(x) | Rectangular(x).  [clausify(42)].
+57 Man5(4).  [assumption].
+58 directlyright(x,y) | directlyright(y,x) | -nextto(x,y).  [clausify(2)].
+62 -TwelveHundred(x) | -Round(y) | nextto(y,x).  [clausify(36)].
+65 differentFrom(d1,d2).  [assumption].
+66 differentFrom(d1,d3).  [assumption].
+67 differentFrom(d1,d4).  [assumption].
+68 differentFrom(d1,d5).  [assumption].
+69 differentFrom(d2,d3).  [assumption].
+70 differentFrom(d2,d4).  [assumption].
+71 differentFrom(d2,d5).  [assumption].
+72 differentFrom(d3,d4).  [assumption].
+73 differentFrom(d3,d5).  [assumption].
+74 differentFrom(d4,d5).  [assumption].
+80 d3 = 2.  [assumption].
+81 2 = d3.  [copy(80),flip(a)].
+84 d5 = 4.  [assumption].
+85 4 = d5.  [copy(84),flip(a)].
+90 -directlyright(d1,d1).  [assumption].
+91 -directlyright(d2,d2).  [assumption].
+92 -directlyright(d3,d3).  [assumption].
+93 -directlyright(d4,d4).  [assumption].
+95 -directlyright(d1,d3).  [assumption].
+96 -directlyright(d2,d4).  [assumption].
+97 -directlyright(d3,d5).  [assumption].
+98 -directlyright(d3,d1).  [assumption].
+99 -directlyright(d4,d2).  [assumption].
+100 -directlyright(d5,d3).  [assumption].
+101 -directlyright(d2,d1).  [assumption].
+102 -directlyright(d3,d2).  [assumption].
+103 -directlyright(d4,d3).  [assumption].
+104 -directlyright(d5,d4).  [assumption].
+105 -directlyright(d1,d4).  [assumption].
+106 -directlyright(d2,d5).  [assumption].
+107 -directlyright(d4,d1).  [assumption].
+108 -directlyright(d5,d2).  [assumption].
+109 -directlyright(d1,d5).  [assumption].
+110 -directlyright(d5,d1).  [assumption].
+126 -right(d2,d1).  [assumption].
+127 -right(d3,d2).  [assumption].
+128 -right(d4,d3).  [assumption].
+129 -right(d5,d4).  [assumption].
+130 -right(d1,d1).  [assumption].
+131 -right(d2,d2).  [assumption].
+132 -right(d3,d3).  [assumption].
+133 -right(d4,d4).  [assumption].
+134 -right(d5,d5).  [assumption].
+135 -right(d3,d1).  [assumption].
+136 -right(d4,d2).  [assumption].
+137 -right(d5,d3).  [assumption].
+138 -right(d4,d1).  [assumption].
+139 -right(d5,d2).  [assumption].
+140 -right(d5,d1).  [assumption].
+142 Blue(x) | Green(x) | Orange(x) | Red(x) | Yellow(x).  [assumption].
+143 Oval(x) | Rectangular(x) | Round(x) | Runner(x) | Square(x).  [assumption].
+145 FourHundred(x) | SixHundred(x) | EightHundred(x) | OneThousand(x) | TwelveHundred(x).  [assumption].
+146 Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x) | Office(x).  [assumption].
+152 -Blue(x) | -Blue(y) | -differentFrom(x,y).  [clausify(8)].
+153 -Green(x) | -Green(y) | -differentFrom(x,y).  [clausify(9)].
+154 -Orange(x) | -Orange(y) | -differentFrom(x,y).  [clausify(10)].
+156 -Yellow(x) | -Yellow(y) | -differentFrom(x,y).  [clausify(12)].
+157 -Oval(x) | -Oval(y) | -differentFrom(x,y).  [clausify(13)].
+158 -Rectangular(x) | -Rectangular(y) | -differentFrom(x,y).  [clausify(14)].
+159 -Round(x) | -Round(y) | -differentFrom(x,y).  [clausify(15)].
+160 -Runner(x) | -Runner(y) | -differentFrom(x,y).  [clausify(16)].
+161 -Square(x) | -Square(y) | -differentFrom(x,y).  [clausify(17)].
+167 -FourHundred(x) | -FourHundred(y) | -differentFrom(x,y).  [clausify(23)].
+168 -SixHundred(x) | -SixHundred(y) | -differentFrom(x,y).  [clausify(24)].
+169 -EightHundred(x) | -EightHundred(y) | -differentFrom(x,y).  [clausify(25)].
+170 -OneThousand(x) | -OneThousand(y) | -differentFrom(x,y).  [clausify(26)].
+171 -TwelveHundred(x) | -TwelveHundred(y) | -differentFrom(x,y).  [clausify(27)].
+172 -Bedroom(x) | -Bedroom(y) | -differentFrom(x,y).  [clausify(28)].
+173 -Hall(x) | -Hall(y) | -differentFrom(x,y).  [clausify(29)].
+174 -Library(x) | -Library(y) | -differentFrom(x,y).  [clausify(30)].
+175 -LivingRoom(x) | -LivingRoom(y) | -differentFrom(x,y).  [clausify(31)].
+176 -Office(x) | -Office(y) | -differentFrom(x,y).  [clausify(32)].
+178 -Red(x) | -Hall(y) | right(x,y).  [clausify(35)].
+179 -Oval(x) | -Yellow(y) | -EightHundred(z) | right(x,y).  [clausify(37)].
+180 -Oval(x) | -Yellow(y) | -EightHundred(z) | right(y,z).  [clausify(37)].
+181 -Red(x) | -Office(y) | directlyright(x,y).  [clausify(38)].
+183 -FourHundred(x) | Stars(x).  [clausify(41)].
+186 -Round(x) | -EightHundred(y) | directlyright(x,y).  [clausify(45)].
+187 -FourHundred(x) | -Square(y) | directlyright(x,y).  [clausify(46)].
+188 -Stars(x) | -Green(y) | directlyright(y,x).  [clausify(48)].
+191 -EightHundred(x) | -Red(y) | right(y,x).  [clausify(51)].
+192 -LivingRoom(x) | -Library(y) | directlyright(y,x).  [clausify(52)].
+193 -Round(d4).  [deny(53)].
+194 Bedroom(2).  [resolve(54,a,55,a)].
+195 Bedroom(d3).  [copy(194),rewrite([81(1)])].
+196 Rectangular(4).  [resolve(56,a,57,a)].
+197 Rectangular(d5).  [copy(196),rewrite([85(1)])].
+199 -TwelveHundred(x) | -Round(y) | directlyright(y,x) | directlyright(x,y).  [resolve(62,c,58,c)].
+233 -TwelveHundred(x) | -Round(x) | directlyright(x,x).  [factor(199,c,d)].
+296 -Blue(d4) | -Blue(d5).  [resolve(152,c,74,a)].
+297 -Blue(d3) | -Blue(d5).  [resolve(152,c,73,a)].
+298 -Blue(d3) | -Blue(d4).  [resolve(152,c,72,a)].
+299 -Blue(d2) | -Blue(d5).  [resolve(152,c,71,a)].
+300 -Blue(d2) | -Blue(d4).  [resolve(152,c,70,a)].
+301 -Blue(d2) | -Blue(d3).  [resolve(152,c,69,a)].
+302 -Blue(d1) | -Blue(d5).  [resolve(152,c,68,a)].
+303 -Blue(d1) | -Blue(d4).  [resolve(152,c,67,a)].
+304 -Blue(d1) | -Blue(d3).  [resolve(152,c,66,a)].
+305 -Blue(d1) | -Blue(d2).  [resolve(152,c,65,a)].
+306 -Green(d4) | -Green(d5).  [resolve(153,c,74,a)].
+307 -Green(d3) | -Green(d5).  [resolve(153,c,73,a)].
+308 -Green(d3) | -Green(d4).  [resolve(153,c,72,a)].
+309 -Green(d2) | -Green(d5).  [resolve(153,c,71,a)].
+310 -Green(d2) | -Green(d4).  [resolve(153,c,70,a)].
+311 -Green(d2) | -Green(d3).  [resolve(153,c,69,a)].
+312 -Green(d1) | -Green(d5).  [resolve(153,c,68,a)].
+313 -Green(d1) | -Green(d4).  [resolve(153,c,67,a)].
+314 -Green(d1) | -Green(d3).  [resolve(153,c,66,a)].
+315 -Green(d1) | -Green(d2).  [resolve(153,c,65,a)].
+316 -Orange(d4) | -Orange(d5).  [resolve(154,c,74,a)].
+317 -Orange(d3) | -Orange(d5).  [resolve(154,c,73,a)].
+318 -Orange(d3) | -Orange(d4).  [resolve(154,c,72,a)].
+319 -Orange(d2) | -Orange(d5).  [resolve(154,c,71,a)].
+320 -Orange(d2) | -Orange(d4).  [resolve(154,c,70,a)].
+321 -Orange(d2) | -Orange(d3).  [resolve(154,c,69,a)].
+322 -Orange(d1) | -Orange(d5).  [resolve(154,c,68,a)].
+323 -Orange(d1) | -Orange(d4).  [resolve(154,c,67,a)].
+324 -Orange(d1) | -Orange(d3).  [resolve(154,c,66,a)].
+325 -Orange(d1) | -Orange(d2).  [resolve(154,c,65,a)].
+339 -Yellow(d2) | -Yellow(d5).  [resolve(156,c,71,a)].
+340 -Yellow(d2) | -Yellow(d4).  [resolve(156,c,70,a)].
+341 -Yellow(d2) | -Yellow(d3).  [resolve(156,c,69,a)].
+342 -Yellow(d1) | -Yellow(d5).  [resolve(156,c,68,a)].
+343 -Yellow(d1) | -Yellow(d4).  [resolve(156,c,67,a)].
+344 -Yellow(d1) | -Yellow(d3).  [resolve(156,c,66,a)].
+345 -Yellow(d1) | -Yellow(d2).  [resolve(156,c,65,a)].
+348 -Oval(d3) | -Oval(d4).  [resolve(157,c,72,a)].
+350 -Oval(d2) | -Oval(d4).  [resolve(157,c,70,a)].
+351 -Oval(d2) | -Oval(d3).  [resolve(157,c,69,a)].
+353 -Oval(d1) | -Oval(d4).  [resolve(157,c,67,a)].
+354 -Oval(d1) | -Oval(d3).  [resolve(157,c,66,a)].
+355 -Oval(d1) | -Oval(d2).  [resolve(157,c,65,a)].
+356 -Rectangular(d4).  [resolve(158,c,74,a),unit_del(b,197)].
+357 -Rectangular(d3).  [resolve(158,c,73,a),unit_del(b,197)].
+358 -Rectangular(d2).  [resolve(158,c,71,a),unit_del(b,197)].
+359 -Rectangular(d1).  [resolve(158,c,68,a),unit_del(b,197)].
+362 -Round(d2) | -Round(d3).  [resolve(159,c,69,a)].
+364 -Round(d1) | -Round(d3).  [resolve(159,c,66,a)].
+365 -Round(d1) | -Round(d2).  [resolve(159,c,65,a)].
+368 -Runner(d3) | -Runner(d4).  [resolve(160,c,72,a)].
+370 -Runner(d2) | -Runner(d4).  [resolve(160,c,70,a)].
+371 -Runner(d2) | -Runner(d3).  [resolve(160,c,69,a)].
+373 -Runner(d1) | -Runner(d4).  [resolve(160,c,67,a)].
+374 -Runner(d1) | -Runner(d3).  [resolve(160,c,66,a)].
+375 -Runner(d1) | -Runner(d2).  [resolve(160,c,65,a)].
+378 -Square(d3) | -Square(d4).  [resolve(161,c,72,a)].
+380 -Square(d2) | -Square(d4).  [resolve(161,c,70,a)].
+381 -Square(d2) | -Square(d3).  [resolve(161,c,69,a)].
+383 -Square(d1) | -Square(d4).  [resolve(161,c,67,a)].
+384 -Square(d1) | -Square(d3).  [resolve(161,c,66,a)].
+385 -Square(d1) | -Square(d2).  [resolve(161,c,65,a)].
+436 -FourHundred(d4) | -FourHundred(d5).  [resolve(167,c,74,a)].
+437 -FourHundred(d3) | -FourHundred(d5).  [resolve(167,c,73,a)].
+438 -FourHundred(d3) | -FourHundred(d4).  [resolve(167,c,72,a)].
+439 -FourHundred(d2) | -FourHundred(d5).  [resolve(167,c,71,a)].
+440 -FourHundred(d2) | -FourHundred(d4).  [resolve(167,c,70,a)].
+441 -FourHundred(d2) | -FourHundred(d3).  [resolve(167,c,69,a)].
+442 -FourHundred(d1) | -FourHundred(d5).  [resolve(167,c,68,a)].
+443 -FourHundred(d1) | -FourHundred(d4).  [resolve(167,c,67,a)].
+444 -FourHundred(d1) | -FourHundred(d3).  [resolve(167,c,66,a)].
+445 -FourHundred(d1) | -FourHundred(d2).  [resolve(167,c,65,a)].
+446 -SixHundred(d4) | -SixHundred(d5).  [resolve(168,c,74,a)].
+447 -SixHundred(d3) | -SixHundred(d5).  [resolve(168,c,73,a)].
+448 -SixHundred(d3) | -SixHundred(d4).  [resolve(168,c,72,a)].
+449 -SixHundred(d2) | -SixHundred(d5).  [resolve(168,c,71,a)].
+450 -SixHundred(d2) | -SixHundred(d4).  [resolve(168,c,70,a)].
+451 -SixHundred(d2) | -SixHundred(d3).  [resolve(168,c,69,a)].
+452 -SixHundred(d1) | -SixHundred(d5).  [resolve(168,c,68,a)].
+453 -SixHundred(d1) | -SixHundred(d4).  [resolve(168,c,67,a)].
+454 -SixHundred(d1) | -SixHundred(d3).  [resolve(168,c,66,a)].
+455 -SixHundred(d1) | -SixHundred(d2).  [resolve(168,c,65,a)].
+456 -EightHundred(d4) | -EightHundred(d5).  [resolve(169,c,74,a)].
+466 -OneThousand(d4) | -OneThousand(d5).  [resolve(170,c,74,a)].
+467 -OneThousand(d3) | -OneThousand(d5).  [resolve(170,c,73,a)].
+468 -OneThousand(d3) | -OneThousand(d4).  [resolve(170,c,72,a)].
+469 -OneThousand(d2) | -OneThousand(d5).  [resolve(170,c,71,a)].
+470 -OneThousand(d2) | -OneThousand(d4).  [resolve(170,c,70,a)].
+471 -OneThousand(d2) | -OneThousand(d3).  [resolve(170,c,69,a)].
+472 -OneThousand(d1) | -OneThousand(d5).  [resolve(170,c,68,a)].
+473 -OneThousand(d1) | -OneThousand(d4).  [resolve(170,c,67,a)].
+474 -OneThousand(d1) | -OneThousand(d3).  [resolve(170,c,66,a)].
+475 -OneThousand(d1) | -OneThousand(d2).  [resolve(170,c,65,a)].
+476 -TwelveHundred(d4) | -TwelveHundred(d5).  [resolve(171,c,74,a)].
+477 -TwelveHundred(d3) | -TwelveHundred(d5).  [resolve(171,c,73,a)].
+478 -TwelveHundred(d3) | -TwelveHundred(d4).  [resolve(171,c,72,a)].
+479 -TwelveHundred(d2) | -TwelveHundred(d5).  [resolve(171,c,71,a)].
+480 -TwelveHundred(d2) | -TwelveHundred(d4).  [resolve(171,c,70,a)].
+481 -TwelveHundred(d2) | -TwelveHundred(d3).  [resolve(171,c,69,a)].
+482 -TwelveHundred(d1) | -TwelveHundred(d5).  [resolve(171,c,68,a)].
+483 -TwelveHundred(d1) | -TwelveHundred(d4).  [resolve(171,c,67,a)].
+484 -TwelveHundred(d1) | -TwelveHundred(d3).  [resolve(171,c,66,a)].
+485 -TwelveHundred(d1) | -TwelveHundred(d2).  [resolve(171,c,65,a)].
+487 -Bedroom(d5).  [resolve(172,c,73,a),unit_del(a,195)].
+488 -Bedroom(d4).  [resolve(172,c,72,a),unit_del(a,195)].
+489 -Bedroom(d2).  [resolve(172,c,69,a),unit_del(b,195)].
+490 -Bedroom(d1).  [resolve(172,c,66,a),unit_del(b,195)].
+491 -Hall(d4) | -Hall(d5).  [resolve(173,c,74,a)].
+494 -Hall(d2) | -Hall(d5).  [resolve(173,c,71,a)].
+495 -Hall(d2) | -Hall(d4).  [resolve(173,c,70,a)].
+500 -Hall(d1) | -Hall(d2).  [resolve(173,c,65,a)].
+501 -Library(d4) | -Library(d5).  [resolve(174,c,74,a)].
+504 -Library(d2) | -Library(d5).  [resolve(174,c,71,a)].
+505 -Library(d2) | -Library(d4).  [resolve(174,c,70,a)].
+507 -Library(d1) | -Library(d5).  [resolve(174,c,68,a)].
+508 -Library(d1) | -Library(d4).  [resolve(174,c,67,a)].
+510 -Library(d1) | -Library(d2).  [resolve(174,c,65,a)].
+511 -LivingRoom(d4) | -LivingRoom(d5).  [resolve(175,c,74,a)].
+514 -LivingRoom(d2) | -LivingRoom(d5).  [resolve(175,c,71,a)].
+515 -LivingRoom(d2) | -LivingRoom(d4).  [resolve(175,c,70,a)].
+517 -LivingRoom(d1) | -LivingRoom(d5).  [resolve(175,c,68,a)].
+518 -LivingRoom(d1) | -LivingRoom(d4).  [resolve(175,c,67,a)].
+520 -LivingRoom(d1) | -LivingRoom(d2).  [resolve(175,c,65,a)].
+521 -Office(d4) | -Office(d5).  [resolve(176,c,74,a)].
+524 -Office(d2) | -Office(d5).  [resolve(176,c,71,a)].
+525 -Office(d2) | -Office(d4).  [resolve(176,c,70,a)].
+527 -Office(d1) | -Office(d5).  [resolve(176,c,68,a)].
+528 -Office(d1) | -Office(d4).  [resolve(176,c,67,a)].
+530 -Office(d1) | -Office(d2).  [resolve(176,c,65,a)].
+531 -Red(x) | directlyright(x,y) | Bedroom(y) | Hall(y) | Library(y) | LivingRoom(y).  [resolve(181,b,146,e)].
+532 -FourHundred(x) | directlyright(x,y) | Oval(y) | Rectangular(y) | Round(y) | Runner(y).  [resolve(187,b,143,e)].
+551 -Blue(d4) | Green(d5) | Orange(d5) | Red(d5) | Yellow(d5).  [resolve(296,b,142,a)].
+552 -Blue(d3) | Green(d5) | Orange(d5) | Red(d5) | Yellow(d5).  [resolve(297,b,142,a)].
+553 -Blue(d3) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4).  [resolve(298,b,142,a)].
+554 -Blue(d2) | Green(d5) | Orange(d5) | Red(d5) | Yellow(d5).  [resolve(299,b,142,a)].
+555 -Blue(d2) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4).  [resolve(300,b,142,a)].
+558 Green(d5) | Orange(d5) | Red(d5) | Yellow(d5) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4).  [resolve(551,a,142,a)].
+559 Green(d5) | Orange(d5) | Red(d5) | Yellow(d5) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3).  [resolve(552,a,142,a)].
+560 -Blue(d2) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3).  [resolve(301,b,142,a)].
+561 -Blue(d1) | Green(d5) | Orange(d5) | Red(d5) | Yellow(d5).  [resolve(302,b,142,a)].
+562 -Blue(d1) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4).  [resolve(303,b,142,a)].
+563 -Blue(d1) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3).  [resolve(304,b,142,a)].
+564 -Blue(d1) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2).  [resolve(305,b,142,a)].
+565 Green(d4) | Orange(d4) | Red(d4) | Yellow(d4) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3).  [resolve(553,a,142,a)].
+566 Green(d5) | Orange(d5) | Red(d5) | Yellow(d5) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2).  [resolve(554,a,142,a)].
+567 Green(d4) | Orange(d4) | Red(d4) | Yellow(d4) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2).  [resolve(555,a,142,a)].
+568 Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2).  [resolve(560,a,142,a)].
+569 Green(d5) | Orange(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1).  [resolve(561,a,142,a)].
+570 Green(d4) | Orange(d4) | Red(d4) | Yellow(d4) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1).  [resolve(562,a,142,a)].
+571 Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1).  [resolve(563,a,142,a)].
+572 Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1).  [resolve(564,a,142,a)].
+613 Green(d5) | Red(d5) | Yellow(d5) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4) | -Orange(d1).  [resolve(558,b,322,b)].
+614 Green(d5) | Red(d5) | Yellow(d5) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4) | -Orange(d2).  [resolve(558,b,319,b)].
+615 Green(d5) | Red(d5) | Yellow(d5) | Green(d4) | Orange(d4) | Red(d4) | Yellow(d4) | -Orange(d3).  [resolve(558,b,317,b)].
+617 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | -Orange(d1).  [resolve(559,b,322,b)].
+618 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | -Orange(d2).  [resolve(559,b,319,b)].
+619 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | -Orange(d4).  [resolve(559,b,316,b)].
+621 Green(d4) | Red(d4) | Yellow(d4) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | -Orange(d1).  [resolve(565,b,323,b)].
+622 Green(d4) | Red(d4) | Yellow(d4) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | -Orange(d2).  [resolve(565,b,320,b)].
+624 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | -Orange(d1).  [resolve(566,b,322,b)].
+625 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | -Orange(d3).  [resolve(566,b,317,b)].
+626 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | -Orange(d4).  [resolve(566,b,316,b)].
+628 Green(d4) | Red(d4) | Yellow(d4) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | -Orange(d1).  [resolve(567,b,323,b)].
+629 Green(d4) | Red(d4) | Yellow(d4) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | -Orange(d3).  [resolve(567,b,318,b)].
+633 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | -Orange(d2).  [resolve(569,b,319,b)].
+634 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | -Orange(d3).  [resolve(569,b,317,b)].
+635 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | -Orange(d4).  [resolve(569,b,316,b)].
+637 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | -Orange(d2).  [resolve(570,b,320,b)].
+638 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | -Orange(d3).  [resolve(570,b,318,b)].
+653 -Square(d3) | Oval(d4) | Runner(d4).  [resolve(378,b,143,e),unit_del(c,356),unit_del(d,193)].
+654 Oval(d4) | Runner(d4) | Oval(d3) | Round(d3) | Runner(d3).  [resolve(653,a,143,e),unit_del(d,357)].
+655 Oval(d4) | Oval(d3) | Round(d3) | Runner(d3) | -Runner(d1).  [resolve(654,b,373,b)].
+656 Oval(d4) | Oval(d3) | Round(d3) | Runner(d3) | -Runner(d2).  [resolve(654,b,370,b)].
+659 -Square(d2) | Oval(d4) | Runner(d4).  [resolve(380,b,143,e),unit_del(c,356),unit_del(d,193)].
+660 -Square(d2) | Oval(d3) | Round(d3) | Runner(d3).  [resolve(381,b,143,e),unit_del(c,357)].
+661 -Square(d1) | Oval(d4) | Runner(d4).  [resolve(383,b,143,e),unit_del(c,356),unit_del(d,193)].
+662 -Square(d1) | Oval(d3) | Round(d3) | Runner(d3).  [resolve(384,b,143,e),unit_del(c,357)].
+663 Oval(d4) | Runner(d4) | Oval(d2) | Round(d2) | Runner(d2).  [resolve(659,a,143,e),unit_del(d,358)].
+664 Oval(d4) | Runner(d4) | Oval(d1) | Round(d1) | Runner(d1).  [resolve(661,a,143,e),unit_del(d,359)].
+665 Oval(d3) | Round(d3) | Runner(d3) | Oval(d2) | Round(d2) | Runner(d2).  [resolve(660,a,143,e),unit_del(e,358)].
+666 Oval(d3) | Round(d3) | Runner(d3) | Oval(d1) | Round(d1) | Runner(d1).  [resolve(662,a,143,e),unit_del(e,359)].
+667 -Square(d1) | Oval(d2) | Round(d2) | Runner(d2).  [resolve(385,b,143,e),unit_del(c,358)].
+668 Oval(d2) | Round(d2) | Runner(d2) | Oval(d1) | Round(d1) | Runner(d1).  [resolve(667,a,143,e),unit_del(e,359)].
+669 Oval(d4) | Oval(d2) | Round(d2) | Runner(d2) | -Runner(d1).  [resolve(663,b,373,b)].
+670 Oval(d4) | Oval(d2) | Round(d2) | Runner(d2) | -Runner(d3).  [resolve(663,b,368,b)].
+673 Oval(d4) | Oval(d1) | Round(d1) | Runner(d1) | -Runner(d2).  [resolve(664,b,370,b)].
+674 Oval(d4) | Oval(d1) | Round(d1) | Runner(d1) | -Runner(d3).  [resolve(664,b,368,b)].
+697 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | Runner(d2) | Oval(d4).  [resolve(665,c,670,e),merge(g),merge(h),merge(i)].
+698 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | Runner(d2) | -Runner(d1).  [resolve(665,c,374,b)].
+701 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Runner(d1) | Oval(d4).  [resolve(666,c,674,e),merge(g),merge(h),merge(i)].
+702 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Runner(d1) | -Runner(d2).  [resolve(666,c,371,b)].
+705 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | Runner(d1) | Oval(d4).  [resolve(668,c,673,e),merge(g),merge(h),merge(i)].
+708 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | Oval(d4) | Runner(d3).  [resolve(697,e,656,e),merge(f),merge(g),merge(h)].
+712 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Oval(d4) | Runner(d3).  [resolve(701,e,655,e),merge(f),merge(g),merge(h)].
+715 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Runner(d1) | Oval(d2) | Round(d2).  [resolve(702,f,668,c),merge(h),merge(i),merge(j)].
+716 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | Oval(d4) | Runner(d2).  [resolve(705,e,669,e),merge(f),merge(g),merge(h)].
+719 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | Oval(d4) | -Runner(d2).  [resolve(708,f,371,b)].
+723 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Oval(d4) | -Runner(d1).  [resolve(712,f,374,b)].
+727 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | Oval(d4) | -Runner(d1).  [resolve(716,f,375,b)].
+730 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | Oval(d4).  [resolve(719,f,697,e),merge(f),merge(g),merge(h),merge(i),merge(j)].
+731 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Oval(d1).  [resolve(730,e,353,b)].
+732 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(730,e,180,a)].
+733 Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(d4,x).  [resolve(730,e,179,a)].
+734 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Oval(d4).  [resolve(723,f,701,e),merge(f),merge(g),merge(h),merge(i),merge(j)].
+735 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Oval(d2).  [resolve(734,e,350,b)].
+736 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(734,e,180,a)].
+737 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(d4,x).  [resolve(734,e,179,a)].
+738 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | Oval(d4).  [resolve(727,f,705,e),merge(f),merge(g),merge(h),merge(i),merge(j)].
+739 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | -Oval(d3).  [resolve(738,e,348,b)].
+740 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(738,e,180,a)].
+741 Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(d4,x).  [resolve(738,e,179,a)].
+742 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Oval(d2) | Round(d2) | Runner(d2).  [resolve(715,e,698,f),merge(g),merge(h),merge(i),merge(j)].
+745 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Oval(d2) | Round(d2) | -Runner(d1).  [resolve(742,g,375,b)].
+748 Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | Oval(d2) | Round(d2).  [resolve(745,g,715,e),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+749 Round(d3) | Oval(d1) | Round(d1) | Oval(d2) | Round(d2).  [resolve(748,a,739,e),merge(f),merge(g),merge(h),merge(i)].
+750 Round(d3) | Oval(d1) | Round(d1) | Round(d2) | Oval(d3).  [resolve(749,d,735,e),merge(f),merge(g),merge(h)].
+753 Round(d3) | Oval(d1) | Round(d1) | Round(d2) | -Oval(d2).  [resolve(750,e,351,b)].
+755 Round(d3) | Oval(d1) | Round(d1) | Round(d2).  [resolve(753,e,749,d),merge(e),merge(f),merge(g),merge(h)].
+756 Round(d3) | Round(d1) | Round(d2) | Oval(d3) | Oval(d2).  [resolve(755,b,731,e),merge(e),merge(g)].
+759 Round(d3) | Round(d1) | Round(d2) | Oval(d2) | -Oval(d1).  [resolve(756,d,354,b)].
+761 Round(d3) | Round(d1) | Round(d2) | Oval(d2).  [resolve(759,e,755,b),merge(e),merge(f),merge(g)].
+762 Round(d3) | Round(d1) | Round(d2) | -Oval(d1).  [resolve(761,d,355,b)].
+764 Round(d3) | Round(d1) | Round(d2).  [resolve(762,d,755,b),merge(d),merge(e),merge(f)].
+765 Round(d1) | Round(d2) | -EightHundred(x) | directlyright(d3,x).  [resolve(764,a,186,a)].
+766 -OneThousand(d4) | FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5).  [resolve(466,b,145,d)].
+767 -OneThousand(d3) | FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5).  [resolve(467,b,145,d)].
+768 -OneThousand(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(468,b,145,d)].
+769 -OneThousand(d2) | FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5).  [resolve(469,b,145,d)].
+770 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(766,a,145,d)].
+771 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(767,a,145,d)].
+772 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(768,a,145,d)].
+773 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(769,a,145,d)].
+774 -OneThousand(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(470,b,145,d)].
+775 -OneThousand(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(471,b,145,d)].
+776 -OneThousand(d1) | FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5).  [resolve(472,b,145,d)].
+777 -OneThousand(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(473,b,145,d)].
+778 -OneThousand(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(474,b,145,d)].
+779 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(774,a,145,d)].
+780 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(775,a,145,d)].
+781 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | TwelveHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1).  [resolve(776,a,145,d)].
+782 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1).  [resolve(777,a,145,d)].
+783 -OneThousand(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(475,b,145,d)].
+784 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1).  [resolve(778,a,145,d)].
+785 FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1).  [resolve(783,a,145,d)].
+786 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Orange(d3) | Red(d3) | Yellow(d3) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(619,h,565,b),merge(k),merge(l),merge(m),merge(n)].
+787 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(625,h,568,b),merge(k),merge(l),merge(m),merge(n)].
+788 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(626,h,567,b),merge(k),merge(l),merge(m),merge(n)].
+789 Green(d4) | Red(d4) | Yellow(d4) | Green(d2) | Orange(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(629,h,568,b),merge(k),merge(l),merge(m),merge(n)].
+790 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2).  [resolve(633,h,572,b),merge(k),merge(l),merge(m),merge(n)].
+791 -Office(d4) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(521,b,146,e),unit_del(b,487)].
+794 -Office(d2) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(524,b,146,e),unit_del(b,487)].
+795 Hall(d5) | Library(d5) | LivingRoom(d5) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(791,a,146,e),unit_del(d,488)].
+796 Hall(d5) | Library(d5) | LivingRoom(d5) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(794,a,146,e),unit_del(d,489)].
+797 -Office(d2) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(525,b,146,e),unit_del(b,488)].
+798 -Office(d1) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(527,b,146,e),unit_del(b,487)].
+799 -Office(d1) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(528,b,146,e),unit_del(b,488)].
+800 Hall(d4) | Library(d4) | LivingRoom(d4) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(797,a,146,e),unit_del(d,489)].
+801 Hall(d5) | Library(d5) | LivingRoom(d5) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(798,a,146,e),unit_del(d,490)].
+802 Hall(d4) | Library(d4) | LivingRoom(d4) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(799,a,146,e),unit_del(d,490)].
+803 Hall(d5) | Library(d5) | Hall(d4) | Library(d4) | LivingRoom(d4) | -LivingRoom(d1).  [resolve(795,c,517,b)].
+804 Hall(d5) | Library(d5) | Hall(d4) | Library(d4) | LivingRoom(d4) | -LivingRoom(d2).  [resolve(795,c,514,b)].
+807 -Office(d1) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(530,b,146,e),unit_del(b,489)].
+808 Hall(d2) | Library(d2) | LivingRoom(d2) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(807,a,146,e),unit_del(d,490)].
+809 Hall(d5) | Library(d5) | Hall(d2) | Library(d2) | LivingRoom(d2) | -LivingRoom(d1).  [resolve(796,c,517,b)].
+811 Hall(d5) | Library(d5) | Hall(d2) | Library(d2) | LivingRoom(d2) | -LivingRoom(d4).  [resolve(796,c,511,b)].
+813 Hall(d4) | Library(d4) | Hall(d2) | Library(d2) | LivingRoom(d2) | -LivingRoom(d1).  [resolve(800,c,518,b)].
+816 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | LivingRoom(d1) | -LivingRoom(d2).  [resolve(801,c,514,b)].
+818 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | LivingRoom(d1) | -LivingRoom(d4).  [resolve(801,c,511,b)].
+819 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | LivingRoom(d1) | -Library(x) | directlyright(x,d5).  [resolve(801,c,192,a)].
+820 Hall(d4) | Library(d4) | Hall(d1) | Library(d1) | LivingRoom(d1) | -LivingRoom(d2).  [resolve(802,c,515,b)].
+822 Hall(d4) | Library(d4) | Hall(d1) | Library(d1) | LivingRoom(d1) | -Library(x) | directlyright(x,d4).  [resolve(802,c,192,a)].
+823 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | LivingRoom(d1) | -Library(x) | directlyright(x,d2).  [resolve(808,c,192,a)].
+824 Hall(d5) | Library(d5) | Hall(d2) | Library(d2) | LivingRoom(d2) | Hall(d4) | Library(d4).  [resolve(811,f,800,c),merge(h),merge(i),merge(j)].
+825 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | LivingRoom(d1) | Hall(d2) | Library(d2).  [resolve(816,f,808,c),merge(h),merge(i),merge(j)].
+826 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | LivingRoom(d1) | Hall(d4) | Library(d4).  [resolve(818,f,802,c),merge(h),merge(i),merge(j)].
+827 Hall(d4) | Library(d4) | Hall(d1) | Library(d1) | LivingRoom(d1) | Hall(d2) | Library(d2).  [resolve(820,f,808,c),merge(h),merge(i),merge(j)].
+828 Hall(d5) | Library(d5) | Hall(d2) | Library(d2) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(824,e,804,f),merge(g),merge(h),merge(i),merge(j)].
+831 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(825,e,809,f),merge(g),merge(h),merge(i),merge(j)].
+833 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(826,e,803,f),merge(g),merge(h),merge(i),merge(j)].
+835 Hall(d4) | Library(d4) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(827,e,813,f),merge(g),merge(h),merge(i),merge(j)].
+837 Hall(d5) | Library(d5) | Hall(d2) | Library(d2) | Hall(d4) | Library(d4) | -LivingRoom(d2).  [resolve(828,g,515,b)].
+841 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2) | -LivingRoom(d1).  [resolve(831,g,520,b)].
+843 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(833,g,518,b)].
+847 Hall(d4) | Library(d4) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2) | -LivingRoom(d1).  [resolve(835,g,520,b)].
+849 Hall(d5) | Library(d5) | Hall(d2) | Library(d2) | Hall(d4) | Library(d4).  [resolve(837,g,824,e),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+850 Hall(d5) | Hall(d2) | Library(d2) | Hall(d4) | Library(d4) | -Library(d1).  [resolve(849,b,507,b)].
+852 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2).  [resolve(841,g,825,e),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+854 Hall(d5) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2) | -Library(d4).  [resolve(852,b,501,b)].
+855 Hall(d5) | Library(d5) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4).  [resolve(843,g,826,e),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+856 Hall(d5) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4) | -Library(d2).  [resolve(855,b,504,b)].
+858 Hall(d4) | Library(d4) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2).  [resolve(847,g,827,e),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+859 Hall(d4) | Hall(d1) | Library(d1) | Hall(d2) | Library(d2) | Hall(d5).  [resolve(858,b,854,f),merge(g),merge(h),merge(i),merge(j)].
+861 Hall(d4) | Hall(d1) | Library(d1) | Hall(d2) | Hall(d5) | Library(d4).  [resolve(859,e,856,f),merge(f),merge(g),merge(h),merge(i)].
+862 Hall(d4) | Hall(d1) | Library(d1) | Hall(d2) | Hall(d5) | -Library(d2).  [resolve(861,f,505,b)].
+864 Hall(d4) | Hall(d1) | Library(d1) | Hall(d2) | Hall(d5).  [resolve(862,f,859,e),merge(f),merge(g),merge(h),merge(i),merge(j)].
+865 Hall(d4) | Hall(d1) | Hall(d2) | Hall(d5) | Library(d2) | Library(d4).  [resolve(864,c,850,f),merge(e),merge(f),merge(h)].
+866 Hall(d4) | Hall(d1) | Hall(d2) | Hall(d5) | Library(d2) | -Library(d1).  [resolve(865,f,508,b)].
+868 Hall(d4) | Hall(d1) | Hall(d2) | Hall(d5) | Library(d2).  [resolve(866,f,864,c),merge(f),merge(g),merge(h),merge(i)].
+869 Hall(d4) | Hall(d1) | Hall(d2) | Hall(d5) | -Library(d1).  [resolve(868,e,510,b)].
+870 Hall(d4) | Hall(d1) | Hall(d2) | Hall(d5).  [resolve(869,e,864,c),merge(e),merge(f),merge(g),merge(h)].
+872 Hall(d4) | Hall(d1) | Hall(d2) | -Red(x) | right(x,d5).  [resolve(870,d,178,b)].
+878 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | LivingRoom(d1) | Hall(d4).  [resolve(823,f,858,b),merge(h),merge(i),merge(j),merge(k),unit_del(f,99)].
+879 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | LivingRoom(d1) | Hall(d5).  [resolve(823,f,852,b),merge(h),merge(i),merge(j),merge(k),unit_del(f,108)].
+880 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(634,h,571,b),merge(k),merge(l),merge(m),merge(n)].
+881 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | Hall(d4) | -Library(x) | directlyright(x,d1).  [resolve(878,e,192,a)].
+882 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | Hall(d5) | -Library(x) | directlyright(x,d1).  [resolve(879,e,192,a)].
+886 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(635,h,570,b),merge(k),merge(l),merge(m),merge(n)].
+890 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(881,f,858,b),merge(g),merge(h),merge(i),merge(j),merge(k),unit_del(f,107)].
+891 Hall(d2) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4) | LivingRoom(d1).  [resolve(890,b,822,f),merge(e),merge(g),merge(h),unit_del(g,96)].
+892 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2).  [resolve(637,h,572,b),merge(k),merge(l),merge(m),merge(n)].
+893 Hall(d2) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d1).  [resolve(891,f,192,a)].
+894 Hall(d2) | Library(d2) | Hall(d1) | Library(d1) | Hall(d5).  [resolve(882,f,852,b),merge(g),merge(h),merge(i),merge(j),merge(k),unit_del(f,110)].
+895 Hall(d2) | Hall(d1) | Library(d1) | Hall(d5) | Library(d5) | LivingRoom(d1).  [resolve(894,b,819,f),merge(e),merge(g),merge(h),unit_del(g,106)].
+896 Hall(d2) | Hall(d1) | Library(d1) | Hall(d5) | Library(d5) | -Library(x) | directlyright(x,d1).  [resolve(895,f,192,a)].
+897 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Orange(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(638,h,571,b),merge(k),merge(l),merge(m),merge(n)].
+898 Hall(d2) | Hall(d1) | Library(d1) | Hall(d4) | Library(d4).  [resolve(893,f,890,b),merge(g),merge(h),merge(i),merge(j),unit_del(f,101)].
+899 Hall(d2) | Hall(d1) | Library(d1) | Hall(d4) | -Library(d2).  [resolve(898,e,505,b)].
+901 Hall(d2) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(899,e,890,b),merge(e),merge(f),merge(g),merge(h)].
+905 Hall(d2) | Hall(d1) | Library(d1) | Hall(d5) | Library(d5).  [resolve(896,f,894,b),merge(g),merge(h),merge(i),merge(j),unit_del(f,101)].
+907 Hall(d2) | Hall(d1) | Library(d1) | Hall(d5) | -Library(d2).  [resolve(905,e,504,b)].
+910 Hall(d2) | Hall(d1) | Library(d1) | Hall(d5).  [resolve(907,e,894,b),merge(e),merge(f),merge(g),merge(h)].
+957 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4) | -TwelveHundred(d1).  [resolve(770,d,482,b)].
+958 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4) | -TwelveHundred(d2).  [resolve(770,d,479,b)].
+959 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4) | -TwelveHundred(d3).  [resolve(770,d,477,b)].
+962 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | -TwelveHundred(d1).  [resolve(771,d,482,b)].
+963 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | -TwelveHundred(d2).  [resolve(771,d,479,b)].
+964 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | -TwelveHundred(d4).  [resolve(771,d,476,b)].
+966 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | -Round(x) | directlyright(x,d5) | directlyright(d5,x).  [resolve(771,d,199,a)].
+971 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | -TwelveHundred(d1).  [resolve(772,d,483,b)].
+972 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | -TwelveHundred(d2).  [resolve(772,d,480,b)].
+974 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | -TwelveHundred(d1).  [resolve(773,d,482,b)].
+975 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | -TwelveHundred(d3).  [resolve(773,d,477,b)].
+976 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | -TwelveHundred(d4).  [resolve(773,d,476,b)].
+979 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | -TwelveHundred(d1).  [resolve(779,d,483,b)].
+980 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | -TwelveHundred(d3).  [resolve(779,d,478,b)].
+982 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | -TwelveHundred(d1).  [resolve(780,d,484,b)].
+988 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -TwelveHundred(d2).  [resolve(781,d,479,b)].
+989 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -TwelveHundred(d3).  [resolve(781,d,477,b)].
+990 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -TwelveHundred(d4).  [resolve(781,d,476,b)].
+992 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -Round(x) | directlyright(x,d5) | directlyright(d5,x).  [resolve(781,d,199,a)].
+993 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -TwelveHundred(d2).  [resolve(782,d,480,b)].
+994 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -TwelveHundred(d3).  [resolve(782,d,478,b)].
+996 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -TwelveHundred(d2).  [resolve(784,d,481,b)].
+997 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | -Round(d3).  [resolve(784,d,233,a),unit_del(i,92)].
+1026 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4).  [resolve(964,h,772,d),merge(k),merge(l),merge(m),merge(n)].
+1027 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(975,h,780,d),merge(k),merge(l),merge(m),merge(n)].
+1028 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4).  [resolve(976,h,779,d),merge(k),merge(l),merge(m),merge(n)].
+1029 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(980,h,780,d),merge(k),merge(l),merge(m),merge(n)].
+1031 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2).  [resolve(988,h,785,d),merge(k),merge(l),merge(m),merge(n)].
+1032 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(989,h,784,d),merge(k),merge(l),merge(m),merge(n)].
+1033 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4).  [resolve(990,h,782,d),merge(k),merge(l),merge(m),merge(n)].
+1034 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2).  [resolve(993,h,785,d),merge(k),merge(l),merge(m),merge(n)].
+1035 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(994,h,784,d),merge(k),merge(l),merge(m),merge(n)].
+1036 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2).  [resolve(996,h,785,d),merge(k),merge(l),merge(m),merge(n)].
+1037 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | Round(d1) | Round(d2).  [resolve(997,h,764,a)].
+1038 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Red(d3) | Yellow(d3) | Green(d4) | Red(d4) | Yellow(d4) | Orange(d4).  [resolve(786,e,615,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1042 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3) | Orange(d3).  [resolve(787,e,618,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1045 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d4) | Red(d4) | Yellow(d4) | Orange(d4).  [resolve(788,e,614,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1056 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | -Round(x) | directlyright(x,d1) | directlyright(d1,x).  [resolve(1037,g,199,a)].
+1058 Green(d4) | Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3) | Orange(d3).  [resolve(789,e,622,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1061 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2) | Orange(d2).  [resolve(790,e,624,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1063 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3) | Orange(d3).  [resolve(880,e,617,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1065 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4) | Orange(d4).  [resolve(886,e,613,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1067 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2) | Orange(d2).  [resolve(892,e,628,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1069 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3) | Orange(d3).  [resolve(897,e,621,h),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+1106 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3) | Round(d1) | Round(d2).  [resolve(966,h,764,a),unit_del(h,97),unit_del(i,100)].
+1110 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | Round(d1) | Round(d2) | -Round(d3).  [resolve(1106,g,233,a),unit_del(j,92)].
+1114 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | Round(d1) | Round(d2).  [resolve(1110,i,764,a),merge(i),merge(j)].
+1136 FourHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | Round(d1) | Round(d2) | -SixHundred(d1).  [resolve(1114,b,452,b)].
+1182 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | TwelveHundred(d1) | Round(d1) | Round(d2).  [resolve(992,h,764,a),unit_del(h,97),unit_del(i,100)].
+1185 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | -Round(x) | directlyright(x,d1) | directlyright(d1,x).  [resolve(1182,g,199,a)].
+1188 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(1026,g,959,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1193 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(1027,g,963,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1197 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(1028,g,958,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1201 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(1029,g,972,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1205 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(1031,g,974,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1208 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(1032,g,962,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1211 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | TwelveHundred(d4).  [resolve(1033,g,957,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1214 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(1034,g,979,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1217 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | TwelveHundred(d3).  [resolve(1035,g,971,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1220 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | TwelveHundred(d2).  [resolve(1036,g,982,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+1223 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Red(d3) | Yellow(d3) | Green(d4) | Red(d4) | Yellow(d4) | -Orange(d3).  [resolve(1038,j,318,b)].
+1228 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3) | -Orange(d2).  [resolve(1042,j,321,b)].
+1232 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d4) | Red(d4) | Yellow(d4) | -Orange(d2).  [resolve(1045,j,320,b)].
+1236 Green(d4) | Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3) | -Orange(d2).  [resolve(1058,j,321,b)].
+1240 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2) | -Orange(d1).  [resolve(1061,j,325,b)].
+1242 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3) | -Orange(d1).  [resolve(1063,j,324,b)].
+1245 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4) | -Orange(d1).  [resolve(1065,j,323,b)].
+1250 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2) | -Orange(d1).  [resolve(1067,j,325,b)].
+1252 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3) | -Orange(d1).  [resolve(1069,j,324,b)].
+1310 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2).  [resolve(1056,i,764,a),merge(k),merge(l),unit_del(i,98),unit_del(j,95)].
+1354 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -TwelveHundred(d3).  [resolve(1188,j,478,b)].
+1359 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -TwelveHundred(d2).  [resolve(1193,j,481,b)].
+1363 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -TwelveHundred(d2).  [resolve(1197,j,480,b)].
+1367 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -TwelveHundred(d2).  [resolve(1201,j,481,b)].
+1371 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | -TwelveHundred(d1).  [resolve(1205,j,485,b)].
+1374 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -TwelveHundred(d1).  [resolve(1208,j,484,b)].
+1378 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -TwelveHundred(d1).  [resolve(1211,j,483,b)].
+1382 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | -TwelveHundred(d1).  [resolve(1214,j,485,b)].
+1385 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -TwelveHundred(d1).  [resolve(1217,j,484,b)].
+1389 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | -TwelveHundred(d1).  [resolve(1220,j,485,b)].
+1392 Green(d5) | Red(d5) | Yellow(d5) | Green(d3) | Red(d3) | Yellow(d3) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(1223,j,786,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1393 Red(d5) | Yellow(d5) | Green(d3) | Red(d3) | Yellow(d3) | Green(d4) | Red(d4) | Yellow(d4) | -Green(d1).  [resolve(1392,a,312,b)].
+1394 Red(d5) | Yellow(d5) | Green(d3) | Red(d3) | Yellow(d3) | Green(d4) | Red(d4) | Yellow(d4) | -Green(d2).  [resolve(1392,a,309,b)].
+1396 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(1228,j,787,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1398 Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3) | -Green(d4).  [resolve(1396,a,306,b)].
+1400 Green(d5) | Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(1232,j,788,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1401 Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d4) | Red(d4) | Yellow(d4) | -Green(d1).  [resolve(1400,a,312,b)].
+1402 Red(d5) | Yellow(d5) | Green(d2) | Red(d2) | Yellow(d2) | Green(d4) | Red(d4) | Yellow(d4) | -Green(d3).  [resolve(1400,a,307,b)].
+1404 Green(d4) | Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(1236,j,789,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1405 Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Green(d3) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5).  [resolve(1404,a,1398,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1408 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2).  [resolve(1240,j,790,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1410 Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2) | -Green(d4).  [resolve(1408,a,306,b)].
+1412 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(1242,j,880,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1414 Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3) | -Green(d4).  [resolve(1412,a,306,b)].
+1416 Green(d5) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(1245,j,886,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1417 Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4) | -Green(d2).  [resolve(1416,a,309,b)].
+1418 Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4) | -Green(d3).  [resolve(1416,a,307,b)].
+1419 Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4) | -Stars(x) | directlyright(d5,x).  [resolve(1416,a,188,b)].
+1420 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2).  [resolve(1250,j,892,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1421 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d2) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5).  [resolve(1420,a,1410,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1424 Green(d4) | Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3).  [resolve(1252,j,897,e),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1425 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Green(d3) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5).  [resolve(1424,a,1414,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1480 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4).  [resolve(1354,j,1026,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1498 FourHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -SixHundred(d1).  [resolve(1480,b,452,b)].
+1499 FourHundred(d5) | EightHundred(d5) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -SixHundred(d2).  [resolve(1480,b,449,b)].
+1501 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(1359,j,1027,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1519 FourHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -SixHundred(d1).  [resolve(1501,b,452,b)].
+1520 FourHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -SixHundred(d4).  [resolve(1501,b,446,b)].
+1523 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4).  [resolve(1363,j,1028,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1541 FourHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -SixHundred(d1).  [resolve(1523,b,452,b)].
+1542 FourHundred(d5) | EightHundred(d5) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -SixHundred(d3).  [resolve(1523,b,447,b)].
+1547 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(1367,j,1029,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1548 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5).  [resolve(1547,b,1520,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1559 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -SixHundred(d1).  [resolve(1547,b,453,b)].
+1560 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2).  [resolve(1371,j,1031,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1578 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | -SixHundred(d3).  [resolve(1560,b,447,b)].
+1579 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | -SixHundred(d4).  [resolve(1560,b,446,b)].
+1583 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(1374,j,1032,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1604 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -SixHundred(d2).  [resolve(1583,b,449,b)].
+1605 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -SixHundred(d4).  [resolve(1583,b,446,b)].
+1609 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4).  [resolve(1378,j,1033,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1627 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -SixHundred(d2).  [resolve(1609,b,449,b)].
+1628 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | -SixHundred(d3).  [resolve(1609,b,447,b)].
+1634 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2).  [resolve(1382,j,1034,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1635 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5).  [resolve(1634,b,1579,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1646 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | -SixHundred(d3).  [resolve(1634,b,448,b)].
+1648 FourHundred(d4) | SixHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3).  [resolve(1385,j,1035,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1650 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5).  [resolve(1648,b,1605,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1661 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | -SixHundred(d2).  [resolve(1648,b,450,b)].
+1663 FourHundred(d3) | SixHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2).  [resolve(1389,j,1036,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1664 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4).  [resolve(1663,b,1646,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1665 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5).  [resolve(1663,b,1578,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+1679 Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d4).  [resolve(1405,f,1402,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(p),merge(q)].
+1683 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5) | Green(d4).  [resolve(1421,f,1417,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(p),merge(q)].
+1685 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d4).  [resolve(1425,f,1418,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(p),merge(q)].
+1722 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d4).  [resolve(1548,g,1542,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+1737 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d4).  [resolve(1635,g,1627,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+1755 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d4).  [resolve(1650,g,1628,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+1770 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4) | SixHundred(d3).  [resolve(1664,g,1661,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+1788 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3).  [resolve(1665,g,1604,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q)].
+1806 Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | -Green(d3).  [resolve(1679,j,308,b)].
+1808 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5) | -Green(d2).  [resolve(1683,j,310,b)].
+1811 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | -Green(d3).  [resolve(1685,j,308,b)].
+1849 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d3).  [resolve(1722,j,448,b)].
+1852 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d2).  [resolve(1737,j,450,b)].
+1861 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d3).  [resolve(1755,j,448,b)].
+1867 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4) | -SixHundred(d2).  [resolve(1770,j,451,b)].
+1872 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d2).  [resolve(1788,j,451,b)].
+1873 Red(d4) | Yellow(d4) | Green(d2) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5).  [resolve(1806,j,1405,f),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1874 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d3) | Green(d4).  [resolve(1873,c,1394,i),merge(i),merge(j),merge(l),merge(m),merge(o),merge(p)].
+1877 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5).  [resolve(1808,j,1421,f),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1879 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5) | Green(d2) | Green(d4).  [resolve(1877,c,1401,i),merge(i),merge(j),merge(l),merge(m),merge(o),merge(p)].
+1881 Red(d4) | Yellow(d4) | Green(d1) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5).  [resolve(1811,j,1425,f),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1882 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d3) | Green(d4).  [resolve(1881,c,1393,i),merge(i),merge(j),merge(l),merge(m),merge(o),merge(p)].
+1917 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | SixHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5).  [resolve(1849,j,1548,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1918 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3) | SixHundred(d4).  [resolve(1917,d,1499,i),merge(i),merge(j),merge(k),merge(m),merge(n),merge(p)].
+1937 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5).  [resolve(1852,j,1635,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1939 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d2) | SixHundred(d4).  [resolve(1937,d,1541,i),merge(i),merge(j),merge(k),merge(m),merge(n),merge(p)].
+1958 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5).  [resolve(1861,j,1650,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+1959 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3) | SixHundred(d4).  [resolve(1958,d,1498,i),merge(i),merge(j),merge(k),merge(m),merge(n),merge(p)].
+1979 FourHundred(d5) | SixHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2).  [resolve(1185,i,764,a),merge(k),merge(l),unit_del(i,98),unit_del(j,95)].
+1998 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | -SixHundred(d3).  [resolve(1979,b,447,b)].
+2000 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | FourHundred(d3) | EightHundred(d3).  [resolve(1998,h,1310,b),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2002 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | FourHundred(d3) | EightHundred(d3) | SixHundred(d3).  [resolve(2000,d,1136,h),merge(i),merge(j),merge(k),merge(m),merge(n),merge(o)].
+2022 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | FourHundred(d3) | EightHundred(d3) | -SixHundred(d1).  [resolve(2002,i,454,b)].
+2024 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | EightHundred(d1) | Round(d1) | Round(d2) | FourHundred(d3) | EightHundred(d3).  [resolve(2022,i,2000,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2029 FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | EightHundred(d1) | Round(d1) | FourHundred(d3) | EightHundred(d3) | -EightHundred(x) | directlyright(d2,x).  [resolve(2024,f,186,a)].
+2030 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4).  [resolve(1867,j,1664,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2031 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4) | SixHundred(d2) | SixHundred(d3).  [resolve(2030,d,1559,i),merge(i),merge(j),merge(k),merge(m),merge(n),merge(p)].
+2050 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | SixHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5).  [resolve(1872,j,1665,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+2051 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d2) | SixHundred(d3).  [resolve(2050,d,1519,i),merge(i),merge(j),merge(k),merge(m),merge(n),merge(p)].
+2070 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d3) | -Green(d2).  [resolve(1874,j,310,b)].
+2075 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5) | Green(d2) | -Green(d1).  [resolve(1879,j,313,b)].
+2078 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d3) | -Green(d1).  [resolve(1882,j,313,b)].
+2188 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3) | -SixHundred(d2).  [resolve(1918,j,450,b)].
+2194 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d2) | -SixHundred(d1).  [resolve(1939,j,453,b)].
+2198 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3) | -SixHundred(d1).  [resolve(1959,j,453,b)].
+2206 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4) | SixHundred(d2) | -SixHundred(d1).  [resolve(2031,j,454,b)].
+2208 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d2) | -SixHundred(d1).  [resolve(2051,j,454,b)].
+2209 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d3).  [resolve(2070,j,1873,c),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2210 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | -Green(d2).  [resolve(2209,i,311,b)].
+2212 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5).  [resolve(2210,i,1873,c),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2213 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d1) | Hall(d2).  [resolve(2212,g,872,d),unit_del(k,134)].
+2217 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5) | Green(d2).  [resolve(2075,j,1877,c),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2218 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5) | -Green(d1).  [resolve(2217,i,315,b)].
+2220 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Red(d5) | Yellow(d5).  [resolve(2218,i,1877,c),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2221 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d1) | Hall(d2).  [resolve(2220,g,872,d),unit_del(k,134)].
+2225 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | Green(d3).  [resolve(2078,j,1881,c),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2226 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5) | -Green(d1).  [resolve(2225,i,314,b)].
+2229 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Red(d5) | Yellow(d5).  [resolve(2226,i,1881,c),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2230 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d1) | Hall(d2).  [resolve(2229,g,872,d),unit_del(k,134)].
+2347 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3).  [resolve(2188,j,1917,d),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2352 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d2).  [resolve(2347,i,451,b)].
+2353 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5).  [resolve(2352,i,1917,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2355 FourHundred(d4) | EightHundred(d4) | FourHundred(d2) | EightHundred(d2) | FourHundred(d3) | EightHundred(d3) | EightHundred(d5) | -FourHundred(d1).  [resolve(2353,g,442,b)].
+2368 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d2).  [resolve(2194,j,1937,d),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2371 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d1).  [resolve(2368,i,455,b)].
+2372 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5).  [resolve(2371,i,1937,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2374 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | EightHundred(d5) | -FourHundred(d3).  [resolve(2372,g,437,b)].
+2386 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | SixHundred(d3).  [resolve(2198,j,1958,d),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2388 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d1).  [resolve(2386,i,454,b)].
+2390 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | FourHundred(d5) | EightHundred(d5).  [resolve(2388,i,1958,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2392 FourHundred(d4) | EightHundred(d4) | FourHundred(d1) | EightHundred(d1) | FourHundred(d3) | EightHundred(d3) | EightHundred(d5) | -FourHundred(d2).  [resolve(2390,g,439,b)].
+2406 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4) | SixHundred(d2).  [resolve(2206,j,2030,d),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2409 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4) | -SixHundred(d1).  [resolve(2406,i,455,b)].
+2410 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d4) | EightHundred(d4).  [resolve(2409,i,2030,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2424 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | SixHundred(d2).  [resolve(2208,j,2050,d),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2427 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | -SixHundred(d1).  [resolve(2424,i,455,b)].
+2430 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5).  [resolve(2427,i,2050,d),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2432 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | EightHundred(d5) | -FourHundred(d4).  [resolve(2430,g,436,b)].
+2435 FourHundred(d3) | EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4).  [resolve(2432,h,2410,g),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m)].
+2443 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d4).  [resolve(2435,a,2374,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2456 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | -FourHundred(d3).  [resolve(2443,h,438,b)].
+2463 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | FourHundred(d2) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4).  [resolve(2456,h,2435,a),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2465 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d4) | FourHundred(d3).  [resolve(2463,d,2392,h),merge(h),merge(i),merge(j),merge(l),merge(m)].
+2476 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d3) | -FourHundred(d2).  [resolve(2465,g,440,b)].
+2479 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d3).  [resolve(2476,h,2463,d),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m)].
+2483 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | -FourHundred(d2).  [resolve(2479,g,441,b)].
+2486 EightHundred(d3) | FourHundred(d1) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4).  [resolve(2483,g,2463,d),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+2487 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d4) | FourHundred(d2) | FourHundred(d3).  [resolve(2486,b,2355,h),merge(g),merge(i),merge(k),merge(l)].
+2499 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d2) | FourHundred(d3) | -FourHundred(d1).  [resolve(2487,f,443,b)].
+2506 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d2) | FourHundred(d3).  [resolve(2499,h,2486,b),merge(h),merge(i),merge(j),merge(k),merge(l)].
+2508 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d2) | -FourHundred(d1).  [resolve(2506,g,444,b)].
+2511 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | FourHundred(d2).  [resolve(2508,g,2486,b),merge(g),merge(h),merge(i),merge(j),merge(k)].
+2513 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4) | -FourHundred(d1).  [resolve(2511,f,445,b)].
+2521 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | EightHundred(d4).  [resolve(2513,f,2486,b),merge(f),merge(g),merge(h),merge(i),merge(j)].
+2526 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d4) | Round(d1) | Round(d2).  [resolve(2521,d,765,c),unit_del(g,97)].
+2536 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d4) | Round(d1) | -EightHundred(x) | directlyright(d2,x).  [resolve(2526,f,186,a)].
+2538 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d4) | Round(d1).  [resolve(2536,f,2521,d),merge(g),merge(h),merge(i),merge(j),unit_del(f,106)].
+2545 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d4) | -EightHundred(x) | directlyright(d1,x).  [resolve(2538,e,186,a)].
+2546 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d4).  [resolve(2545,e,2521,d),merge(f),merge(g),merge(h),merge(i),unit_del(e,109)].
+2552 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | Round(d1) | FourHundred(d3).  [resolve(2546,d,2029,h),merge(g),merge(j),unit_del(i,96)].
+2553 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | right(d4,x).  [resolve(2546,d,741,f)].
+2554 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(2546,d,740,f)].
+2555 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(d4,x).  [resolve(2546,d,737,f)].
+2556 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(2546,d,736,f)].
+2557 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(d4,x).  [resolve(2546,d,733,f)].
+2558 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(x,d4).  [resolve(2546,d,732,f)].
+2563 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | -EightHundred(x) | directlyright(d1,x).  [resolve(2552,g,186,a)].
+2569 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | FourHundred(d5) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3).  [resolve(2563,h,2546,d),merge(i),merge(j),merge(k),unit_del(h,105)].
+2570 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | directlyright(d5,x) | Oval(x) | Rectangular(x) | Round(x) | Runner(x).  [resolve(2569,d,532,a)].
+2585 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Hall(d2) | -Red(x) | right(x,d4).  [resolve(2213,h,178,b)].
+2587 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | Hall(d2) | -Red(x) | right(x,d4).  [resolve(2221,h,178,b)].
+2589 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Hall(d2) | -Red(x) | right(x,d4).  [resolve(2230,h,178,b)].
+2862 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d1) | Round(d1) | Runner(d1).  [resolve(2570,g,110,a),unit_del(h,359)].
+2863 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d2) | Round(d2) | Runner(d2).  [resolve(2570,g,108,a),unit_del(h,358)].
+2864 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d4) | Runner(d4).  [resolve(2570,g,104,a),unit_del(h,356),unit_del(i,193)].
+2866 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d4) | -Runner(d1).  [resolve(2864,h,373,b)].
+2867 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d4) | -Runner(d2).  [resolve(2864,h,370,b)].
+2876 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d1) | Round(d1) | Oval(d4).  [resolve(2862,i,2866,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2880 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d2) | Round(d2) | Oval(d4).  [resolve(2863,i,2867,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2881 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d2) | Round(d2) | -Runner(d1).  [resolve(2863,i,375,b)].
+2889 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d1) | Round(d1) | -Oval(d2).  [resolve(2876,i,350,b)].
+2894 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d2) | Round(d2) | -Oval(d1).  [resolve(2880,i,353,b)].
+2898 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Oval(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(2881,i,2862,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+2913 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Round(d2) | Oval(d1) | Round(d1).  [resolve(2898,g,2889,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+2914 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Round(d2) | Round(d1) | Oval(d2).  [resolve(2913,h,2894,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(p)].
+2917 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Round(d2) | Round(d1) | -Oval(d1).  [resolve(2914,i,355,b)].
+2921 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Round(d2) | Round(d1).  [resolve(2917,i,2913,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+2924 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Round(d1) | -EightHundred(x) | directlyright(d2,x).  [resolve(2921,g,186,a)].
+2925 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | Round(d1).  [resolve(2924,h,2546,d),merge(i),merge(j),merge(k),unit_del(h,96)].
+2929 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3) | -EightHundred(x) | directlyright(d1,x).  [resolve(2925,g,186,a)].
+2933 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | FourHundred(d3).  [resolve(2929,g,2546,d),merge(h),merge(i),merge(j),unit_del(g,105)].
+2936 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Stars(d3).  [resolve(2933,f,183,a)].
+2945 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Green(d4) | Red(d4) | Yellow(d4).  [resolve(2936,f,1419,i),unit_del(n,100)].
+3029 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Hall(d2).  [resolve(2585,j,2212,g),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),unit_del(j,129)].
+3030 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | -Red(x) | right(x,d2).  [resolve(3029,i,178,b)].
+3031 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1).  [resolve(3030,i,2212,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),unit_del(i,139)].
+3032 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | -Red(x) | right(x,d1).  [resolve(3031,h,178,b)].
+3033 Red(d4) | Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5).  [resolve(3032,h,2212,g),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),unit_del(h,140)].
+3034 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | directlyright(d4,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(3033,a,531,a)].
+3045 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | Hall(d2).  [resolve(2587,j,2220,g),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),unit_del(j,129)].
+3046 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | -Red(x) | right(x,d2).  [resolve(3045,i,178,b)].
+3047 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1).  [resolve(3046,i,2220,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),unit_del(i,139)].
+3048 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | -Red(x) | right(x,d1).  [resolve(3047,h,178,b)].
+3050 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5).  [resolve(3048,h,2220,g),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),unit_del(h,140)].
+3051 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | directlyright(d4,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(3050,a,531,a)].
+3058 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Hall(d2).  [resolve(2589,j,2229,g),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),unit_del(j,129)].
+3059 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | -Red(x) | right(x,d2).  [resolve(3058,i,178,b)].
+3061 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1).  [resolve(3059,i,2229,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),unit_del(i,139)].
+3062 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | -Red(x) | right(x,d1).  [resolve(3061,h,178,b)].
+3063 Red(d4) | Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5).  [resolve(3062,h,2229,g),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),unit_del(h,140)].
+3064 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | directlyright(d4,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(3063,a,531,a)].
+3108 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(3034,g,107,a),unit_del(g,490)].
+3109 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(3034,g,99,a),unit_del(g,489)].
+3110 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(3034,g,93,a),unit_del(g,488)].
+3113 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Library(d1) | -Library(x) | directlyright(x,d1).  [resolve(3108,i,192,a)].
+3115 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | Library(d2) | -Library(x) | directlyright(x,d2).  [resolve(3109,i,192,a)].
+3116 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(3110,i,518,b)].
+3117 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d2).  [resolve(3110,i,515,b)].
+3119 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(3110,i,192,a)].
+3124 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(3116,i,3108,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3125 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2) | Library(d2).  [resolve(3117,i,3109,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3142 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(3113,i,3124,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r),unit_del(i,107)].
+3144 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | Library(d2) | Hall(d4).  [resolve(3115,i,3125,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r),unit_del(i,99)].
+3147 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2).  [resolve(3119,i,3144,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),unit_del(i,96)].
+3148 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1).  [resolve(3119,i,3142,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),unit_del(i,105)].
+3149 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d2) | -Library(d2).  [resolve(3147,h,505,b)].
+3151 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d1) | -Library(d1).  [resolve(3148,h,508,b)].
+3154 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d2).  [resolve(3149,i,3144,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+3158 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | -Red(x) | right(x,d4).  [resolve(3154,g,178,b)].
+3160 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d1).  [resolve(3151,i,3142,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+3161 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | -Hall(d2).  [resolve(3160,g,495,b)].
+3166 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2).  [resolve(3158,h,3033,a),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),unit_del(h,133)].
+3167 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1).  [resolve(3166,g,3161,h),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3168 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5) | -Hall(d1).  [resolve(3166,g,500,b)].
+3173 Yellow(d4) | Red(d2) | Yellow(d2) | Red(d3) | Yellow(d3) | Yellow(d5).  [resolve(3168,g,3167,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3176 Yellow(d4) | Red(d2) | Yellow(d2) | Yellow(d3) | Yellow(d5) | -EightHundred(x) | right(d3,x).  [resolve(3173,d,191,b)].
+3262 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(3051,g,107,a),unit_del(g,490)].
+3263 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(3051,g,99,a),unit_del(g,489)].
+3264 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(3051,g,93,a),unit_del(g,488)].
+3265 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | Library(d1) | -Library(x) | directlyright(x,d1).  [resolve(3262,i,192,a)].
+3267 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d2) | Library(d2) | -Library(x) | directlyright(x,d2).  [resolve(3263,i,192,a)].
+3268 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(3264,i,518,b)].
+3269 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d2).  [resolve(3264,i,515,b)].
+3271 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(3264,i,192,a)].
+3274 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(3268,i,3262,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3275 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2) | Library(d2).  [resolve(3269,i,3263,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3290 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(3265,i,3274,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r),unit_del(i,107)].
+3295 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d2) | Library(d2) | Hall(d4).  [resolve(3267,i,3275,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r),unit_del(i,99)].
+3301 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2).  [resolve(3271,i,3295,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),unit_del(i,96)].
+3302 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1).  [resolve(3271,i,3290,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),unit_del(i,105)].
+3303 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | -Library(d2).  [resolve(3301,h,505,b)].
+3305 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d1) | -Library(d1).  [resolve(3302,h,508,b)].
+3308 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2).  [resolve(3303,i,3295,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+3311 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d2) | -Red(x) | right(x,d4).  [resolve(3308,g,178,b)].
+3315 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d1).  [resolve(3305,i,3290,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+3316 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1) | -Hall(d2).  [resolve(3315,g,495,b)].
+3319 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d2).  [resolve(3311,h,3050,a),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),unit_del(h,133)].
+3320 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | Hall(d1).  [resolve(3319,g,3316,h),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3321 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5) | -Hall(d1).  [resolve(3319,g,500,b)].
+3324 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d2) | Yellow(d2) | Yellow(d5).  [resolve(3321,g,3320,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3325 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | directlyright(d2,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(3324,d,531,a)].
+3330 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(3325,f,106,a),unit_del(f,487)].
+3332 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(3325,f,96,a),unit_del(f,488)].
+3333 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(3325,f,91,a),unit_del(f,489)].
+3335 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | -LivingRoom(d2).  [resolve(3330,h,514,b)].
+3342 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d2).  [resolve(3332,h,515,b)].
+3348 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | Hall(d2) | Library(d2).  [resolve(3335,h,3333,h),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3352 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2) | Library(d2).  [resolve(3342,h,3333,h),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3358 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d2) | Library(d2) | -Library(d1).  [resolve(3348,g,507,b)].
+3367 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | Library(d2) | -Library(d1).  [resolve(3352,g,508,b)].
+3372 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d2) | Library(d2) | Hall(d1).  [resolve(3358,i,910,c),merge(i),merge(k)].
+3378 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | Library(d2) | Hall(d1).  [resolve(3367,i,901,c),merge(i),merge(k)].
+3383 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(3372,h,510,b)].
+3389 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(3378,h,510,b)].
+3393 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(3383,i,910,c),merge(i),merge(j),merge(k)].
+3395 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(3393,f,491,b)].
+3404 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(3389,i,901,c),merge(i),merge(j),merge(k)].
+3405 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d2) | Hall(d1).  [resolve(3404,f,3395,h),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3406 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1) | -Red(x) | right(x,d2).  [resolve(3405,f,178,b)].
+3407 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1).  [resolve(3406,g,3324,d),merge(h),merge(i),merge(j),merge(k),merge(l),unit_del(g,131)].
+3409 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5) | -Red(x) | right(x,d1).  [resolve(3407,f,178,b)].
+3410 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d2) | Yellow(d5).  [resolve(3409,f,3324,d),merge(g),merge(h),merge(i),merge(j),merge(k),unit_del(f,126)].
+3411 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | directlyright(d1,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(3410,b,531,a)].
+3418 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(3411,e,109,a),unit_del(e,487)].
+3419 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(3411,e,105,a),unit_del(e,488)].
+3420 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(3411,e,90,a),unit_del(e,490)].
+3421 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | -LivingRoom(d1).  [resolve(3418,g,517,b)].
+3424 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | -LivingRoom(d4).  [resolve(3418,g,511,b)].
+3425 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | -Library(x) | directlyright(x,d5).  [resolve(3418,g,192,a)].
+3429 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(3419,g,518,b)].
+3432 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(3419,g,192,a)].
+3434 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | Hall(d1) | Library(d1).  [resolve(3421,g,3420,g),merge(g),merge(h),merge(i),merge(j)].
+3440 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | Hall(d4) | Library(d4).  [resolve(3424,g,3419,g),merge(g),merge(h),merge(i),merge(j)].
+3441 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(3429,g,3420,g),merge(g),merge(h),merge(i),merge(j)].
+3445 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d1) | Library(d1) | -Library(d4).  [resolve(3434,f,501,b)].
+3446 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d4) | Library(d4) | -Library(d1).  [resolve(3440,f,507,b)].
+3451 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(3445,h,3441,f),merge(h),merge(i),merge(j),merge(k),merge(m),merge(n)].
+3456 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d1) | Hall(d4) | Library(d4).  [resolve(3451,g,3446,h),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m)].
+3457 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d1) | Hall(d4) | -Library(d1).  [resolve(3456,h,508,b)].
+3460 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d1) | Hall(d4).  [resolve(3457,h,3451,g),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3461 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1) | Hall(d4) | -Hall(d2).  [resolve(3460,e,494,b)].
+3466 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Library(d5) | Hall(d2) | Hall(d1).  [resolve(3425,g,910,c),merge(j),unit_del(g,109)].
+3467 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(3466,f,507,b)].
+3471 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(3467,h,910,c),merge(h),merge(i),merge(j)].
+3473 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(3471,e,491,b)].
+3479 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2) | Hall(d1).  [resolve(3432,g,901,c),merge(j),unit_del(g,105)].
+3485 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(3479,f,508,b)].
+3488 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(3485,h,901,c),merge(h),merge(i),merge(j)].
+3491 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d2) | Hall(d1).  [resolve(3488,e,3473,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3492 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1) | Hall(d4).  [resolve(3491,e,3461,g),merge(f),merge(g),merge(h),merge(i),merge(j)].
+3494 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1) | -Hall(d2).  [resolve(3492,f,495,b)].
+3497 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | Hall(d1).  [resolve(3494,f,3491,e),merge(f),merge(g),merge(h),merge(i),merge(j)].
+3501 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5) | -Red(x) | right(x,d1).  [resolve(3497,e,178,b)].
+3502 Yellow(d4) | Yellow(d1) | Yellow(d2) | Yellow(d5).  [resolve(3501,e,3410,b),merge(f),merge(g),merge(h),merge(i),unit_del(e,130)].
+3507 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2).  [resolve(3502,d,2558,h),unit_del(k,129)].
+3508 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1).  [resolve(3502,d,2556,h),unit_del(k,129)].
+3509 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(3502,d,2554,h),unit_del(k,129)].
+3532 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(3507,g,180,a)].
+3536 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(3508,g,180,a)].
+3538 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(3509,g,180,a)].
+3579 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(3064,g,107,a),unit_del(g,490)].
+3580 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(3064,g,99,a),unit_del(g,489)].
+3581 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(3064,g,93,a),unit_del(g,488)].
+3582 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Library(d1) | -Library(x) | directlyright(x,d1).  [resolve(3579,i,192,a)].
+3584 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | Library(d2) | -Library(x) | directlyright(x,d2).  [resolve(3580,i,192,a)].
+3585 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(3581,i,518,b)].
+3586 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | -LivingRoom(d2).  [resolve(3581,i,515,b)].
+3588 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(3581,i,192,a)].
+3590 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(3585,i,3579,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3591 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2) | Library(d2).  [resolve(3586,i,3580,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+3605 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(3582,i,3590,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r),unit_del(i,107)].
+3608 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | Library(d2) | Hall(d4).  [resolve(3584,i,3591,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r),unit_del(i,99)].
+3611 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d2).  [resolve(3588,i,3608,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),unit_del(i,96)].
+3612 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Library(d4) | Hall(d1).  [resolve(3588,i,3605,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),unit_del(i,105)].
+3613 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d2) | -Library(d2).  [resolve(3611,h,505,b)].
+3615 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d1) | -Library(d1).  [resolve(3612,h,508,b)].
+3620 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d2).  [resolve(3613,i,3608,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+3623 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2) | -Red(x) | right(x,d4).  [resolve(3620,g,178,b)].
+3626 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d4) | Hall(d1).  [resolve(3615,i,3605,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+3627 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1) | -Hall(d2).  [resolve(3626,g,495,b)].
+3633 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d2).  [resolve(3623,h,3063,a),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),unit_del(h,133)].
+3635 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | Hall(d1).  [resolve(3633,g,3627,h),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3636 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5) | -Hall(d1).  [resolve(3633,g,500,b)].
+3639 Yellow(d4) | Red(d1) | Yellow(d1) | Red(d3) | Yellow(d3) | Yellow(d5).  [resolve(3636,g,3635,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+3642 Yellow(d4) | Red(d1) | Yellow(d1) | Yellow(d3) | Yellow(d5) | -EightHundred(x) | right(d3,x).  [resolve(3639,d,191,b)].
+4896 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(x,d4).  [resolve(3532,k,2546,d),merge(l),merge(m),merge(n)].
+4897 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2).  [resolve(4896,j,3502,d),merge(k),merge(l),merge(m),unit_del(j,129)].
+4899 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(4897,h,180,a)].
+4901 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2) | -Yellow(x) | right(x,d4).  [resolve(4899,j,2546,d),merge(k),merge(l),merge(m)].
+4902 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2).  [resolve(4901,i,3502,d),merge(j),merge(k),merge(l),unit_del(i,129)].
+4909 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | -Round(d1).  [resolve(4902,g,364,b)].
+4918 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(3536,k,2546,d),merge(l),merge(m),merge(n)].
+4919 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1).  [resolve(4918,j,3502,d),merge(k),merge(l),merge(m),unit_del(j,129)].
+4920 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(4919,h,180,a)].
+4922 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(4920,j,2546,d),merge(k),merge(l),merge(m)].
+4923 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1).  [resolve(4922,i,3502,d),merge(j),merge(k),merge(l),unit_del(i,129)].
+4930 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d1) | -Round(d2).  [resolve(4923,g,362,b)].
+4939 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(3538,k,2546,d),merge(l),merge(m),merge(n)].
+4940 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(4939,j,3502,d),merge(k),merge(l),merge(m),unit_del(j,129)].
+4941 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(4940,h,180,a)].
+4943 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(4941,j,2546,d),merge(k),merge(l),merge(m)].
+4944 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1).  [resolve(4943,i,3502,d),merge(j),merge(k),merge(l),unit_del(i,129)].
+4945 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d1).  [resolve(4944,g,4930,h),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+4946 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2).  [resolve(4945,g,4909,h),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+4955 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | -Round(d1).  [resolve(4946,g,365,b)].
+4957 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2).  [resolve(4955,g,4945,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+4963 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d1) | Round(d2).  [resolve(4957,d,765,c),unit_del(h,92)].
+4965 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d3).  [resolve(4957,d,736,f)].
+4983 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1).  [resolve(4965,j,3502,d),merge(k),merge(l),merge(m),unit_del(j,137)].
+4986 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(4983,f,180,a)].
+4998 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d3).  [resolve(4986,j,4957,d),merge(k),merge(l),merge(m),merge(n),merge(o)].
+4999 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1).  [resolve(4998,i,3502,d),merge(j),merge(k),merge(l),unit_del(i,137)].
+5000 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(4999,g,180,a)].
+5002 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | right(x,d3).  [resolve(5000,i,4957,d),merge(j),merge(k),merge(l),merge(m),merge(n)].
+5003 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1).  [resolve(5002,h,3502,d),merge(i),merge(j),merge(k),unit_del(h,137)].
+5004 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d1) | -Round(d2).  [resolve(5003,f,362,b)].
+5006 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d1).  [resolve(5004,g,4963,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+5013 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | -EightHundred(x) | directlyright(d1,x).  [resolve(5006,f,186,a)].
+5014 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2).  [resolve(5013,f,4957,d),merge(g),merge(h),merge(i),merge(j),merge(k),unit_del(f,95)].
+5023 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d1) | Round(d2).  [resolve(5014,e,765,c),unit_del(g,102)].
+5027 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(x,d2).  [resolve(5014,e,732,f)].
+5034 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d1) | -EightHundred(x) | directlyright(d2,x).  [resolve(5023,f,186,a)].
+5037 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d1).  [resolve(5034,f,5014,e),merge(g),merge(h),merge(i),merge(j),unit_del(f,91)].
+5165 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2).  [resolve(5027,i,3502,d),merge(j),merge(k),merge(l),unit_del(i,139)].
+5167 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5165,e,180,a)].
+5277 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(x,d2).  [resolve(5167,i,5014,e),merge(j),merge(k),merge(l),merge(m)].
+5278 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Oval(d2) | Round(d2).  [resolve(5277,h,3502,d),merge(i),merge(j),merge(k),unit_del(h,139)].
+5280 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5278,f,180,a)].
+5282 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Round(d2) | -Yellow(x) | right(x,d2).  [resolve(5280,h,5014,e),merge(i),merge(j),merge(k),merge(l)].
+5283 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Round(d2).  [resolve(5282,g,3502,d),merge(h),merge(i),merge(j),unit_del(g,139)].
+5284 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d2) | -Round(d1).  [resolve(5283,e,364,b)].
+5286 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d2).  [resolve(5284,f,5037,e),merge(f),merge(g),merge(h),merge(i)].
+5287 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1) | -Round(d1).  [resolve(5286,e,365,b)].
+5289 Yellow(d4) | Yellow(d1) | Yellow(d2) | EightHundred(d1).  [resolve(5287,e,5037,e),merge(e),merge(f),merge(g),merge(h)].
+5296 Yellow(d4) | Yellow(d1) | Yellow(d2) | Round(d1) | Round(d2).  [resolve(5289,d,765,c),unit_del(f,98)].
+5307 Yellow(d4) | Yellow(d1) | Yellow(d2) | Round(d1) | -EightHundred(x) | directlyright(d2,x).  [resolve(5296,e,186,a)].
+5308 Yellow(d4) | Yellow(d1) | Yellow(d2) | Round(d1).  [resolve(5307,e,5289,d),merge(f),merge(g),merge(h),unit_del(e,101)].
+5316 Yellow(d4) | Yellow(d1) | Yellow(d2) | -EightHundred(x) | directlyright(d1,x).  [resolve(5308,d,186,a)].
+5317 Yellow(d4) | Yellow(d1) | Yellow(d2).  [resolve(5316,d,5289,d),merge(e),merge(f),merge(g),unit_del(d,90)].
+5322 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2).  [resolve(5317,a,2558,h),unit_del(j,133)].
+5323 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1).  [resolve(5317,a,2556,h),unit_del(j,133)].
+5324 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(5317,a,2554,h),unit_del(j,133)].
+5333 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5322,f,180,a)].
+5336 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5323,f,180,a)].
+5338 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5324,f,180,a)].
+5364 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(x,d4).  [resolve(5333,j,2546,d),merge(k),merge(l),merge(m)].
+5365 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2).  [resolve(5364,i,5317,a),merge(j),merge(k),unit_del(i,133)].
+5367 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5365,g,180,a)].
+5369 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2) | -Yellow(x) | right(x,d4).  [resolve(5367,i,2546,d),merge(j),merge(k),merge(l)].
+5370 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2).  [resolve(5369,h,5317,a),merge(i),merge(j),unit_del(h,133)].
+5377 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | -Round(d1).  [resolve(5370,f,364,b)].
+5388 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(5336,j,2546,d),merge(k),merge(l),merge(m)].
+5391 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1).  [resolve(5388,i,5317,a),merge(j),merge(k),unit_del(i,133)].
+5392 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5391,g,180,a)].
+5394 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(5392,i,2546,d),merge(j),merge(k),merge(l)].
+5395 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1).  [resolve(5394,h,5317,a),merge(i),merge(j),unit_del(h,133)].
+5402 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d1) | -Round(d2).  [resolve(5395,f,362,b)].
+5413 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(5338,j,2546,d),merge(k),merge(l),merge(m)].
+5414 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(5413,i,5317,a),merge(j),merge(k),unit_del(i,133)].
+5415 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5414,g,180,a)].
+5417 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1) | -Yellow(x) | right(x,d4).  [resolve(5415,i,2546,d),merge(j),merge(k),merge(l)].
+5418 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1).  [resolve(5417,h,5317,a),merge(i),merge(j),unit_del(h,133)].
+5419 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d1).  [resolve(5418,f,5402,g),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+5420 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2).  [resolve(5419,f,5377,g),merge(f),merge(g),merge(h),merge(i),merge(j)].
+5429 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | -Round(d1).  [resolve(5420,f,365,b)].
+5431 Yellow(d1) | Yellow(d2) | EightHundred(d3) | EightHundred(d1) | EightHundred(d2).  [resolve(5429,f,5419,f),merge(f),merge(g),merge(h),merge(i),merge(j)].
+5437 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d1) | Round(d2).  [resolve(5431,c,765,c),unit_del(g,92)].
+5438 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(d4,x).  [resolve(5431,c,737,f)].
+5459 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1).  [resolve(5438,i,5317,a),merge(j),merge(k),unit_del(i,133)].
+5462 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5459,e,180,a)].
+5474 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(x,d3).  [resolve(5462,i,5431,c),merge(j),merge(k),merge(l),merge(m)].
+5475 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1).  [resolve(5474,h,5317,a),merge(i),merge(j),unit_del(h,128)].
+5476 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5475,f,180,a)].
+5478 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | right(x,d3).  [resolve(5476,h,5431,c),merge(i),merge(j),merge(k),merge(l)].
+5479 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1).  [resolve(5478,g,5317,a),merge(h),merge(i),unit_del(g,128)].
+5482 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d1) | -Round(d2).  [resolve(5479,e,362,b)].
+5484 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | Round(d1).  [resolve(5482,f,5437,f),merge(f),merge(g),merge(h),merge(i),merge(j)].
+5491 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2) | -EightHundred(x) | directlyright(d1,x).  [resolve(5484,e,186,a)].
+5492 Yellow(d1) | Yellow(d2) | EightHundred(d1) | EightHundred(d2).  [resolve(5491,e,5431,c),merge(f),merge(g),merge(h),merge(i),unit_del(e,95)].
+5501 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d1) | Round(d2).  [resolve(5492,d,765,c),unit_del(f,102)].
+5504 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(d4,x).  [resolve(5492,d,733,f)].
+5512 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d1) | -EightHundred(x) | directlyright(d2,x).  [resolve(5501,e,186,a)].
+5513 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d1).  [resolve(5512,e,5492,d),merge(f),merge(g),merge(h),unit_del(e,91)].
+5645 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2).  [resolve(5504,h,5317,a),merge(i),merge(j),unit_del(h,133)].
+5647 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5645,d,180,a)].
+5649 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(x,d2).  [resolve(5647,h,5492,d),merge(i),merge(j),merge(k)].
+5650 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Oval(d2) | Round(d2).  [resolve(5649,g,5317,a),merge(h),merge(i),unit_del(g,136)].
+5652 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(x,y).  [resolve(5650,e,180,a)].
+5654 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Round(d2) | -Yellow(x) | right(x,d2).  [resolve(5652,g,5492,d),merge(h),merge(i),merge(j)].
+5655 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d3) | Round(d2).  [resolve(5654,f,5317,a),merge(g),merge(h),unit_del(f,136)].
+5656 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d2) | -Round(d1).  [resolve(5655,d,364,b)].
+5658 Yellow(d1) | Yellow(d2) | EightHundred(d1) | Round(d2).  [resolve(5656,e,5513,d),merge(e),merge(f),merge(g)].
+5659 Yellow(d1) | Yellow(d2) | EightHundred(d1) | -Round(d1).  [resolve(5658,d,365,b)].
+5661 Yellow(d1) | Yellow(d2) | EightHundred(d1).  [resolve(5659,d,5513,d),merge(d),merge(e),merge(f)].
+5669 Yellow(d1) | Yellow(d2) | Round(d1) | Round(d2).  [resolve(5661,c,765,c),unit_del(e,98)].
+5680 Yellow(d1) | Yellow(d2) | Round(d1) | -EightHundred(x) | directlyright(d2,x).  [resolve(5669,d,186,a)].
+5683 Yellow(d1) | Yellow(d2) | Round(d1).  [resolve(5680,d,5661,c),merge(e),merge(f),unit_del(d,101)].
+5691 Yellow(d1) | Yellow(d2) | -EightHundred(x) | directlyright(d1,x).  [resolve(5683,c,186,a)].
+5692 Yellow(d1) | Yellow(d2).  [resolve(5691,c,5661,c),merge(d),merge(e),unit_del(c,90)].
+5911 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Red(d4) | Yellow(d4) | -Stars(x) | directlyright(d4,x).  [resolve(2945,k,188,b)].
+8972 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Red(d5) | Yellow(d5) | Green(d1) | Red(d1) | Yellow(d1) | Red(d4) | Yellow(d4).  [resolve(5911,m,2936,f),merge(n),merge(o),merge(p),merge(q),merge(r),unit_del(m,103)].
+8973 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Red(d5) | Yellow(d5) | Red(d1) | Yellow(d1) | Red(d4) | Yellow(d4) | -Stars(x) | directlyright(d1,x).  [resolve(8972,h,188,b)].
+8976 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Red(d5) | Yellow(d5) | Red(d1) | Yellow(d1) | Red(d4) | Yellow(d4).  [resolve(8973,l,2936,f),merge(m),merge(n),merge(o),merge(p),merge(q),unit_del(l,95)].
+8983 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Red(d1) | Yellow(d1) | Red(d4) | Yellow(d4) | -EightHundred(x) | right(d5,x).  [resolve(8976,f,191,b)].
+8991 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Red(d1) | Yellow(d1) | Red(d4) | Yellow(d4).  [resolve(8983,k,2546,d),merge(l),merge(m),merge(n),unit_del(k,129)].
+8995 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Red(d1) | Yellow(d1) | Yellow(d4) | -EightHundred(x) | right(d4,x).  [resolve(8991,i,191,b)].
+8997 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Red(d1) | Yellow(d1) | Yellow(d4).  [resolve(8995,j,2546,d),merge(k),merge(l),merge(m),unit_del(j,133)].
+8998 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | directlyright(d1,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(8997,g,531,a)].
+9001 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(8998,i,109,a),unit_del(i,487)].
+9002 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(8998,i,105,a),unit_del(i,488)].
+9003 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(8998,i,90,a),unit_del(i,490)].
+9004 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | -LivingRoom(d1).  [resolve(9001,k,517,b)].
+9007 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | -LivingRoom(d4).  [resolve(9001,k,511,b)].
+9008 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | -Library(x) | directlyright(x,d5).  [resolve(9001,k,192,a)].
+9010 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(9002,k,518,b)].
+9013 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(9002,k,192,a)].
+9015 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | Hall(d1) | Library(d1).  [resolve(9004,k,9003,k),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9017 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | Hall(d4) | Library(d4).  [resolve(9007,k,9002,k),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9018 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(9010,k,9003,k),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9023 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Library(d1) | -Library(d4).  [resolve(9015,j,501,b)].
+9024 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d4) | Library(d4) | -Library(d1).  [resolve(9017,j,507,b)].
+9029 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(9023,l,9018,j),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s),merge(u),merge(v)].
+9031 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Hall(d4) | Library(d4).  [resolve(9029,k,9024,l),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s),merge(t),merge(u)].
+9032 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Hall(d4) | -Library(d1).  [resolve(9031,l,508,b)].
+9035 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Hall(d4).  [resolve(9032,l,9029,k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s),merge(t),merge(u),merge(v)].
+9036 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | Hall(d4) | -Hall(d2).  [resolve(9035,i,494,b)].
+9040 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | Hall(d2) | Hall(d1).  [resolve(9008,k,910,c),merge(n),unit_del(k,109)].
+9041 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9040,j,507,b)].
+9045 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(9041,l,910,c),merge(l),merge(m),merge(n)].
+9047 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(9045,i,491,b)].
+9052 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | Hall(d2) | Hall(d1).  [resolve(9013,k,901,c),merge(n),unit_del(k,105)].
+9056 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9052,j,508,b)].
+9059 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(9056,l,901,c),merge(l),merge(m),merge(n)].
+9061 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d2) | Hall(d1).  [resolve(9059,i,9047,k),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s),merge(t)].
+9062 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | Hall(d4).  [resolve(9061,i,9036,k),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9064 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | -Hall(d2).  [resolve(9062,j,495,b)].
+9067 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1).  [resolve(9064,j,9061,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9068 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | -Red(x) | right(x,d1).  [resolve(9067,i,178,b)].
+9069 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | FourHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4).  [resolve(9068,i,8997,g),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),unit_del(i,130)].
+9071 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Stars(d1).  [resolve(9069,e,183,a)].
+9090 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d5) | Green(d1) | Red(d1) | Green(d4) | Red(d4).  [resolve(9071,h,1419,i),merge(i),merge(l),merge(o),unit_del(m,110)].
+9097 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d5) | Green(d1) | Red(d1) | Red(d4) | -Stars(x) | directlyright(d4,x).  [resolve(9090,k,188,b)].
+9215 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d5) | Green(d1) | Red(d1) | Red(d4).  [resolve(9097,l,9071,h),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s),unit_del(l,107)].
+9216 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d5) | Red(d1) | Red(d4) | -Stars(x) | directlyright(d1,x).  [resolve(9215,i,188,b)].
+9217 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d5) | Red(d1) | Red(d4).  [resolve(9216,k,9071,h),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),unit_del(k,90)].
+9224 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d1) | Red(d4) | -EightHundred(x) | right(d5,x).  [resolve(9217,h,191,b)].
+9232 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d1) | Red(d4).  [resolve(9224,j,2546,d),merge(k),merge(l),merge(m),unit_del(j,129)].
+9236 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d1) | -EightHundred(x) | right(d4,x).  [resolve(9232,i,191,b)].
+9239 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d1).  [resolve(9236,i,2546,d),merge(j),merge(k),merge(l),unit_del(i,133)].
+9240 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | directlyright(d1,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(9239,h,531,a)].
+9242 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(9240,h,109,a),unit_del(h,487)].
+9243 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(9240,h,105,a),unit_del(h,488)].
+9244 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(9240,h,90,a),unit_del(h,490)].
+9245 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | -LivingRoom(d1).  [resolve(9242,j,517,b)].
+9248 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | -LivingRoom(d4).  [resolve(9242,j,511,b)].
+9249 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | -Library(x) | directlyright(x,d5).  [resolve(9242,j,192,a)].
+9250 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(9243,j,518,b)].
+9253 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(9243,j,192,a)].
+9255 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | Hall(d1) | Library(d1).  [resolve(9245,j,9244,j),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9257 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | Hall(d4) | Library(d4).  [resolve(9248,j,9243,j),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9258 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(9250,j,9244,j),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9262 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Library(d1) | -Library(d4).  [resolve(9255,i,501,b)].
+9263 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d4) | Library(d4) | -Library(d1).  [resolve(9257,i,507,b)].
+9268 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(9262,k,9258,i),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(s),merge(t)].
+9269 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Hall(d4) | Library(d4).  [resolve(9268,j,9263,k),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s)].
+9270 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Hall(d4) | -Library(d1).  [resolve(9269,k,508,b)].
+9273 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d1) | Hall(d4).  [resolve(9270,k,9268,j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r),merge(s),merge(t)].
+9274 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | Hall(d4) | -Hall(d2).  [resolve(9273,h,494,b)].
+9277 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Library(d5) | Hall(d2) | Hall(d1).  [resolve(9249,j,910,c),merge(m),unit_del(j,109)].
+9280 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9277,i,507,b)].
+9290 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(9280,k,910,c),merge(k),merge(l),merge(m)].
+9292 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(9290,h,491,b)].
+9317 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Library(d4) | Hall(d2) | Hall(d1).  [resolve(9253,j,901,c),merge(m),unit_del(j,105)].
+9321 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9317,i,508,b)].
+9324 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(9321,k,901,c),merge(k),merge(l),merge(m)].
+9325 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d2) | Hall(d1).  [resolve(9324,h,9292,j),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9326 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | Hall(d4).  [resolve(9325,h,9274,j),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9328 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1) | -Hall(d2).  [resolve(9326,i,495,b)].
+9334 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Hall(d1).  [resolve(9328,i,9325,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9335 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4) | -Red(x) | right(x,d1).  [resolve(9334,h,178,b)].
+9336 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | EightHundred(d5) | Yellow(d5) | Yellow(d1) | Yellow(d4).  [resolve(9335,h,9239,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),unit_del(h,130)].
+9341 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | -EightHundred(d4).  [resolve(9336,d,456,b)].
+9346 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4).  [resolve(9341,g,2546,d),merge(g),merge(h),merge(i)].
+9354 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Red(d1) | Yellow(d3).  [resolve(9346,a,3642,f),merge(f),merge(h),merge(j),unit_del(h,132)].
+9361 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | directlyright(d1,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(9354,f,531,a)].
+9421 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(9361,g,109,a),unit_del(g,487)].
+9422 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(9361,g,105,a),unit_del(g,488)].
+9423 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(9361,g,90,a),unit_del(g,490)].
+9424 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | -LivingRoom(d1).  [resolve(9421,i,517,b)].
+9427 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | -LivingRoom(d4).  [resolve(9421,i,511,b)].
+9428 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | -Library(x) | directlyright(x,d5).  [resolve(9421,i,192,a)].
+9429 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(9422,i,518,b)].
+9432 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(9422,i,192,a)].
+9434 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | Hall(d1) | Library(d1).  [resolve(9424,i,9423,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+9436 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | Hall(d4) | Library(d4).  [resolve(9427,i,9422,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+9437 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(9429,i,9423,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+9441 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Library(d1) | -Library(d4).  [resolve(9434,h,501,b)].
+9442 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d4) | Library(d4) | -Library(d1).  [resolve(9436,h,507,b)].
+9447 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(9441,j,9437,h),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(q),merge(r)].
+9448 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Hall(d4) | Library(d4).  [resolve(9447,i,9442,j),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q)].
+9449 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Hall(d4) | -Library(d1).  [resolve(9448,j,508,b)].
+9452 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Hall(d4).  [resolve(9449,j,9447,i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p),merge(q),merge(r)].
+9453 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | Hall(d4) | -Hall(d2).  [resolve(9452,g,494,b)].
+9456 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | Hall(d2) | Hall(d1).  [resolve(9428,i,910,c),merge(l),unit_del(i,109)].
+9457 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9456,h,507,b)].
+9461 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(9457,j,910,c),merge(j),merge(k),merge(l)].
+9463 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(9461,g,491,b)].
+9466 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | Hall(d2) | Hall(d1).  [resolve(9432,i,901,c),merge(l),unit_del(i,105)].
+9470 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9466,h,508,b)].
+9473 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(9470,j,901,c),merge(j),merge(k),merge(l)].
+9474 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d2) | Hall(d1).  [resolve(9473,g,9463,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9475 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | Hall(d4).  [resolve(9474,g,9453,i),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+9477 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | -Hall(d2).  [resolve(9475,h,495,b)].
+9480 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1).  [resolve(9477,h,9474,g),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+9481 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | -Red(x) | right(x,d1).  [resolve(9480,g,178,b)].
+9482 EightHundred(d1) | EightHundred(d2) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3).  [resolve(9481,g,9354,f),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),unit_del(g,130)].
+9492 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Red(d1).  [resolve(9482,b,3642,f),merge(f),merge(h),merge(i),merge(j),unit_del(g,127)].
+9499 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | directlyright(d1,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(9492,f,531,a)].
+9522 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(9499,f,109,a),unit_del(f,487)].
+9523 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(9499,f,105,a),unit_del(f,488)].
+9524 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | Library(d1) | LivingRoom(d1).  [resolve(9499,f,90,a),unit_del(f,490)].
+9525 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | -LivingRoom(d1).  [resolve(9522,h,517,b)].
+9528 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | -LivingRoom(d4).  [resolve(9522,h,511,b)].
+9529 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | -Library(x) | directlyright(x,d5).  [resolve(9522,h,192,a)].
+9530 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | -LivingRoom(d1).  [resolve(9523,h,518,b)].
+9533 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | -Library(x) | directlyright(x,d4).  [resolve(9523,h,192,a)].
+9535 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | Hall(d1) | Library(d1).  [resolve(9525,h,9524,h),merge(h),merge(i),merge(j),merge(k),merge(l)].
+9537 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | Hall(d4) | Library(d4).  [resolve(9528,h,9523,h),merge(h),merge(i),merge(j),merge(k),merge(l)].
+9538 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | Hall(d1) | Library(d1).  [resolve(9530,h,9524,h),merge(h),merge(i),merge(j),merge(k),merge(l)].
+9542 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Library(d1) | -Library(d4).  [resolve(9535,g,501,b)].
+9543 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d4) | Library(d4) | -Library(d1).  [resolve(9537,g,507,b)].
+9548 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Library(d1) | Hall(d4).  [resolve(9542,i,9538,g),merge(i),merge(j),merge(k),merge(l),merge(m),merge(o),merge(p)].
+9549 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Hall(d4) | Library(d4).  [resolve(9548,h,9543,i),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o)].
+9550 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Hall(d4) | -Library(d1).  [resolve(9549,i,508,b)].
+9553 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d1) | Hall(d4).  [resolve(9550,i,9548,h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n),merge(o),merge(p)].
+9554 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | Hall(d4) | -Hall(d2).  [resolve(9553,f,494,b)].
+9557 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Library(d5) | Hall(d2) | Hall(d1).  [resolve(9529,h,910,c),merge(k),unit_del(h,109)].
+9558 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9557,g,507,b)].
+9562 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(9558,i,910,c),merge(i),merge(j),merge(k)].
+9564 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(9562,f,491,b)].
+9567 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Library(d4) | Hall(d2) | Hall(d1).  [resolve(9533,h,901,c),merge(k),unit_del(h,105)].
+9571 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(9567,g,508,b)].
+9574 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(9571,i,901,c),merge(i),merge(j),merge(k)].
+9575 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d2) | Hall(d1).  [resolve(9574,f,9564,h),merge(h),merge(i),merge(j),merge(k),merge(l),merge(m),merge(n)].
+9576 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | Hall(d4).  [resolve(9575,f,9554,h),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+9578 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1) | -Hall(d2).  [resolve(9576,g,495,b)].
+9581 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Hall(d1).  [resolve(9578,g,9575,f),merge(g),merge(h),merge(i),merge(j),merge(k),merge(l)].
+9582 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | -Red(x) | right(x,d1).  [resolve(9581,f,178,b)].
+9583 EightHundred(d1) | Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3).  [resolve(9582,f,9492,f),merge(g),merge(h),merge(i),merge(j),merge(k),unit_del(f,130)].
+9593 Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | Red(d1).  [resolve(9583,a,3642,f),merge(e),merge(g),merge(h),merge(i),unit_del(f,135)].
+9600 Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3) | -EightHundred(x) | right(d1,x).  [resolve(9593,e,191,b)].
+9609 Yellow(d5) | Yellow(d1) | Yellow(d4) | Yellow(d3).  [resolve(9600,e,9583,a),merge(f),merge(g),merge(h),merge(i),unit_del(e,130)].
+9629 Yellow(d1) | Yellow(d4) | Yellow(d3) | -Yellow(d2).  [resolve(9609,a,339,b)].
+9630 Yellow(d1) | Yellow(d4) | Yellow(d3).  [resolve(9629,d,5692,b),merge(d)].
+9644 Yellow(d1) | Yellow(d3) | -Yellow(d2).  [resolve(9630,b,340,b)].
+9645 Yellow(d1) | Yellow(d3).  [resolve(9644,c,5692,b),merge(c)].
+9649 Yellow(d1) | -Yellow(d2).  [resolve(9645,b,341,b)].
+9650 Yellow(d1).  [resolve(9649,b,5692,b),merge(b)].
+9651 -Yellow(d2).  [back_unit_del(345),unit_del(a,9650)].
+9652 -Yellow(d3).  [back_unit_del(344),unit_del(a,9650)].
+9653 -Yellow(d4).  [back_unit_del(343),unit_del(a,9650)].
+9654 -Yellow(d5).  [back_unit_del(342),unit_del(a,9650)].
+10047 Red(d2) | -EightHundred(x) | right(d3,x).  [back_unit_del(3176),unit_del(a,9653),unit_del(c,9651),unit_del(d,9652),unit_del(e,9654)].
+10394 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d2) | Round(d2).  [resolve(9650,a,2557,h),unit_del(h,138)].
+10395 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d3) | Round(d3) | Oval(d1) | Round(d1).  [resolve(9650,a,2555,h),unit_del(h,138)].
+10396 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Oval(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(9650,a,2553,h),unit_del(h,138)].
+10401 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(d3,x).  [resolve(10394,d,179,a)].
+10404 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(d3,x).  [resolve(10395,d,179,a)].
+10406 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(d2,x).  [resolve(10396,d,179,a)].
+10427 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2) | -Yellow(x) | right(d3,x).  [resolve(10401,h,2546,d),merge(i),merge(j),merge(k)].
+10428 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d2) | Round(d2).  [resolve(10427,g,9650,a),unit_del(g,135)].
+10431 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2) | -Yellow(x) | -EightHundred(y) | right(d2,x).  [resolve(10428,e,179,a)].
+10434 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2) | -Yellow(x) | right(d2,x).  [resolve(10431,g,2546,d),merge(h),merge(i),merge(j)].
+10436 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d2).  [resolve(10434,f,9650,a),unit_del(f,126)].
+10443 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | -Round(d1).  [resolve(10436,d,364,b)].
+10457 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1) | -Yellow(x) | right(d3,x).  [resolve(10404,h,2546,d),merge(i),merge(j),merge(k)].
+10458 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Oval(d1) | Round(d1).  [resolve(10457,g,9650,a),unit_del(g,135)].
+10461 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(d1,x).  [resolve(10458,e,179,a)].
+10463 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1) | -Yellow(x) | right(d1,x).  [resolve(10461,g,2546,d),merge(h),merge(i),merge(j)].
+10465 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d3) | Round(d1).  [resolve(10463,f,9650,a),unit_del(f,130)].
+10473 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d1) | -Round(d2).  [resolve(10465,d,362,b)].
+10487 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1) | -Yellow(x) | right(d2,x).  [resolve(10406,h,2546,d),merge(i),merge(j),merge(k)].
+10488 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Oval(d1) | Round(d1).  [resolve(10487,g,9650,a),unit_del(g,126)].
+10491 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1) | -Yellow(x) | -EightHundred(y) | right(d1,x).  [resolve(10488,e,179,a)].
+10493 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1) | -Yellow(x) | right(d1,x).  [resolve(10491,g,2546,d),merge(h),merge(i),merge(j)].
+10495 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2) | Round(d1).  [resolve(10493,f,9650,a),unit_del(f,130)].
+10496 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d1).  [resolve(10495,d,10473,e),merge(e),merge(f),merge(g),merge(h)].
+10497 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | Round(d2).  [resolve(10496,d,10443,e),merge(d),merge(e),merge(f)].
+10506 EightHundred(d3) | EightHundred(d1) | EightHundred(d2) | -Round(d1).  [resolve(10497,d,365,b)].
+10509 EightHundred(d3) | EightHundred(d1) | EightHundred(d2).  [resolve(10506,d,10496,d),merge(d),merge(e),merge(f)].
+10510 EightHundred(d1) | EightHundred(d2) | Red(d2).  [resolve(10509,a,10047,b),unit_del(d,132)].
+10523 EightHundred(d1) | EightHundred(d2) | directlyright(d2,x) | Bedroom(x) | Hall(x) | Library(x) | LivingRoom(x).  [resolve(10510,c,531,a)].
+10540 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Library(d5) | LivingRoom(d5).  [resolve(10523,c,106,a),unit_del(c,487)].
+10542 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Library(d4) | LivingRoom(d4).  [resolve(10523,c,96,a),unit_del(c,488)].
+10543 EightHundred(d1) | EightHundred(d2) | Hall(d2) | Library(d2) | LivingRoom(d2).  [resolve(10523,c,91,a),unit_del(c,489)].
+10546 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Library(d5) | -LivingRoom(d2).  [resolve(10540,e,514,b)].
+10552 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Library(d4) | -LivingRoom(d2).  [resolve(10542,e,515,b)].
+10559 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Library(d5) | Hall(d2) | Library(d2).  [resolve(10546,e,10543,e),merge(e),merge(f)].
+10562 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Library(d4) | Hall(d2) | Library(d2).  [resolve(10552,e,10543,e),merge(e),merge(f)].
+10567 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Hall(d2) | Library(d2) | -Library(d1).  [resolve(10559,d,507,b)].
+10575 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Hall(d2) | Library(d2) | -Library(d1).  [resolve(10562,d,508,b)].
+10578 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Hall(d2) | Library(d2) | Hall(d1).  [resolve(10567,f,910,c),merge(f),merge(h)].
+10580 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Hall(d2) | Library(d2) | Hall(d1).  [resolve(10575,f,901,c),merge(f),merge(h)].
+10582 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(10578,e,510,b)].
+10585 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Hall(d2) | Hall(d1) | -Library(d1).  [resolve(10580,e,510,b)].
+10589 EightHundred(d1) | EightHundred(d2) | Hall(d5) | Hall(d2) | Hall(d1).  [resolve(10582,f,910,c),merge(f),merge(g),merge(h)].
+10591 EightHundred(d1) | EightHundred(d2) | Hall(d2) | Hall(d1) | -Hall(d4).  [resolve(10589,c,491,b)].
+10595 EightHundred(d1) | EightHundred(d2) | Hall(d4) | Hall(d2) | Hall(d1).  [resolve(10585,f,901,c),merge(f),merge(g),merge(h)].
+10596 EightHundred(d1) | EightHundred(d2) | Hall(d2) | Hall(d1).  [resolve(10595,c,10591,e),merge(e),merge(f),merge(g),merge(h)].
+10597 EightHundred(d1) | EightHundred(d2) | Hall(d1) | -Red(x) | right(x,d2).  [resolve(10596,c,178,b)].
+10598 EightHundred(d1) | EightHundred(d2) | Hall(d1).  [resolve(10597,d,10510,c),merge(e),merge(f),unit_del(d,131)].
+10599 EightHundred(d1) | EightHundred(d2) | -Red(x) | right(x,d1).  [resolve(10598,c,178,b)].
+10600 EightHundred(d1) | EightHundred(d2).  [resolve(10599,c,10510,c),merge(d),merge(e),unit_del(c,126)].
+10601 EightHundred(d1) | Red(d2).  [resolve(10600,b,10047,b),unit_del(c,127)].
+10619 EightHundred(d1) | -EightHundred(x) | right(d2,x).  [resolve(10601,b,191,b)].
+10628 EightHundred(d1).  [resolve(10619,b,10600,b),merge(c),unit_del(b,131)].
+11364 Red(d2).  [resolve(10628,a,10047,b),unit_del(b,135)].
+11471 -EightHundred(x) | right(d2,x).  [resolve(11364,a,191,b)].
+11474 $F.  [resolve(11471,a,10628,a),unit_del(a,126)].
+
+============================== end of proof ==========================
